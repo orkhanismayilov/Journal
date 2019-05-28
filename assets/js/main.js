@@ -2,6 +2,9 @@ $(document).ready(function () {
 
     'use strict';
 
+    // Force Page to Load from Top
+    $(this).scrollTop(0);
+
     // Particles
     particlesJS.load('particles', 'assets/js/particles.json', function () {
         // console.log('callback - particles.js config loaded');
@@ -224,10 +227,4 @@ $(document).ready(function () {
         pagers.parent().find('.active').removeClass('active');
         $(pagers[index]).addClass('active');
     }
-
-    // Force Page to Load from Top
-    $(document).ready(function () {
-        $(this).scrollTop(0);
-    });
-
 });
