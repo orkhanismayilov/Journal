@@ -165,9 +165,9 @@ $(document).ready(function () {
         $(document).on('mousewheel', function (e) {
             e = e || window.event;
 
-            if (e.originalEvent.deltaY > 0 && activePanelIndex != panels.last().data('panel')) {
+            if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel')) {
                 togglePanels('next');
-            } else if (e.originalEvent.deltaY < 0 && activePanelIndex != panels.first().data('panel')) {
+            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel')) {
                 togglePanels('prev');
             }
         });
