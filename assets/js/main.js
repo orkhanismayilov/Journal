@@ -181,7 +181,9 @@ $(document).ready(function () {
         pagers.click(function () {
             var shiftIndex = $(this).data('panel');
 
-            togglePanels(null, shiftIndex);
+            if (!$(this).hasClass('active')) {
+                togglePanels(null, shiftIndex);
+            }
         });
     }
 

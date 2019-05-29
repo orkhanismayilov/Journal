@@ -168,6 +168,14 @@ ul {
         .logo {
             background: @color-blue  !important;
         }
+
+        #search-form-header {
+            width: ~'calc(100vw - 185px)' !important;
+        }
+
+        .btn-search {
+            background: @color-blue !important;
+        }
     }
 
     // Menu
@@ -252,7 +260,7 @@ ul {
 
         &.active {
             #search-form-header {
-                width: ~'calc(100vw - 215px)';
+                width: ~'calc(100vw - 185px)';
             }
 
             .btn-search {
@@ -294,6 +302,7 @@ ul {
     width: 100%;
     height: 300px;
     min-height: 600px;
+    padding-top: @header-height;
     background: #fff;
     clip-path: circle(0 at 0 0);
     transition: @transition-4ms ease-in-out;
