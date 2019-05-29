@@ -399,6 +399,14 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
 }
+.section-scroll.active .section-category,
+.section-scroll.active .section-title,
+.section-scroll.active .section-desc,
+.section-scroll.active .section-author,
+.section-scroll.active .section-button {
+  transform: translate3d(0, 0, 0);
+  opacity: 1;
+}
 .section-scroll .section-link {
   display: block;
   width: 70%;
@@ -419,18 +427,34 @@ ul {
   line-height: 1;
   margin-bottom: 20px;
   color: #00a9f4;
+  transform: translate3d(0, -250%, 0);
+  opacity: 0;
+  transition: all 0.8s;
+  transition-delay: .4s;
 }
 .section-scroll .section-title {
   margin-bottom: 20px;
   text-transform: capitalize;
+  transform: translate3d(-100%, 0, 0);
+  opacity: 0;
+  transition: all 0.8s;
+  transition-delay: .4s;
 }
 .section-scroll .section-desc {
   margin-bottom: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
+  transform: translate3d(-150%, 0, 0);
+  opacity: 0;
+  transition: all 0.8s;
+  transition-delay: .4s;
 }
 .section-scroll .section-author {
   margin-bottom: 30px;
+  transform: translate3d(0, 150%, 0);
+  opacity: 0;
+  transition: all 0.8s;
+  transition-delay: .4s;
 }
 .section-scroll .section-author i {
   margin-right: 5px;
@@ -445,8 +469,10 @@ ul {
   padding: 15px 30px;
   background: rgba(25, 122, 86, 0.3);
   font-size: 1.3rem;
-  transition: all 0.2s;
   text-transform: uppercase;
+  transform: translate3d(0, 200%, 0);
+  opacity: 0;
+  transition: all 0.8s, background 0.2s;
 }
 .section-scroll .section-button i {
   margin-left: 15px;

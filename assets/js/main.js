@@ -155,7 +155,7 @@ $(document).ready(function () {
             $(this).css('z-index', zIndex);
 
             if (zIndex === 0) {
-                $(this).fadeIn();
+                $(this).fadeIn().addClass('active');
             }
 
             zIndex--;
@@ -200,14 +200,13 @@ $(document).ready(function () {
         if (!animating) {
             animating = true;
 
-            $(panels[shiftIndex]).addClass('active');
-
             activePanel.fadeOut();
             activePanel.removeClass('active');
 
             activePanel = $(panels[shiftIndex]);
             activePanel.fadeIn(function () {
                 animating = false;
+                activePanel.addClass('active');
             });
 
             if (dir === 'next') {

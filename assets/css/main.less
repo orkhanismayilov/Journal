@@ -16,6 +16,7 @@
 
 @transition-2ms: all .2s;
 @transition-4ms: all .4s;
+@transition-8ms: all .8s;
 
 @container-1200: 1200px;
 
@@ -316,6 +317,18 @@ ul {
     background-repeat: no-repeat;
     background-size: cover;
 
+    &.active {
+
+        .section-category,
+        .section-title,
+        .section-desc,
+        .section-author,
+        .section-button {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+
     // Section Link
     .section-link {
         display: block;
@@ -342,12 +355,20 @@ ul {
         line-height: 1;
         margin-bottom: 20px;
         color: @color-blue-light;
+        transform: translate3d(0, -250%, 0);
+        opacity: 0;
+        transition: @transition-8ms;
+        transition-delay: .4s;
     }
 
     // Article Title
     .section-title {
         margin-bottom: 20px;
         text-transform: capitalize;
+        transform: translate3d(-100%, 0, 0);
+        opacity: 0;
+        transition: @transition-8ms;
+        transition-delay: .4s;
     }
 
     // Article Description
@@ -355,11 +376,19 @@ ul {
         margin-bottom: 20px;
         font-size: 1.5rem;
         line-height: 1.5;
+        transform: translate3d(-150%, 0, 0);
+        opacity: 0;
+        transition: @transition-8ms;
+        transition-delay: .4s;
     }
 
     // Article Author
     .section-author {
         margin-bottom: 30px;
+        transform: translate3d(0, 150%, 0);
+        opacity: 0;
+        transition: @transition-8ms;
+        transition-delay: .4s;
 
         i {
             margin-right: 5px;
@@ -378,8 +407,10 @@ ul {
         padding: 15px 30px;
         background: fade(@color-green, 30%);
         font-size: 1.3rem;
-        transition: @transition-2ms;
         text-transform: uppercase;
+        transform: translate3d(0, 200%, 0);
+        opacity: 0;
+        transition: @transition-8ms, background .2s;
 
         i {
             margin-left: 15px;
