@@ -342,9 +342,48 @@ ul {
   height: 100%;
   transition: all 0.2s;
 }
+#header .lang-switcher {
+  margin-left: auto;
+  margin-right: 10px;
+}
+#header .lang-switcher .langs {
+  display: flex;
+  width: 40px;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+#header .lang-switcher .langs:hover {
+  width: 80px;
+}
+#header .lang-switcher .langs:hover .lang-item.active:before {
+  width: 100%;
+}
+#header .lang-switcher .lang-item {
+  position: relative;
+}
+#header .lang-switcher .lang-item:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #00a9f4;
+  transition: all 0.2s;
+}
+#header .lang-switcher .lang-link {
+  display: block;
+  width: 40px;
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  transition: all 0.2s;
+}
+#header .lang-switcher .lang-link:hover {
+  color: #00a9f4;
+}
 #header .user-info {
   height: 100%;
-  margin-left: auto;
 }
 #header .search {
   height: 100%;
@@ -434,7 +473,7 @@ ul {
   line-height: 1;
   margin-bottom: 20px;
   color: #00a9f4;
-  transform: translate3d(0, -250%, 0);
+  transform: translate3d(0, -150%, 0);
   opacity: 0;
   transition: all 0.8s;
   transition-delay: .4s;
@@ -442,7 +481,7 @@ ul {
 .section-scroll .section-title {
   margin-bottom: 20px;
   text-transform: capitalize;
-  transform: translate3d(-100%, 0, 0);
+  transform: translate3d(-70%, 0, 0);
   opacity: 0;
   transition: all 0.8s;
   transition-delay: .4s;
@@ -451,14 +490,14 @@ ul {
   margin-bottom: 20px;
   font-size: 1.5rem;
   line-height: 1.5;
-  transform: translate3d(-150%, 0, 0);
+  transform: translate3d(-100%, 0, 0);
   opacity: 0;
   transition: all 0.8s;
   transition-delay: .4s;
 }
 .section-scroll .section-author {
   margin-bottom: 30px;
-  transform: translate3d(0, 150%, 0);
+  transform: translate3d(0, 120%, 0);
   opacity: 0;
   transition: all 0.8s;
   transition-delay: .4s;
@@ -477,7 +516,7 @@ ul {
   background: rgba(25, 122, 86, 0.3);
   font-size: 1.3rem;
   text-transform: uppercase;
-  transform: translate3d(0, 200%, 0);
+  transform: translate3d(0, 150%, 0);
   opacity: 0;
   transition: all 0.8s, background 0.2s;
 }

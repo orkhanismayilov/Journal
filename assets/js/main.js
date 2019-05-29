@@ -27,6 +27,7 @@ $(document).ready(function () {
     // Search Trigger [Header]
     var searchTrigger = $('#search-trigger-header');
     if (searchTrigger.length > 0) {
+        // Open Search Input on Click
         searchTrigger.click(function () {
             var that = $(this),
                 searchInput = $('.search-input'),
@@ -34,14 +35,27 @@ $(document).ready(function () {
 
             $(this).parent().addClass('active');
 
+            // Focus on Search Input after Open
             focusTimeout = setTimeout(function () {
                 searchInput.focus();
                 clearTimeout(focusTimeout);
             }, 200);
 
+            // Hide Search Input on Blur
             searchInput.blur(function () {
                 that.parent().removeClass('active');
             });
+
+            // Close on ESC Key
+            $(document).on('keyup', closeOnEsc);
+
+            // Close on ESC Key Function
+            function closeOnEsc(e) {
+                if (e.keyCode === 27) {
+                    searchInput.blur();
+                    $(document).off('keyup', closeOnEsc);
+                }
+            }
         });
     }
 

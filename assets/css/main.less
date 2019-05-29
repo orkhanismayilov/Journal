@@ -174,7 +174,7 @@ ul {
         }
 
         .btn-search {
-            background: @color-blue !important;
+            background: @color-blue  !important;
         }
     }
 
@@ -246,10 +246,60 @@ ul {
         }
     }
 
+    // Lang Switcher
+    .lang-switcher {
+        margin-left: auto;
+        margin-right: 10px;
+
+        .langs {
+            display: flex;
+            width: 40px;
+            overflow: hidden;
+            transition: @transition-2ms;
+
+            &:hover {
+                width: 80px;
+
+                .lang-item.active {
+                    &:before {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        .lang-item {
+            position: relative;
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: @color-blue-light;
+                transition: @transition-2ms;
+            }
+        }
+
+        .lang-link {
+            display: block;
+            width: 40px;
+            padding: 10px 0;
+            color: #fff;
+            text-align: center;
+            transition: @transition-2ms;
+
+            &:hover {
+                color: @color-blue-light;
+            }
+        }
+    }
+
     // User Info
     .user-info {
         height: 100%;
-        margin-left: auto;
     }
 
     // Search
@@ -364,7 +414,7 @@ ul {
         line-height: 1;
         margin-bottom: 20px;
         color: @color-blue-light;
-        transform: translate3d(0, -250%, 0);
+        transform: translate3d(0, -150%, 0);
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
@@ -374,7 +424,7 @@ ul {
     .section-title {
         margin-bottom: 20px;
         text-transform: capitalize;
-        transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-70%, 0, 0);
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
@@ -385,7 +435,7 @@ ul {
         margin-bottom: 20px;
         font-size: 1.5rem;
         line-height: 1.5;
-        transform: translate3d(-150%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
@@ -394,7 +444,7 @@ ul {
     // Article Author
     .section-author {
         margin-bottom: 30px;
-        transform: translate3d(0, 150%, 0);
+        transform: translate3d(0, 120%, 0);
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
@@ -417,7 +467,7 @@ ul {
         background: fade(@color-green, 30%);
         font-size: 1.3rem;
         text-transform: uppercase;
-        transform: translate3d(0, 200%, 0);
+        transform: translate3d(0, 150%, 0);
         opacity: 0;
         transition: @transition-8ms, background .2s;
 
