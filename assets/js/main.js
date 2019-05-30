@@ -225,11 +225,7 @@ $(document).ready(function () {
                 activePanel.addClass('active');
             });
 
-            if (dir === 'next') {
-                activePanelIndex++;
-            } else if (dir === 'prev') {
-                activePanelIndex--;
-            }
+            activePanelIndex = shiftIndex;
 
             togglePagers(shiftIndex);
         } else {
