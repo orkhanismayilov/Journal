@@ -15,6 +15,7 @@
 @header-height: 85px;
 
 @transition-2ms: all .2s;
+@transition-3ms: all .3s;
 @transition-4ms: all .4s;
 @transition-8ms: all .8s;
 
@@ -418,6 +419,7 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
+        will-change: transform;
     }
 
     // Article Title
@@ -428,6 +430,7 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
+        will-change: transform;
     }
 
     // Article Description
@@ -439,6 +442,7 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
+        will-change: transform;
     }
 
     // Article Author
@@ -448,6 +452,7 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
+        will-change: transform;
 
         i {
             margin-right: 5px;
@@ -470,6 +475,7 @@ ul {
         transform: translate3d(0, 150%, 0);
         opacity: 0;
         transition: @transition-8ms, background .2s;
+        will-change: transform;
 
         i {
             margin-left: 15px;
@@ -505,6 +511,7 @@ ul {
         background-size: cover;
         background-repeat: no-repeat;
         transition: @transition-4ms ease-in-out;
+        will-change: transform;        
 
         &.active {
             transform: translate3d(-100%, 0, 0);
@@ -592,6 +599,7 @@ ul {
                 height: 100%;
                 background: @color-green;
                 transition: @transition-2ms;
+                will-change: transform;
                 z-index: -1;
             }
 
@@ -607,13 +615,17 @@ ul {
 // Categories Wrapper
 #categories-wrapper {
     padding: 150px 0;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     // Categories Title
     .categories-title {
         text-align: center;
         text-transform: capitalize;
         margin-bottom: 50px;
-        color: @color-blue;
+        color: #fff;
+        text-shadow: 0 0 10px fade(@color-black, 65%);
     }
 
     // Categories List
@@ -631,12 +643,12 @@ ul {
 
         &:hover {
             .category-img {
-                transform: scale(1.2);
+                transform: scale(1.3);
                 filter: blur(10px);
             }
 
             .category-title {
-                top: 50%;
+                transform: translate3d(-50%, 240%, 0);
                 opacity: 1;
             }
         }
@@ -653,15 +665,17 @@ ul {
 
     // Category Image
     .category-img {
-        transition: @transition-4ms;
+        transition: @transition-3ms ease-in-out;
+        transform: scale(1.05);
+        will-change: transform;
     }
 
     // Category Title
     .category-title {
         position: absolute;
-        top: 65%;
+        top: 0;
         left: 50%;
-        transform: translate3d(-50%, -50%, 0);
+        transform: translate3d(-50%, 350%, 0);
         padding: 10px 15px;
         font-size: 1.7rem;
         font-weight: 900;
@@ -673,6 +687,7 @@ ul {
         border-radius: 3px;
         opacity: 0;
         transition: @transition-4ms;
+        will-change: transform;
     }
 }
 
@@ -708,7 +723,7 @@ ul {
             height: 100%;
             transform: translate(-50%, 0);
             border-radius: 2px;
-            background: fade(#fff, 70%);
+            background: lighten(#000, 80%);
         }
 
         &.active {
