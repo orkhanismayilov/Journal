@@ -22,9 +22,16 @@ $(document).ready(function () {
         var menuTrigger = $('#menu-trigger');
 
         menuTrigger.click(function () {
+            // Toggle Hamburger State
             menuTrigger.toggleClass('is-active');
+
+            // Toggle Main Menu
             mainMenu.toggleClass('active');
+
+            // Toggle Search Bar and Logo Background
             $header.toggleClass('menu-opened');
+
+            // Toggle Sections Scroll Event
             $B.toggleClass('menu-opened');
         });
     }

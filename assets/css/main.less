@@ -12,6 +12,9 @@
 
 @color-black: #333;
 
+@color-gray: #ccc;
+@color-gray-light: #dedede;
+
 @header-height: 85px;
 
 @transition-2ms: all .2s;
@@ -173,11 +176,12 @@ ul {
         }
 
         .logo {
+            width: 215px;
             background: @color-blue  !important;
         }
 
         #search-form-header {
-            width: ~'calc(100vw - 185px)' !important;
+            width: ~'calc(100vw - 300px)' !important;
         }
 
         .btn-search {
@@ -229,7 +233,7 @@ ul {
     .logo {
         width: 100px;
         height: 100%;
-        transition: @transition-4ms;
+        transition: @transition-3ms;
         transition-delay: .4s;
         z-index: 2;
 
@@ -242,6 +246,7 @@ ul {
         // Logo Link
         a {
             display: block;
+            width: 100px;
             height: 100%;
             padding: 0 20px;
         }
@@ -331,9 +336,9 @@ ul {
             top: 0;
             right: 0;
             width: 0;
-            height: 100%;
+            height: @header-height;
             z-index: -1;
-            transition: all .4s ease-in-out;
+            transition: @transition-4ms ease-in-out;
         }
 
         label {
@@ -367,19 +372,179 @@ ul {
         clip-path: circle(200% at 0 0);
     }
 
+    // Main Menu Content Container
     .mm-content {
-        height: 500px;
         padding-top: @header-height;
         background: #fff;
     }
 
+    // Main Menu Content Wrapper
+    .mm-content-wrapper {
+        display: flex;
+        background: @color-gray-light;
+    }
+
+    // Main Menu Links List Wrapper
+    .mm-list-wrapper {
+        flex: 1 1 300px;
+        max-width: 300px;
+    }
+
+    // Main Menu Links List
+    .mm-list {
+        width: 100%;
+        height: 100%;
+        background: @color-blue;
+
+        // Main Menu List Items
+        .mm-list-item {
+            transition: @transition-2ms;
+
+            &.active {
+                .mm-list-link {
+                    color: @color-blue-light;
+                }
+            }
+
+            &:hover {
+                .mm-list-link {
+                    color: @color-blue-light;
+                }
+            }
+        }
+
+        // Main Menu Item Links
+        .mm-list-link {
+            display: flex;
+            padding: 30px;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+            transition: @transition-2ms;
+
+            i {
+                margin-left: 10px;
+                font-size: 1.3rem;
+                line-height: 1rem;
+                color: @color-blue-light;
+            }
+        }
+    }
+
+    // Main Menu Submenu
+    .mm-submenu {
+        flex: 1 1 ~'calc(100% - 300px)';
+        max-width: ~'calc(100% - 300px)';
+
+        // Main Menu Submenu Item
+        .mm-submenu-item {
+            padding: 20px 30px;
+            text-transform: capitalize;
+        }
+
+        // Main Menu Submenu Title
+        .submenu-title {
+            color: @color-blue;
+            margin-bottom: 20px;
+        }
+    }
+
+    // Main Menu Submenu List with Images
+    .submenu-image-list {
+        display: flex;
+        margin: 0 -10px;
+
+        // Submenu Item with Image
+        .submenu-image-item {
+            width: 20%;
+            padding: 0 10px;
+        }
+
+        // Submenu Link with Image
+        .submenu-image-link {
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                .overlay {
+                    clip-path: circle(70.7% at 50% 50%);
+                    opacity: 1;
+                }
+            }
+        }
+
+        // Submenu Link Figure
+        .submenu-figure {
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+
+            // Overlay
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: fade(@color-blue, 70%);
+                opacity: 0;
+                clip-path: circle(0 at 50% 50%);
+                transition: @transition-4ms;
+            }
+
+            // Overlay Title{
+            .overlay-title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                padding: 0 10px;
+                transform: translate(-50%, -50%);
+                font-size: 1.5rem;
+                font-weight: 700;
+                line-height: 1;
+                color: #fff;
+                text-transform: uppercase;
+                text-align: center;
+            }
+
+            // Overlay Explore
+            .overlay-explore {
+                display: block;
+                margin-top: 10px;
+                color: @color-green-light;
+                font-size: 1.2rem;
+                font-weight: 300;
+                text-transform: uppercase;
+
+                i {
+                    font-size: 1rem;
+                    margin-left: 10px;
+                    vertical-align: 1px;
+                }
+            }
+        }
+
+        // Submenu Date
+        .date {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 300;
+            color: @color-blue;
+            text-transform: capitalize;
+            text-align: center;
+        }
+    }
+
+    // Main Menu Backdrop Overlay
     .mm-overlay {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: fade(@color-black, 75%);
+        background: fade(#000, 65%);
         z-index: -1;
     }
 }
