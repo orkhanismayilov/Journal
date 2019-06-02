@@ -2,6 +2,12 @@ $(document).ready(function () {
 
     'use strict';
 
+    // Global Variables
+    var $W = $(window),
+        $D = $(document),
+        $B = $('body'),
+        $header = $('#header');
+
     // Force Page to Load from Top
     $(this).scrollTop(0);
 
@@ -13,14 +19,13 @@ $(document).ready(function () {
     // Menu Trigger
     var mainMenu = $('#main-menu');
     if (mainMenu.length > 0) {
-        var menuTrigger = $('#menu-trigger'),
-            header = $('#header');
+        var menuTrigger = $('#menu-trigger');
 
         menuTrigger.click(function () {
             menuTrigger.toggleClass('is-active');
             mainMenu.toggleClass('active');
-
-            header.toggleClass('menu-opened');
+            $header.toggleClass('menu-opened');
+            $B.toggleClass('menu-opened');
         });
     }
 
@@ -47,13 +52,13 @@ $(document).ready(function () {
             });
 
             // Close on ESC Key
-            $(document).on('keyup', closeOnEsc);
+            $D.on('keyup', closeOnEsc);
 
             // Close on ESC Key Function
             function closeOnEsc(e) {
                 if (e.keyCode === 27) {
                     searchInput.blur();
-                    $(document).off('keyup', closeOnEsc);
+                    $D.off('keyup', closeOnEsc);
                 }
             }
         });
@@ -162,7 +167,8 @@ $(document).ready(function () {
         var activePanel = panels.first(),
             activePanelIndex = activePanel.data('panel'),
             zIndex = 0,
-            animating = false;
+            animating = false,
+            menuOpened = $B.hasClass('menu-opened');
 
         // Changing Panels Z-Index and Initializing Active
         panels.each(function () {
@@ -176,12 +182,13 @@ $(document).ready(function () {
         });
 
         // Scroll to Section on Mouse Scroll
-        $(document).on('mousewheel', function (e) {
+        $D.on('mousewheel', function (e) {
             e = e || window.event;
+            menuOpened = $B.hasClass('menu-opened');
 
-            if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel')) {
+            if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel') && !menuOpened) {
                 togglePanels('next');
-            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel')) {
+            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel')  && !menuOpened) {
                 togglePanels('prev');
             }
         });
@@ -190,8 +197,6 @@ $(document).ready(function () {
     // Pagers Scroll
     var pagers = $('.pager-item');
     if (pagers.length > 0) {
-        var activePager = pagers.first();
-
         pagers.click(function () {
             var shiftIndex = $(this).data('panel');
 
