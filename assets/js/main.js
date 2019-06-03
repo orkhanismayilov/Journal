@@ -19,22 +19,11 @@ $(document).ready(function () {
     // Menu Trigger
     var mainMenu = $('#main-menu');
     if (mainMenu.length > 0) {
-        var menuTrigger = $('#menu-trigger');
+        var menuTrigger = $('#menu-trigger'),
+            overlay = mainMenu.find('.mm-overlay');
 
         // Openin/Closing Main Menu
-        menuTrigger.click(function () {
-            // Toggle Hamburger State
-            menuTrigger.toggleClass('is-active');
-
-            // Toggle Main Menu
-            mainMenu.toggleClass('active');
-
-            // Toggle Search Bar and Logo Background
-            $header.toggleClass('menu-opened');
-
-            // Toggle Sections Scroll Event
-            $B.toggleClass('menu-opened');
-        });
+        menuTrigger.click(toggleMainMenu);
 
         var subMenuTriggers = mainMenu.find('.mm-list-link.has-submenu'),
             submenus = mainMenu.find('.mm-submenu-item'),
@@ -59,6 +48,24 @@ $(document).ready(function () {
 
             return false;
         });
+
+        // Close Menu on Outside Click
+        overlay.click(toggleMainMenu);
+
+        // Toggle Main Menu
+        function toggleMainMenu() {
+            // Toggle Hamburger State
+            menuTrigger.toggleClass('is-active');
+
+            // Toggle Main Menu
+            mainMenu.toggleClass('active');
+
+            // Toggle Search Bar and Logo Background
+            $header.toggleClass('menu-opened');
+
+            // Toggle Sections Scroll Event
+            $B.toggleClass('menu-opened');
+        }
     }
 
     // Search Trigger [Header]

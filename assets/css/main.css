@@ -439,6 +439,7 @@ ul {
 #main-menu .mm-content {
   padding-top: 85px;
   background: #fff;
+  overflow: hidden;
 }
 #main-menu .mm-content-wrapper {
   display: flex;
@@ -505,6 +506,7 @@ ul {
 }
 #main-menu .submenu-image-list .submenu-image-item.w-33 {
   width: 33.3333%;
+  margin-bottom: 20px;
 }
 #main-menu .submenu-image-list .submenu-image-link {
   display: block;
@@ -520,9 +522,11 @@ ul {
   filter: blur(5px);
 }
 #main-menu .submenu-image-list .submenu-figure {
-  margin-bottom: 20px;
   position: relative;
   overflow: hidden;
+}
+#main-menu .submenu-image-list .submenu-figure:not(:last-child) {
+  margin-bottom: 20px;
 }
 #main-menu .submenu-image-list .submenu-figure .overlay {
   position: absolute;

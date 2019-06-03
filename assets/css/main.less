@@ -376,6 +376,7 @@ ul {
     .mm-content {
         padding-top: @header-height;
         background: #fff;
+        overflow: hidden;
     }
 
     // Main Menu Content Wrapper
@@ -470,6 +471,7 @@ ul {
 
             &.w-33 {
                 width: 33.3333%;
+                margin-bottom: 20px;
             }
         }
 
@@ -496,9 +498,12 @@ ul {
 
         // Submenu Link Figure
         .submenu-figure {
-            margin-bottom: 20px;
             position: relative;
             overflow: hidden;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
 
             // Overlay
             .overlay {
