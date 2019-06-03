@@ -11,9 +11,16 @@ $(document).ready(function () {
     // Force Page to Load from Top
     $(this).scrollTop(0);
 
-    // Particles
-    particlesJS.load('particles', 'assets/js/particles.json', function () {
-        // console.log('callback - particles.js config loaded');
+    // Page Load
+    $W.on('load', function () {
+
+        // Hide Preloader on Page Load
+        $('#preloader').fadeOut('fast');
+
+        // Init Particles on Page Load
+        particlesJS.load('particles', 'assets/js/particles.json', function () {
+            // console.log('callback - particles.js config loaded');
+        });
     });
 
     // Menu Trigger
@@ -210,15 +217,17 @@ $(document).ready(function () {
             menuOpened = $B.hasClass('menu-opened');
 
         // Changing Panels Z-Index and Initializing Active
-        panels.each(function () {
-            $(this).css('z-index', zIndex);
+        $W.on('load', function () {
+            panels.each(function () {
+                $(this).css('z-index', zIndex);
 
-            if (zIndex === 0) {
-                $(this).fadeIn().addClass('active');
-            }
+                if (zIndex === 0) {
+                    $(this).fadeIn().addClass('active');
+                }
 
-            zIndex--;
-        });
+                zIndex--;
+            });
+        })
 
         // Scroll to Section on Mouse Scroll
         $D.on('mousewheel', function (e) {
