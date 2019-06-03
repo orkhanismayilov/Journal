@@ -21,6 +21,7 @@ $(document).ready(function () {
     if (mainMenu.length > 0) {
         var menuTrigger = $('#menu-trigger');
 
+        // Openin/Closing Main Menu
         menuTrigger.click(function () {
             // Toggle Hamburger State
             menuTrigger.toggleClass('is-active');
@@ -33,6 +34,30 @@ $(document).ready(function () {
 
             // Toggle Sections Scroll Event
             $B.toggleClass('menu-opened');
+        });
+
+        var subMenuTriggers = mainMenu.find('.mm-list-link.has-submenu'),
+            submenus = mainMenu.find('.mm-submenu-item'),
+            activeSubmenu = mainMenu.find('.mm-submenu-item.active');
+
+        subMenuTriggers.click(function () {
+            var that = $(this),
+                targetID = that.data('submenu');
+
+            if ('#' + activeSubmenu.prop('id') !== targetID) {
+                activeSubmenu.slideUp(300, function () {
+                    activeSubmenu.removeClass('active');
+
+                    activeSubmenu = $(targetID).slideDown(300, function () {
+                        activeSubmenu.addClass('active');
+                    });
+                });
+
+                that.parent().siblings().removeClass('active');
+                that.parent().addClass('active');
+            }
+
+            return false;
         });
     }
 
@@ -195,7 +220,7 @@ $(document).ready(function () {
 
             if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel') && !menuOpened) {
                 togglePanels('next');
-            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel')  && !menuOpened) {
+            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel') && !menuOpened) {
                 togglePanels('prev');
             }
         });
