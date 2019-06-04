@@ -146,6 +146,38 @@ ul {
     }
 }
 
+// Subscribe Button
+.btn-subscribe {
+    padding: 25px 60px;
+    border-radius: 3px;
+    position: relative;
+    background: @color-green;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover:before {
+        clip-path: circle(150% at 100% 0);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: @color-blue;
+        transition: @transition-4ms;
+        clip-path: circle(0 at 100% 0);
+        z-index: -1;
+    }
+}
+
 // Form Control
 .form-control {
     border: none;
@@ -493,6 +525,11 @@ ul {
                 width: 33.3333%;
                 margin-bottom: 20px;
             }
+
+            &.w-16 {
+                width: 16.6667%;
+                margin-bottom: 20px;
+            }
         }
 
         // Submenu Link with Image
@@ -622,6 +659,11 @@ ul {
             transform: translate3d(0, 0, 0);
             opacity: 1;
         }
+
+        &.long {
+            position: static;
+            height: auto;
+        }
     }
 
     // Section Link
@@ -654,7 +696,6 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
-        will-change: transform;
     }
 
     // Article Title
@@ -665,7 +706,6 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
-        will-change: transform;
     }
 
     // Article Description
@@ -677,7 +717,6 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
-        will-change: transform;
     }
 
     // Article Author
@@ -687,7 +726,6 @@ ul {
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
-        will-change: transform;
 
         i {
             margin-right: 5px;
@@ -710,7 +748,6 @@ ul {
         transform: translate3d(0, 150%, 0);
         opacity: 0;
         transition: @transition-8ms, background .2s;
-        will-change: transform;
 
         i {
             margin-left: 15px;
@@ -746,7 +783,6 @@ ul {
         background-size: cover;
         background-repeat: no-repeat;
         transition: @transition-4ms ease-in-out;
-        will-change: transform;
 
         &.active {
             transform: translate3d(-100%, 0, 0);
@@ -834,7 +870,6 @@ ul {
                 height: 100%;
                 background: @color-green;
                 transition: @transition-2ms;
-                will-change: transform;
                 z-index: -1;
             }
 
@@ -923,6 +958,23 @@ ul {
         opacity: 0;
         transition: @transition-4ms;
         will-change: transform;
+    }
+}
+
+// Subscribe Wrapper
+.subscribe-wrapper {
+    padding: 50px 0;
+    text-align: center;
+
+    // Subscribe Title
+    .subscribe-title {
+        margin-bottom: 10px;
+    }
+
+    // Subscribe Description
+    .subscribe-desc {
+        color: @color-blue;
+        margin-bottom: 30px;
     }
 }
 

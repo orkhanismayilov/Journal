@@ -236,7 +236,7 @@ $(document).ready(function () {
 
             if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel') && !menuOpened) {
                 togglePanels('next');
-            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel') && !menuOpened) {
+            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel') && $D.scrollTop() === 0 && !menuOpened) {
                 togglePanels('prev');
             }
         });
@@ -256,8 +256,6 @@ $(document).ready(function () {
 
     // Toggle Panels Function
     function togglePanels(dir, shiftIndex) {
-        var shiftIndex;
-
         // Checking Direction and Setting Shift Index
         if (dir === 'next') {
             shiftIndex = activePanelIndex + 1;
@@ -276,6 +274,12 @@ $(document).ready(function () {
             activePanel.fadeIn(function () {
                 animating = false;
                 activePanel.addClass('active');
+
+                if (activePanelIndex === panels.last().data('panel')) {
+                    $B.height(panels.last().outerHeight(true));
+                } else {
+                    $B.height(0);
+                }
             });
 
             activePanelIndex = shiftIndex;
