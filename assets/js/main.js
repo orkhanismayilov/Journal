@@ -274,15 +274,15 @@ $(document).ready(function () {
             activePanel.fadeIn(function () {
                 animating = false;
                 activePanel.addClass('active');
-
-                if (activePanelIndex === panels.last().data('panel')) {
-                    $B.height(panels.last().outerHeight(true));
-                } else {
-                    $B.height(0);
-                }
             });
 
             activePanelIndex = shiftIndex;
+
+            if (activePanelIndex === panels.last().data('panel')) {
+                $B.height(panels.last().outerHeight(true));
+            } else {
+                $B.height(0);
+            }
 
             togglePagers(shiftIndex);
         } else {
