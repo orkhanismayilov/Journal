@@ -265,25 +265,33 @@ $(document).ready(function () {
 
         // Checking Animating State and Going On
         if (!animating) {
+            // Set Animation State
             animating = true;
 
+            // Animating out Active Panel
             activePanel.fadeOut();
             activePanel.removeClass('active');
 
+            // Updating and Animating in Next Panel
             activePanel = $(panels[shiftIndex]);
             activePanel.fadeIn(function () {
-                animating = false;
                 activePanel.addClass('active');
+
+                // Unset Animation State
+                animating = false;
             });
 
+            // Update Active Panel Index
             activePanelIndex = shiftIndex;
 
+            // Add/Remove Scrollbar
             if (activePanelIndex === panels.last().data('panel')) {
                 $B.height(panels.last().outerHeight(true));
             } else {
                 $B.height(0);
             }
 
+            // Update Pagers
             togglePagers(shiftIndex);
         } else {
             return false;
