@@ -1339,6 +1339,7 @@ ul {
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
+  overflow: hidden;
   z-index: 1;
   cursor: pointer;
 }
@@ -1931,7 +1932,7 @@ ul {
 #categories-wrapper .category-img {
   transition: all 0.3s ease-in-out;
   transform: scale(1.05);
-  will-change: transform;
+  will-change: transform, filter;
 }
 #categories-wrapper .category-title {
   position: absolute;
@@ -1956,7 +1957,7 @@ ul {
   text-align: center;
 }
 .subscribe-wrapper .subscribe-title {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .subscribe-wrapper .subscribe-desc {
   color: #051c2c;

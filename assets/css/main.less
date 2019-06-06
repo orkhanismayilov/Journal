@@ -157,6 +157,7 @@ ul {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
+    overflow: hidden;
     z-index: 1;
     cursor: pointer;
 
@@ -937,7 +938,7 @@ ul {
     .category-img {
         transition: @transition-3ms ease-in-out;
         transform: scale(1.05);
-        will-change: transform;
+        will-change: transform, filter;
     }
 
     // Category Title
@@ -968,7 +969,7 @@ ul {
 
     // Subscribe Title
     .subscribe-title {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
 
     // Subscribe Description
