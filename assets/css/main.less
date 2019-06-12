@@ -964,7 +964,8 @@ ul {
 
             .category-title {
                 transform: translate3d(-50%, 240%, 0);
-                opacity: 1;
+                background: @color-green;
+                color: #fff;
             }
         }
     }
@@ -990,17 +991,15 @@ ul {
         position: absolute;
         top: 0;
         left: 50%;
-        transform: translate3d(-50%, 350%, 0);
+        transform: translate3d(-50%, 450%, 0);
         padding: 10px 15px;
         font-size: 1.7rem;
         font-weight: 900;
         letter-spacing: 2px;
         text-align: center;
         text-transform: uppercase;
-        background: @color-green;
-        color: #fff;
+        color: fade(#fff, 75%);
         border-radius: 3px;
-        opacity: 0;
         transition: @transition-4ms;
         will-change: transform;
     }
