@@ -1302,9 +1302,11 @@ ul {
   font-size: 1rem;
 }
 .btn-login {
+  display: flex;
   height: 100%;
   padding: 15px 25px;
-  color: #fff;
+  align-items: center;
+  color: #fff !important;
   text-transform: uppercase;
   transition: all 0.2s;
   cursor: pointer;
@@ -1330,6 +1332,27 @@ ul {
 .btn-search i {
   font-size: 1.7rem;
 }
+.btn-primary {
+  display: block;
+  padding: 15px 20px;
+  margin-left: auto;
+  border: 2px solid #051c2c;
+  background: #051c2c;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background: #fff;
+  color: #051c2c;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.7);
+  transform: translateY(-3px);
+}
+.btn-primary i {
+  margin-left: 10px;
+}
 .btn-arrow-right {
   width: 50px;
   height: 50px;
@@ -1354,9 +1377,16 @@ ul {
   line-height: 50px;
 }
 .form-control {
+  display: block;
   border: none;
   box-shadow: none;
   outline: none;
+}
+.form-group {
+  margin-bottom: 30px;
+}
+.form-group label {
+  display: block;
 }
 #preloader {
   position: fixed;
@@ -1388,11 +1418,16 @@ ul {
   left: 0;
   width: 100%;
 }
-#header.menu-opened .hamburger {
-  background: #051c2c !important;
+#header.dark {
+  background: #051c2c;
 }
-#header.menu-opened .logo {
-  width: 215px;
+#header.dark .btn-search:hover {
+  color: #00a9f4;
+}
+#header.dark .btn-login:hover {
+  color: #00a9f4 !important;
+}
+#header.menu-opened .hamburger {
   background: #051c2c !important;
 }
 #header.menu-opened #search-form-header {
@@ -1436,12 +1471,14 @@ ul {
 #header .logo {
   width: 100px;
   height: 100%;
-  transition: all 0.3s;
-  transition-delay: .4s;
   z-index: 2;
 }
 #header .logo:hover img {
   filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
+}
+#header .logo.menu-opened {
+  width: 215px;
+  background: #051c2c !important;
 }
 #header .logo a {
   display: block;
@@ -1544,7 +1581,7 @@ ul {
 }
 #main-menu .mm-content {
   padding-top: 85px;
-  background: #fff;
+  background: #051c2c;
   overflow: hidden;
 }
 #main-menu .mm-content-wrapper {
@@ -1947,8 +1984,99 @@ ul {
   transition: all 0.4s;
   will-change: transform;
 }
+#login-signup-page {
+  width: 100%;
+  padding: 180px 0 100px;
+}
+#login-signup-page .tabs-wrapper {
+  width: 600px;
+  margin: 0 auto;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(51, 51, 51, 0.5);
+  transition: all 0.4s;
+}
+#login-signup-page .tab-links-wrapper {
+  display: flex;
+}
+#login-signup-page .tab-link {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 30px;
+  background: #051c2c;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: .5;
+  transition: all 0.3s;
+}
+#login-signup-page .tab-link:last-child {
+  border-left: 1px solid #dedede;
+}
+#login-signup-page .tab-link:not(.active):hover {
+  background: #197a56;
+}
+#login-signup-page .tab-link.active {
+  border-bottom: none;
+  opacity: 1;
+}
+#login-signup-page .tab-link i {
+  margin-right: 7px;
+  font-size: 1.2rem;
+}
+#login-signup-page .tab-header {
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+#login-signup-page .tab-contents-wrapper {
+  padding: 50px;
+}
+#login-signup-page .tab-content {
+  display: none;
+}
+#login-signup-page .tab-content.active {
+  display: block;
+}
+#login-signup-page .form-group {
+  margin-bottom: 40px;
+}
+#login-signup-page .form-control {
+  width: 100%;
+  height: 60px;
+  margin-top: 15px;
+  padding: 10px 15px;
+  color: #051c2c;
+  font-size: 1.1rem;
+  border: 1px solid #333;
+  border-radius: 3px;
+  transition: all 0.4s;
+}
+#login-signup-page .form-control:focus {
+  box-shadow: 0 0 10px rgba(5, 28, 44, 0.5);
+}
+#login-signup-page .signup-tip {
+  margin-bottom: 20px;
+  color: #333;
+  line-height: 1.5;
+}
+#login-signup-page .signup-tip a {
+  color: #00a9f4;
+  font-size: 1.1rem;
+  font-weight: 900;
+  transition: all 0.2s;
+}
+#login-signup-page .signup-tip a:hover {
+  text-decoration: underline;
+  color: #1F40E6;
+}
 #footer {
   padding: 70px 0 20px;
+}
+#footer.border-top {
+  border-top: 2px solid #051c2c;
+  padding-top: 50px;
 }
 #footer .footer-row {
   display: flex;

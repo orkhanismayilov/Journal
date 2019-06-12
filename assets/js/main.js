@@ -18,22 +18,25 @@ $(document).ready(function () {
         $('#preloader').fadeOut('fast');
 
         // Init Particles on Page Load
-        particlesJS.load('particles', 'assets/js/particles.json', function () {
-            // console.log('callback - particles.js config loaded');
-        });
+        var particlesContainer = $('#particles');
+        if (particlesContainer.length > 0) {
+            particlesJS.load('particles', 'assets/js/particles.json', function () {
+                // console.log('callback - particles.js config loaded');
+            });
+        }
     });
 
     // Menu Trigger
     var mainMenu = $('#main-menu');
     if (mainMenu.length > 0) {
         var menuTrigger = $('#menu-trigger'),
+            logo = $header.find('.logo'),
             overlay = mainMenu.find('.mm-overlay');
 
         // Openin/Closing Main Menu
         menuTrigger.click(toggleMainMenu);
 
         var subMenuTriggers = mainMenu.find('.mm-list-link.has-submenu'),
-            submenus = mainMenu.find('.mm-submenu-item'),
             activeSubmenu = mainMenu.find('.mm-submenu-item.active');
 
         subMenuTriggers.click(function () {
@@ -252,6 +255,50 @@ $(document).ready(function () {
                 togglePanels(null, shiftIndex);
             }
         });
+    }
+
+    // Toggle Login SignUp Forms
+    var lsPage = $('#login-signup-page');
+    if (lsPage.length > 0) {
+        var tabLinks = lsPage.find('.tab-link'),
+            trigger,
+            target;
+
+        // Toggle Tab Contents on Tab Link Click
+        tabLinks.click(function () {
+            trigger = $(this);
+            target = $(trigger.attr('href'));
+
+            toggleTabContent(trigger, target);
+
+            // Prevent Default
+            return false;
+        });
+
+        // Toggle Tab Contents from URL hash
+        var hash = window.location.hash;
+        if (hash != '') {
+            trigger = $('[href="' + hash + '"]');
+
+            if (!trigger.hasClass('active')) {
+                target = $(hash);
+
+                toggleTabContent(trigger, target);
+            }
+        }
+
+        // Tab Content Toggle Function
+        function toggleTabContent(trigger, target) {
+            // Toggle Tab Links
+            trigger.siblings('.tab-link').removeClass('active');
+            trigger.addClass('active');
+
+            // Toggle Tab Contents
+            target.siblings('.tab-content').hide().removeClass('active');
+            target.fadeIn(function () {
+                target.addClass('active');
+            });
+        }
     }
 
     // Toggle Panels Function

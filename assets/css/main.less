@@ -112,9 +112,11 @@ ul {
 
 // Login Button
 .btn-login {
+    display: flex;
     height: 100%;
     padding: 15px 25px;
-    color: #fff;
+    align-items: center;
+    color: #fff !important;
     text-transform: uppercase;
     transition: @transition-2ms;
     cursor: pointer;
@@ -147,6 +149,32 @@ ul {
     }
 }
 
+// Primary Button
+.btn-primary {
+    display: block;
+    padding: 15px 20px;
+    margin-left: auto;
+    border: 2px solid @color-blue;
+    background: @color-blue;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: @transition-2ms;
+    cursor: pointer;
+
+    &:hover {
+        background: #fff;
+        color: @color-blue;
+        box-shadow: 0 0 10px fade(@color-black, 70%);
+        transform: translateY(-3px);
+    }
+
+    i {
+        margin-left: 10px;
+    }
+}
+
+// Right Arrow Button
 .btn-arrow-right {
     width: 50px;
     height: 50px;
@@ -175,9 +203,19 @@ ul {
 
 // Form Control
 .form-control {
+    display: block;
     border: none;
     box-shadow: none;
     outline: none;
+}
+
+// Form Group
+.form-group {
+    margin-bottom: 30px;
+
+    label {
+        display: block;
+    }
 }
 
 // Preloader
@@ -216,14 +254,22 @@ ul {
         width: 100%;
     }
 
+    // Dark Header
+    &.dark {
+        background: @color-blue;
+
+        .btn-search:hover {
+            color: @color-blue-light;
+        }
+
+        .btn-login:hover {
+            color: @color-blue-light  !important;
+        }
+    }
+
     // Menu Opened
     &.menu-opened {
         .hamburger {
-            background: @color-blue  !important;
-        }
-
-        .logo {
-            width: 215px;
             background: @color-blue  !important;
         }
 
@@ -280,14 +326,18 @@ ul {
     .logo {
         width: 100px;
         height: 100%;
-        transition: @transition-3ms;
-        transition-delay: .4s;
         z-index: 2;
 
         &:hover {
             img {
                 filter: drop-shadow(0 0 5px fade(#fff, 50%));
             }
+        }
+
+        // Menu Opened
+        &.menu-opened {
+            width: 215px;
+            background: @color-blue  !important;
         }
 
         // Logo Link
@@ -422,7 +472,7 @@ ul {
     // Main Menu Content Container
     .mm-content {
         padding-top: @header-height;
-        background: #fff;
+        background: @color-blue;
         overflow: hidden;
     }
 
@@ -956,9 +1006,129 @@ ul {
     }
 }
 
+// Login SignUp Page
+#login-signup-page {
+    width: 100%;
+    padding: 180px 0 100px;
+
+    // Tabs Wrapper
+    .tabs-wrapper {
+        width: 600px;
+        margin: 0 auto;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 0 10px fade(@color-black, 50%);
+        transition: @transition-4ms;
+    }
+
+    // Tab Links Wrapper
+    .tab-links-wrapper {
+        display: flex;
+    }
+
+    // Tab Link
+    .tab-link {
+        flex: 1 1 50%;
+        max-width: 50%;
+        padding: 30px;
+        background: @color-blue;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        opacity: .5;
+        transition: @transition-3ms;
+
+        &:last-child {
+            border-left: 1px solid @color-gray-light;
+        }
+
+        &:not(.active):hover {
+            background: @color-green;
+        }
+
+        &.active {
+            border-bottom: none;
+            opacity: 1;
+        }
+
+        i {
+            margin-right: 7px;
+            font-size: 1.2rem;
+        }
+    }
+
+    // Tab Header
+    .tab-header {
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    // Tab Contents Wrapper
+    .tab-contents-wrapper {
+        padding: 50px;
+    }
+
+    // Tab Content
+    .tab-content {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    // Tab Form Group
+    .form-group {
+        margin-bottom: 40px;
+    }
+
+    // Tab Form Control
+    .form-control {
+        width: 100%;
+        height: 60px;
+        margin-top: 15px;
+        padding: 10px 15px;
+        color: @color-blue;
+        font-size: 1.1rem;
+        border: 1px solid @color-black;
+        border-radius: 3px;
+        transition: @transition-4ms;
+
+        &:focus {
+            box-shadow: 0 0 10px fade(@color-blue, 50%);
+        }
+    }
+
+    // Signup Tip
+    .signup-tip {
+        margin-bottom: 20px;
+        color: @color-black;
+        line-height: 1.5;
+
+        a {
+            color: @color-blue-light;
+            font-size: 1.1rem;
+            font-weight: 900;
+            transition: @transition-2ms;
+
+            &:hover {
+                text-decoration: underline;
+                color: @color-blue-medium;
+            }
+        }
+    }
+}
+
 // Footer
 #footer {
     padding: 70px 0 20px;
+
+    &.border-top {
+        border-top: 2px solid @color-blue;
+        padding-top: 50px;
+    }
 
     // Footer Row
     .footer-row {
