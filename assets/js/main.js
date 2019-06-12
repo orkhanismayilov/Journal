@@ -186,7 +186,7 @@ $(document).ready(function () {
             e = e || window.event;
 
             if (e.type == 'touchend') {
-                diff = posX - e.touches[0].clientX;
+                diff = posX - e.changedTouches[0].clientX;
             } else {
                 diff = posX - e.clientX;
             }
@@ -215,9 +215,12 @@ $(document).ready(function () {
     if (panels.length > 0) {
         var activePanel = panels.first(),
             activePanelIndex = activePanel.data('panel'),
+            shiftIndex = activePanelIndex,
             zIndex = 0,
             animating = false,
-            menuOpened = $B.hasClass('menu-opened');
+            menuOpened = $B.hasClass('menu-opened'),
+            posY = 0,
+            diff = 0;
 
         // Changing Panels Z-Index and Initializing Active
         $W.on('load', function () {
@@ -238,21 +241,69 @@ $(document).ready(function () {
             menuOpened = $B.hasClass('menu-opened');
 
             if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel') && !menuOpened) {
-                togglePanels('next');
+                shiftIndex = activePanelIndex + 1;
+                togglePanels(shiftIndex);
             } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel') && $D.scrollTop() === 0 && !menuOpened) {
-                togglePanels('prev');
+                shiftIndex = activePanelIndex - 1;
+                togglePanels(shiftIndex);
             }
         });
+
+        // // Scroll To Section On TouchDrag
+        // panels.on({
+        //     'touchstart': function () {
+        //         dragStart();
+        //     },
+        //     'touchend': function () {
+        //         dragEnd();
+        //     }
+        // });
+
+        // // Drag Start Function
+        // function dragStart(e) {
+        //     e = e || window.event;
+        //     e.preventDefault();
+
+        //     if (e.type == 'touchstart') {
+        //         posY = e.touches[0].clientY;
+        //     }
+        // }
+
+        // // Drag End Function
+        // function dragEnd(e) {
+        //     e = e || window.event;
+
+        //     if (e.type == 'touchend') {
+        //         diff = posY - e.touches[0].clientY;
+
+        //         if (diff < -treshold) {
+        //             if (activePanelIndex - 1 >= 0) {
+        //                 shiftIndex = activePanelIndex - 1;
+
+        //                 togglePanels(shiftIndex);
+        //             }
+        //         } else if (diff > treshold) {
+        //             if (activePanelIndex + 1 < slides.length) {
+        //                 shiftIndex = activePanelIndex + 1;
+
+        //                 togglePanels(shiftIndex);
+        //             }
+        //         }
+        //     }
+
+        //     document.onmouseup = null;
+        //     document.onmousemove = null;
+        // }
     }
 
     // Pagers Scroll
     var pagers = $('.pager-item');
     if (pagers.length > 0) {
         pagers.click(function () {
-            var shiftIndex = $(this).data('panel');
+            shiftIndex = $(this).data('panel');
 
             if (!$(this).hasClass('active')) {
-                togglePanels(null, shiftIndex);
+                togglePanels(shiftIndex);
             }
         });
     }
@@ -302,14 +353,7 @@ $(document).ready(function () {
     }
 
     // Toggle Panels Function
-    function togglePanels(dir, shiftIndex) {
-        // Checking Direction and Setting Shift Index
-        if (dir === 'next') {
-            shiftIndex = activePanelIndex + 1;
-        } else if (dir === 'prev') {
-            shiftIndex = activePanelIndex - 1;
-        }
-
+    function togglePanels(shiftIndex) {
         // Checking Animating State and Going On
         if (!animating) {
             // Set Animation State
