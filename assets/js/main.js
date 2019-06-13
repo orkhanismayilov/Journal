@@ -339,6 +339,17 @@ $(document).ready(function () {
             }
         }
 
+        // Signup Tip Trigger
+        var signupTipTrigger = $('#signup-trigger');
+        signupTipTrigger.click(function () {
+            trigger = $('.tab-link[href="#signup"]');
+            target = $('#signup');
+
+            toggleTabContent(trigger, target);
+
+            return false;
+        });
+
         // Tab Content Toggle Function
         function toggleTabContent(trigger, target) {
             // Toggle Tab Links
