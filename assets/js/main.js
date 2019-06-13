@@ -220,7 +220,8 @@ $(document).ready(function () {
             animating = false,
             menuOpened = $B.hasClass('menu-opened'),
             posY = 0,
-            diff = 0;
+            diff = 0,
+            verticalTreshold = 150;
 
         // Changing Panels Z-Index and Initializing Active
         $W.on('load', function () {
@@ -249,51 +250,51 @@ $(document).ready(function () {
             }
         });
 
-        // // Scroll To Section On TouchDrag
-        // panels.on({
-        //     'touchstart': function () {
-        //         dragStart();
-        //     },
-        //     'touchend': function () {
-        //         dragEnd();
-        //     }
-        // });
+        // Scroll To Section On TouchDrag
+        panels.on({
+            'touchstart': function () {
+                dragStart();
+            },
+            'touchend': function () {
+                dragEnd();
+            }
+        });
 
-        // // Drag Start Function
-        // function dragStart(e) {
-        //     e = e || window.event;
-        //     e.preventDefault();
+        // Drag Start Function
+        function dragStart(e) {
+            e = e || window.event;
+            e.preventDefault();
 
-        //     if (e.type == 'touchstart') {
-        //         posY = e.touches[0].clientY;
-        //     }
-        // }
+            if (e.type == 'touchstart') {
+                posY = e.touches[0].clientY;
+            }
+        }
 
-        // // Drag End Function
-        // function dragEnd(e) {
-        //     e = e || window.event;
+        // Drag End Function
+        function dragEnd(e) {
+            e = e || window.event;
 
-        //     if (e.type == 'touchend') {
-        //         diff = posY - e.touches[0].clientY;
+            if (e.type == 'touchend') {
+                diff = posY - e.changedTouches[0].clientY;
 
-        //         if (diff < -treshold) {
-        //             if (activePanelIndex - 1 >= 0) {
-        //                 shiftIndex = activePanelIndex - 1;
+                if (diff < -verticalTreshold) {
+                    if (activePanelIndex - 1 >= 0) {
+                        shiftIndex = activePanelIndex - 1;
 
-        //                 togglePanels(shiftIndex);
-        //             }
-        //         } else if (diff > treshold) {
-        //             if (activePanelIndex + 1 < slides.length) {
-        //                 shiftIndex = activePanelIndex + 1;
+                        togglePanels(shiftIndex);
+                    }
+                } else if (diff > verticalTreshold) {
+                    if (activePanelIndex + 1 < panels.length) {
+                        shiftIndex = activePanelIndex + 1;
 
-        //                 togglePanels(shiftIndex);
-        //             }
-        //         }
-        //     }
+                        togglePanels(shiftIndex);
+                    }
+                }
+            }
 
-        //     document.onmouseup = null;
-        //     document.onmousemove = null;
-        // }
+            document.onmouseup = null;
+            document.onmousemove = null;
+        }
     }
 
     // Pagers Scroll
