@@ -6,13 +6,14 @@ $(document).ready(function () {
     var $W = $(window),
         $D = $(document),
         $B = $('body'),
-        $header = $('#header');
+        $header = $('#header'),
+        $preloader = $('#preloader');
 
     // Page Load
     $W.on('load', function () {
 
         // Hide Preloader on Page Load
-        $('#preloader').fadeOut('fast');
+        $preloader.fadeOut('fast');
 
         // Init Particles on Page Load
         if ($W.width() > 1024) {
