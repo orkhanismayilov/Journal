@@ -1403,6 +1403,7 @@ ul {
         justify-content: center;
         align-items: center;
 
+        // Scroll Down Mouse Tip
         .mouse {
             background: @colorOutlineFade linear-gradient(transparent 0%, transparent 50%, @colorOutline 50%, @colorOutline 100%);
             position: relative;
@@ -1413,6 +1414,7 @@ ul {
             animation:
                 colorSlide @animDuration linear infinite,
                 nudgeMouse @animDuration ease-out infinite;
+            cursor: pointer;
 
             &:before,
             &:after {

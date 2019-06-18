@@ -8,9 +8,6 @@ $(document).ready(function () {
         $B = $('body'),
         $header = $('#header');
 
-    // Force Page to Load from Top
-    $(this).scrollTop(0);
-
     // Page Load
     $W.on('load', function () {
 
@@ -18,11 +15,13 @@ $(document).ready(function () {
         $('#preloader').fadeOut('fast');
 
         // Init Particles on Page Load
-        var particlesContainer = $('#particles');
-        if (particlesContainer.length > 0) {
-            particlesJS.load('particles', 'assets/js/particles.json', function () {
-                // console.log('callback - particles.js config loaded');
-            });
+        if ($W.width() > 1024) {
+            var particlesContainer = $('#particles');
+            if (particlesContainer.length > 0) {
+                particlesJS.load('particles', 'assets/js/particles.json', function () {
+                    // console.log('callback - particles.js config loaded');
+                });
+            }
         }
     });
 
