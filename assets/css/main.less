@@ -4,9 +4,9 @@
 @import 'preloader';
 
 // Variables
-@color-blue: #051c2c;
-@color-blue-medium: #1F40E6;
-@color-blue-light: #00a9f4;
+@color-blue: #001e3b;
+@color-blue-medium: #004589;
+@color-blue-light: #0080ff;
 
 @color-green: #197a56;
 @color-green-light: #32c77f;
@@ -1321,37 +1321,10 @@ ul {
 // Category Page
 #category-page {
 
-    // Category Landing
-    .category-landing {
-        width: 100%;
-        height: 100vh;
-        min-height: 600px;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-
-    // Category Desctiption
-    .category-desc {
-        position: absolute;
-        width: 50%;
-        bottom: 50px;
-        left: 50%;
-        transform: translateX(-50%);
-        color: #fff;
-        text-align: center;
-        font-size: 1.2rem;
-        line-height: 1.5;
-        letter-spacing: 1px;
-    }
-
     // Category Heading
     .category-heading {
         width: 100%;
         height: 100vh;
-        border-top: 2px solid #fff;
-        border-bottom: 2px solid @color-blue;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -1364,15 +1337,16 @@ ul {
             left: 0;
             width: 100%;
             height: 100%;
-            background: fade(@color-black, 60%);
+            background: fade(@color-black, 70%);
         }
     }
 
     // Category Title Wrapper
     .category-title-wrapper {
         position: absolute;
-        top: 65%;
+        bottom: 50px;
         left: 50%;
+        width: 75%;
         transform: translateX(-50%);
         z-index: 1;
         text-shadow: 0 0 10px fade(@color-black, 70%);
@@ -1383,8 +1357,19 @@ ul {
         font-size: 6rem;
         font-weight: 900;
         text-transform: uppercase;
+        text-align: center;
         color: #fff;
         margin-bottom: 30px;
+    }
+
+    // Category Description
+    .category-desc {
+        text-align: center;
+        color: #fff;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        margin-bottom: 30px;
+        text-shadow: 0 0 10px fade(@color-black, 50%);
     }
 
     // Category Tip
@@ -1655,7 +1640,7 @@ ul {
         &:hover {
             &:before {
                 width: 3px;
-                background: @color-blue-medium;
+                background: @color-blue-light;
             }
         }
 
@@ -1675,7 +1660,7 @@ ul {
         &.active {
             &:before {
                 width: 4px;
-                background: @color-blue-medium;
+                background: @color-blue-light;
             }
         }
 
