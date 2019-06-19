@@ -6,25 +6,7 @@ $(document).ready(function () {
     var $W = $(window),
         $D = $(document),
         $B = $('body'),
-        $header = $('#header'),
-        $preloader = $('#preloader');
-
-    // Page Load
-    $W.on('load', function () {
-
-        // Hide Preloader on Page Load
-        $preloader.fadeOut('fast');
-
-        // Init Particles on Page Load
-        if ($W.width() > 1024) {
-            var particlesContainer = $('#particles');
-            if (particlesContainer.length > 0) {
-                particlesJS.load('particles', 'assets/js/particles.json', function () {
-                    // console.log('callback - particles.js config loaded');
-                });
-            }
-        }
-    });
+        $header = $('#header');
 
     // Menu Trigger
     var mainMenu = $('#main-menu');
@@ -223,18 +205,7 @@ $(document).ready(function () {
             diff = 0,
             verticalTreshold = 150;
 
-        // Changing Panels Z-Index and Initializing Active
-        $W.on('load', function () {
-            panels.each(function () {
-                $(this).css('z-index', zIndex);
 
-                if (zIndex === 0) {
-                    $(this).fadeIn().addClass('active');
-                }
-
-                zIndex--;
-            });
-        })
 
         // Scroll to Section on Mouse Scroll
         $D.on('mousewheel', function (e) {
@@ -406,4 +377,35 @@ $(document).ready(function () {
         pagers.parent().find('.active').removeClass('active');
         $(pagers[index]).addClass('active');
     }
+});
+
+// Page Load
+$(window).on('load', function () {
+
+    // Hide Preloader on Page Load
+    $('#preloader').fadeOut('fast');
+
+    // Init Particles on Page Load
+    if ($(window).width() > 1024) {
+        var particlesContainer = $('#particles');
+        if (particlesContainer.length > 0) {
+            particlesJS.load('particles', 'assets/js/particles.json', function () {
+                // console.log('callback - particles.js config loaded');
+            });
+        }
+    }
+
+    // Changing Panels Z-Index and Initializing Active
+    var panels = $('.section-scroll'),
+        zIndex = 0;
+
+    panels.each(function () {
+        $(this).css('z-index', zIndex);
+
+        if (zIndex === 0) {
+            $(this).fadeIn().addClass('active');
+        }
+
+        zIndex--;
+    });
 });
