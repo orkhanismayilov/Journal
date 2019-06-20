@@ -11,7 +11,7 @@
 @color-green: #197a56;
 @color-green-light: #32c77f;
 
-@color-black: #333;
+@color-black: #222;
 
 @color-gray: #ccc;
 @color-gray-light: #dedede;
@@ -366,6 +366,25 @@ ul {
     }
 }
 
+// Secondary Button
+.btn-secondary {
+    display: inline-block;
+    padding: 15px 30px;
+    background: fade(@color-green, 30%);
+    color: #fff !important;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    transition: @transition-2ms;
+
+    &:hover {
+        background: @color-green;
+    }
+
+    i {
+        margin-left: 15px;
+    }
+}
+
 // Right Arrow Button
 .btn-arrow-right {
     width: 50px;
@@ -432,6 +451,23 @@ ul {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+}
+
+// Article Author
+.article-author {
+    margin-bottom: 30px;
+    color: @color-black;
+    transition: @transition-3ms;
+
+    i {
+        margin-right: 5px;
+        font-size: 1.2rem;
+        color: @color-blue-light;
+    }
+
+    strong {
+        color: @color-blue-light;
     }
 }
 
@@ -964,37 +1000,18 @@ ul {
 
     // Article Author
     .section-author {
-        margin-bottom: 30px;
+        color: #fff;
         transform: translate3d(0, 120%, 0);
         opacity: 0;
         transition: @transition-8ms;
         transition-delay: .4s;
-
-        i {
-            margin-right: 5px;
-            font-size: 1.2rem;
-            color: @color-blue-light;
-        }
-
-        strong {
-            color: @color-blue-light;
-        }
     }
 
-    // Article GoTo
+    // Section Button
     .section-button {
-        display: inline-block;
-        padding: 15px 30px;
-        background: fade(@color-green, 30%);
-        font-size: 1.3rem;
-        text-transform: uppercase;
-        transform: translate3d(0, 150%, 0);
         opacity: 0;
+        transform: translate3d(0, 150%, 0);
         transition: @transition-8ms, background .2s;
-
-        i {
-            margin-left: 15px;
-        }
     }
 
     // Section Overlay
@@ -1349,7 +1366,7 @@ ul {
         width: 75%;
         transform: translateX(-50%);
         z-index: 1;
-        text-shadow: 0 0 10px fade(@color-black, 70%);
+        text-shadow: 0 0 10px fade(@color-black, 65%);
     }
 
     // Category Title
@@ -1360,6 +1377,7 @@ ul {
         text-align: center;
         color: #fff;
         margin-bottom: 30px;
+        text-shadow: 0 0 10px fade(@color-black, 65%);
     }
 
     // Category Description
@@ -1369,7 +1387,7 @@ ul {
         font-size: 1.3rem;
         line-height: 1.5;
         margin-bottom: 30px;
-        text-shadow: 0 0 10px fade(@color-black, 50%);
+        text-shadow: 0 0 10px fade(@color-black, 65%);
     }
 
     // Category Tip
@@ -1426,6 +1444,125 @@ ul {
                 border-radius: 100%;
                 animation: trackBallSlide @animDuration linear infinite;
             }
+        }
+    }
+
+    // Category Articles
+    .category-articles {
+        border-top: 2px solid #fff;
+    }
+
+    // Category Article Big
+    .category-article-big {
+        position: relative;
+
+        // Article Image Wrapper
+        .article-image-wrapper {
+            display: flex;
+            height: 80vh;
+        }
+
+        // Article Image
+        .article-image {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        // Article Info Wrapper
+        .article-info-wrapper {
+            position: absolute;
+            bottom: 100px;
+            left: 15%;
+            width: 70%;
+            color: #fff;
+            text-shadow: 0 0 10px fade(@color-black, 65%);
+            z-index: 1;
+        }
+
+        // Article Title
+        .article-title {
+            margin-bottom: 20px;
+            font-size: 3.5rem;
+            text-transform: uppercase;
+        }
+
+        // Article Excerpt
+        .article-excerpt {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        // Overlay
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: fade(@color-black, 50%);
+        }
+    }
+
+    // Category Article
+    .category-article {
+        margin: 50px 0;
+
+        border-radius: 3px;
+        transition: @transition-3ms;
+
+        &:hover {
+            box-shadow: 0 0 10px 3px fade(@color-blue, 30%);
+            transform: translateY(-3px);
+        }
+
+        // Article Link
+        .article-link {
+            display: flex;
+            padding: 50px;
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                .article-title {
+                    color: @color-green;
+                }
+
+                .article-image {
+                    transform: scale(1.05);
+                    box-shadow: 0 0 10px 3px fade(@color-blue, 30%);
+                }
+            }
+        }
+
+        // Article Image Wrapper
+        .article-image-wrapper {
+            flex: 1 0 600px;
+            max-width: 600px;
+            margin-right: 70px;
+        }
+
+        // Article Image
+        .article-image {
+            transition: @transition-3ms;
+        }
+
+        // Article Title
+        .article-title {
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: @color-black;
+            transition: @transition-2ms;
+        }
+
+        // Article Excerpt
+        .article-excerpt {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            color: @color-black;
         }
     }
 }
