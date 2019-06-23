@@ -308,6 +308,8 @@ $(document).ready(function () {
 
                 toggleTabContent(trigger, target);
             }
+
+            $D.scrollTop(0);
         }
 
         // Signup Tip Trigger
@@ -333,6 +335,30 @@ $(document).ready(function () {
                 target.addClass('active');
             });
         }
+    }
+
+    // Scroll Down Tip
+    var scrollDownTip = $('#scrolldown-tip');
+    if (scrollDownTip.length > 0) {
+        scrollDownTip.click(function () {
+            var scrollTarget = $(this).data('target');
+
+            $('html, body').animate({
+                scrollTop: $(scrollTarget).offset().top
+            }, 1000);
+        });
+    }
+
+    // Fill Header When Scroll is Over Category Articles
+    var categoryArticlesWrapper = $('#category-articles');
+    if (categoryArticlesWrapper.length > 0) {
+        $D.scroll(function () {
+            if ($D.scrollTop() > categoryArticlesWrapper.offset().top - 150) {
+                $header.addClass('dark');
+            } else {
+                $header.removeClass('dark');
+            }
+        });
     }
 
     // Toggle Panels Function

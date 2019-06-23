@@ -288,7 +288,7 @@ ul {
 
 // Container Wide
 .container-wide {
-    width: 85%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -478,6 +478,7 @@ ul {
     height: @header-height;
     background: fade(@color-blue, 50%);
     box-shadow: 0 0 12px fade(#555, 50%);
+    transition: background .2s;
     z-index: 999;
 
     // Fixed Header
@@ -653,7 +654,7 @@ ul {
 
         &.active {
             #search-form-header {
-                width: ~'calc(100vw - 185px)';
+                width: ~'calc(100% - 185px)';
             }
 
             .btn-search {
@@ -663,7 +664,7 @@ ul {
         }
 
         #search-form-header {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             width: 0;
@@ -948,12 +949,12 @@ ul {
     // Section Link
     .section-link {
         display: block;
-        width: 70%;
+        width: 80%;
         padding: 0 25% 0 0;
         position: absolute;
         top: 50%;
-        left: 15%;
-        transform: translate(0, -50%);
+        left: 10%;
+        transform: translateY(-50%);
         color: #fff;
         text-shadow: 0 0 10px fade(@color-black, 65%);
         z-index: 5;
@@ -1053,8 +1054,8 @@ ul {
     .featured-info-wrapper {
         position: absolute;
         top: 50%;
-        left: 15%;
-        width: 35%;
+        left: 10%;
+        width: 40%;
         padding: 40px;
         transform: translate(0, -50%);
         background: @color-black;
@@ -1168,6 +1169,7 @@ ul {
     // Category Item
     .category-item {
         width: 33.3333%;
+        height: 300px;
         padding: 0 5px;
         margin-bottom: 10px;
 
@@ -1196,6 +1198,7 @@ ul {
 
     // Category Image
     .category-img {
+        width: 100%;
         transition: @transition-3ms ease-in-out;
         transform: scale(1.05);
         will-change: transform, filter;
@@ -1362,9 +1365,8 @@ ul {
     .category-title-wrapper {
         position: absolute;
         bottom: 50px;
-        left: 50%;
-        width: 75%;
-        transform: translateX(-50%);
+        left: 10%;
+        width: 80%;
         z-index: 1;
         text-shadow: 0 0 10px fade(@color-black, 65%);
     }
@@ -1454,6 +1456,7 @@ ul {
 
     // Category Article Big
     .category-article-big {
+        margin-bottom: 100px;
         position: relative;
 
         // Article Image Wrapper
@@ -1473,8 +1476,8 @@ ul {
         .article-info-wrapper {
             position: absolute;
             bottom: 100px;
-            left: 15%;
-            width: 70%;
+            left: 10%;
+            width: 80%;
             color: #fff;
             text-shadow: 0 0 10px fade(@color-black, 65%);
             z-index: 1;
@@ -1506,20 +1509,31 @@ ul {
 
     // Category Article
     .category-article {
-        margin: 50px 0;
-
+        margin-bottom: 100px;
         border-radius: 3px;
         transition: @transition-3ms;
 
-        &:hover {
-            box-shadow: 0 0 10px 3px fade(@color-blue, 30%);
-            transform: translateY(-3px);
+        // &:hover {
+        //     box-shadow: 0 0 10px 3px fade(@color-blue, 30%);
+        //     transform: translateY(-3px);
+        // }
+
+        // Right Image Article
+        &.image-right {
+            .article-image-wrapper {
+                order: 1;
+                margin-right: 0;
+            }
+
+            .article-info-wrapper {
+                order: 0;
+                margin-right: 70px;
+            }
         }
 
         // Article Link
         .article-link {
             display: flex;
-            padding: 50px;
             width: 100%;
             height: 100%;
 
@@ -1563,6 +1577,16 @@ ul {
             margin-bottom: 20px;
             font-size: 1.2rem;
             color: @color-black;
+        }
+
+        // Article Date
+        .article-date {
+            color: @color-black;
+
+            i {
+                color: @color-blue-light;
+                margin-right: 5px;
+            }
         }
     }
 }
