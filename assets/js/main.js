@@ -6,7 +6,30 @@ $(document).ready(function () {
     var $W = $(window),
         $D = $(document),
         $B = $('body'),
+        $HB = $('html, body'),
         $header = $('#header');
+
+    // Go Up Button
+    var btnUp = $('.btn-up');
+    if (btnUp.length > 0) {
+        if ($D.scrollTop() > 1000) {
+            btnUp.css('right', '50px');
+        }
+
+        $D.scroll(function () {
+            if ($D.scrollTop() > 1000) {
+                btnUp.css('right', '50px');
+            } else {
+                btnUp.css('right', '-50px');
+            }
+        });
+
+        btnUp.click(function () {
+            $HB.animate({
+                scrollTop: 0
+            }, 1000);
+        });
+    }
 
     // Menu Trigger
     var mainMenu = $('#main-menu');
@@ -343,7 +366,7 @@ $(document).ready(function () {
         scrollDownTip.click(function () {
             var scrollTarget = $(this).data('target');
 
-            $('html, body').animate({
+            $HB.animate({
                 scrollTop: $(scrollTarget).offset().top
             }, 1000);
         });
@@ -352,8 +375,36 @@ $(document).ready(function () {
     // Fill Header When Scroll is Over Category Articles
     var categoryArticlesWrapper = $('#category-articles');
     if (categoryArticlesWrapper.length > 0) {
+
+        // Check on Page Load
+        if ($D.scrollTop() > categoryArticlesWrapper.offset().top) {
+            $header.addClass('dark');
+        }
+
         $D.scroll(function () {
             if ($D.scrollTop() > categoryArticlesWrapper.offset().top - 150) {
+                $header.addClass('dark');
+            } else {
+                $header.removeClass('dark');
+            }
+        });
+    }
+
+    // Article Page Functions
+    var articlePage = $('#article-page');
+    if (articlePage.length > 0) {
+
+        // Fill Header When Scroll is Over Article Excerpt
+        var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper');
+
+        // Check on Page Load
+        if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
+            $header.addClass('dark');
+        }
+
+        $D.scroll(function (e) {
+            // Define scrollTop and Appply Dark on Header
+            if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
                 $header.addClass('dark');
             } else {
                 $header.removeClass('dark');

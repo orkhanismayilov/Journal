@@ -38,7 +38,7 @@
     </div>
 
     <!-- Header -->
-    <header id="header" class="fixed dark">
+    <header id="header" class="fixed">
         <!-- Menu -->
         <div class="menu">
             <button id="menu-trigger" class="hamburger hamburger--stand" type="button">
@@ -90,6 +90,13 @@
                                 <li class="mm-list-item">
                                     <a href="#" class="mm-list-link">
                                         About Us
+                                    </a>
+                                </li>
+
+                                <!-- Main Menu List Item -->
+                                <li class="mm-list-item">
+                                    <a href="auth.html#login" class="mm-list-link">
+                                        Log In<i class="fal fa-sign-in-alt"></i>
                                     </a>
                                 </li>
 
@@ -398,6 +405,11 @@
             </ul>
         </div>
 
+        <!-- User -->
+        <div class="user-info">
+            <a href="auth.html#login" class="btn btn-login"><i class="fal fa-sign-in-alt"></i> Log In</a>
+        </div>
+
         <!-- Search -->
         <div class="search">
             <button id="search-trigger-header" class="btn btn-search"><i class="far fa-search"></i></button>
@@ -409,90 +421,77 @@
         </div>
     </header>
 
-    <!-- Login & SignUp Page -->
-    <div id="login-signup-page">
+    <!-- Article Page -->
+    <div id="article-page">
 
-        <!-- Form Tabs Wrappers -->
-        <div class="tabs-wrapper">
+        <!-- Article Background -->
+        <div class="article-bg" style="background-image: url('/assets/images/tech-article-landing.jpg')">
 
-            <!-- Tab Links Wrapper -->
-            <div class="tab-links-wrapper">
+            <!-- Overlay -->
+            <div class="overlay"></div>
 
-                <!-- Tab Link -->
-                <a href="#login" class="tab-link active"><i class="far fa-sign-in-alt"></i> Log In</a>
+            <!-- White Overlay -->
+            <div class="overlay white"></div>
+        </div>
 
-                <!-- Tab Link -->
-                <a href="#signup" class="tab-link"><i class="far fa-user-plus"></i> Sign Up</a>
+        <!-- Article Landing -->
+        <div class="article-landing">
+
+            <!-- Article Heading -->
+            <div class="article-heading">
+
+                <!-- Article Category -->
+                <p class="article-category">
+                    <a href="category.html" class="article-category-link">Technology</a>
+                </p>
+
+                <!-- Article Title -->
+                <h1 class="article-title">
+                    Saab's new spy plane has a powerful piece of hardware on top
+                </h1>
+
+                <!-- Article Date -->
+                <p class="article-date">
+                    25 June 2019
+                </p>
+
             </div>
+        </div>
 
-            <!-- Tab Contents Wrapper -->
-            <div class="tab-contents-wrapper">
+        <!-- Article Excerpt Wrapper-->
+        <div class="article-excerpt-wrapper">
 
-                <!-- Tab Content -->
-                <div id="login" class="tab-content active">
-                    <h3 class="tab-header">Log In</h3>
-                    <form action="#" id="login-form">
-                        <div class="form-group">
-                            <label>
-                                E-mail
-                                <input type="email" class="form-control" name="email">
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                Password
-                                <input type="password" class="form-control" name="password">
-                            </label>
-                        </div>
-                        <p class="signup-tip">
-                            Do not have an account? Let's <a id="signup-trigger" href="#signup">create one</a>. You will
-                            get all news about our issues, articles and insights.
-                        </p>
-                        <div class="form-buttons">
-                            <button class="btn btn-primary" type="submit">
-                                Log In
-                                <i class="far fa-sign-in-alt"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Tab Content -->
-                <div id="signup" class="tab-content">
-                    <h3 class="tab-header">Sign Up</h3>
-                    <form action="#" id="signup-form">
-                        <div class="form-group">
-                            <label>
-                                E-mail
-                                <input type="email" class="form-control" name="email">
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                Password
-                                <input type="password" class="form-control" name="password">
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label>
-                                Password Confirmation
-                                <input type="password" class="form-control" name="password_confirmation">
-                            </label>
-                        </div>
-                        <p class="signup-tip">
-                            By clicking Sign Up button you agree to our <a href="#">Terms of Use</a>.
-                        </p>
-                        <div class="form-buttons">
-                            <button class="btn btn-primary" type="submit">
-                                Sign Up
-                                <i class="far fa-user-plus"></i>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+            <!-- Article Excerpt -->
+            <h6 class="article-excerpt">
+                The aircraft is called GlobalEye.
+            </h6>
 
         </div>
+
+        <!-- Article Limit -->
+        <div id="article-limit"></div>
+
+        <!-- Article Content -->
+        <article class="article">
+
+            <div class="container">
+
+                <!-- Article Top Bar -->
+                <div class="article-top-bar">
+
+                    <!-- Article Authors -->
+                    <div class="article-authors"></div>
+
+                    <!-- Share & Print Buttons -->
+                    <div class="share-print-buttons"></div>
+
+                </div>
+
+            </div>
+
+
+        </article>
+
     </div>
 
     <!-- Footer -->
@@ -591,6 +590,9 @@
 
         </div>
     </footer>
+
+    <!-- Go Up Button -->
+    <button class="btn btn-up"></button>
 
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/particles.min.js"></script>
