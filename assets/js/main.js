@@ -395,7 +395,9 @@ $(document).ready(function () {
     if (articlePage.length > 0) {
 
         // Fill Header When Scroll is Over Article Excerpt
-        var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper');
+        var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper'),
+            articleLimit = $('#article-limit').offset().top,
+            whiteOverlay = articlePage.find('.white');
 
         // Check on Page Load
         if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
@@ -410,6 +412,16 @@ $(document).ready(function () {
                 $header.removeClass('dark');
             }
         });
+
+        // var smController = new ScrollMagic.Controller();
+
+        // var scene = new ScrollMagic.Scene({
+        //     offset: 500,
+        //     duration: articleLimit,
+        //     reverse: true
+        // })
+        //     .setClassToggle('.overlay.white', 'visible')
+        //     .addTo(smController);
     }
 
     // Toggle Panels Function
