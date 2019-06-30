@@ -2510,8 +2510,8 @@ ul {
   width: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #fff;
-  text-shadow: 0 0 5px rgba(34, 34, 34, 0.65);
+  color: #001e3b;
+  opacity: .3;
 }
 #article-page #article-limit {
   width: 100%;
@@ -2519,7 +2519,6 @@ ul {
   visibility: hidden;
 }
 #article-page .article {
-  background: #fff;
   padding-top: 200px;
 }
 #article-page .overlay {

@@ -396,16 +396,15 @@ $(document).ready(function () {
 
         // Fill Header When Scroll is Over Article Excerpt
         var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper'),
-            articleLimit = $('#article-limit').offset().top,
-            whiteOverlay = articlePage.find('.white');
+            articleLimit = articleExcerptWrapper.find('.article-excerpt').offset().top;
 
-        // Check on Page Load
+        // Check on Page Load and Apply Dark on Header
         if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
             $header.addClass('dark');
         }
 
+        // Check scrollTop and Apply Dark on Header
         $D.scroll(function (e) {
-            // Define scrollTop and Appply Dark on Header
             if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
                 $header.addClass('dark');
             } else {
@@ -413,15 +412,39 @@ $(document).ready(function () {
             }
         });
 
-        // var smController = new ScrollMagic.Controller();
+        // Apply ScrollMagic for Opacity Animations
+        // Defining Controller and Tweens
+        var smController = new ScrollMagic.Controller(),
+            whiteOpacityTween = new TweenMax.to('.overlay.white', 1, { opacity: 1 }),
+            headingOpacityTween = new TweenMax.to('.article-heading', 1, { opacity: .3 }),
+            excerptOpacityTween = new TweenMax.to('.article-excerpt', 1, { opacity: 1 });
 
-        // var scene = new ScrollMagic.Scene({
-        //     offset: 500,
-        //     duration: articleLimit,
-        //     reverse: true
-        // })
-        //     .setClassToggle('.overlay.white', 'visible')
-        //     .addTo(smController);
+        // Defining White Overlay Scene
+        var overlayScene = new ScrollMagic.Scene({
+            offset: 0,
+            duration: articleLimit - 200,
+            reverse: true
+        })
+            .setTween(whiteOpacityTween)
+            .addTo(smController);
+
+        // Defining Article Heading Opacity Scene
+        var headingScene = new ScrollMagic.Scene({
+            offset: 0,
+            duration: articleLimit - 200,
+            reverse: true
+        })
+            .setTween(headingOpacityTween)
+            .addTo(smController);
+
+        // Defining Article Excerpt Opacity Scene
+        var excerptScene = new ScrollMagic.Scene({
+            offset: 0,
+            duration: articleLimit - 200,
+            reverse: true
+        })
+            .setTween(excerptOpacityTween)
+            .addTo(smController);
     }
 
     // Toggle Panels Function
