@@ -509,16 +509,12 @@ ul {
     }
 
     a {
-        padding: 2px 4px;
-        border-radius: 2px;
         color: @color-blue-light;
-        transition: @transition-3ms;
+        transition: @transition-2ms;
 
         &:hover {
-            background: @color-black;
-
             strong {
-                color: #fff;
+                color: @color-blue;
             }
         }
     }
@@ -1720,7 +1716,7 @@ ul {
     // Article Excerpt Wrapper
     .article-excerpt-wrapper {
         width: 100%;
-        height: 100vh;
+        height: 70vh;
         min-height: 600px;
         position: relative;
     }
@@ -1751,17 +1747,19 @@ ul {
 
     // Article Top Bar
     .article-top-bar {
-        display: flex;
         width: @container-1000;
         margin: 0 auto;
-        justify-content: space-between;
-        align-items: center;
         margin-bottom: 50px;
+    }
+
+    // Article Publishing Date
+    .article-publishing-date {
+        margin-bottom: 10px;
     }
 
     // Article Authors
     .article-authors {
-        font-size: .9rem;
+        margin-bottom: 50px;
 
         .article-author {
             margin: 0;
@@ -1775,6 +1773,9 @@ ul {
     // Share Print Buttons
     .share-print-buttons {
         display: flex;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid @color-blue;
     }
 
     // Share Item
@@ -1782,7 +1783,7 @@ ul {
         display: block;
         width: 35px;
         height: 35px;
-        margin-left: 7px;
+        margin-right: 7px;
         line-height: 35px;
 
         &.dropdown {
@@ -1816,6 +1817,7 @@ ul {
         right: 0;
         width: auto;
         padding: 20px 35px;
+        background: #fff;
         border-radius: 3px;
         line-height: 1.2;
         box-shadow: 0 0 5px fade(@color-black, 30%);
@@ -1824,10 +1826,16 @@ ul {
 
     // Dropdown Downlaod Link
     .dropdown-download-link {
+        display: block;
+        width: 100%;
         color: @color-blue-medium;
 
         &:hover {
             color: @color-blue-light;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
         }
 
         i {
@@ -1839,8 +1847,101 @@ ul {
     .article {
         width: @container-1000;
         margin: 0 auto;
+
+        &:after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        // Article Text
+        p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            line-height: 1.8;
+            margin-bottom: 30px;
+
+            &.drop-cap::first-letter {
+                float: left;
+                margin-right: 15px;
+                font-size: 4.3rem;
+                line-height: 0.8;
+                vertical-align: -5px;
+                margin-top: 10px;
+            }
+
+            a {
+                padding: 0 3px 1px;
+                color: @color-blue-medium;
+                transition: @transition-2ms;
+                position: relative;
+
+                &:hover {
+                    background: @color-blue-medium;
+                    color: #fff;
+                }
+
+                &:after {
+                    content: '';
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: @color-blue-medium;
+                }
+            }
+        }
     }
 
+    // Downloadable Resource
+    .downloadable-resources {
+        float: right;
+        clear: right;
+        margin: 0 -150px 50px 50px;
+    }
+
+    // Downloadable Resources Heading
+    .dr-heading {
+        padding-top: 20px;
+        margin-bottom: 20px;
+        border-top: 1px solid @color-blue;
+        font-size: 1rem;
+        font-weight: 900;
+        color: @color-blue;
+        text-transform: uppercase;
+    }
+
+    // Downloadable Resources Item
+    .dr-item {
+        display: block;
+        font-size: .9rem;
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    // Downloadable Resources Link
+    .dr-link {
+        display: block;
+        padding: 10px 20px;
+        border: 2px solid @color-blue-medium;
+        color: @color-blue-medium;
+        text-align: center;
+        transition: @transition-2ms;
+
+        &:hover {
+            background: @color-blue-medium;
+            color: #fff;
+            box-shadow: 0 3px 5px fade(@color-black, 30%);
+            transform: translateY(-3px);
+        }
+
+        i {
+            margin-right: 7px;
+        }
+    }
 
 
     // Overlay
