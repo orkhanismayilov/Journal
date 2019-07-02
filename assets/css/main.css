@@ -2652,12 +2652,11 @@ ul {
 #article-page .downloadable-resources {
   float: right;
   clear: right;
-  margin: 0 -150px 50px 50px;
+  margin: 0 -90px 50px 50px;
 }
 #article-page .dr-heading {
-  padding-top: 20px;
+  padding-top: 8px;
   margin-bottom: 20px;
-  border-top: 1px solid #001e3b;
   font-size: 1rem;
   font-weight: 900;
   color: #001e3b;
