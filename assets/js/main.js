@@ -447,6 +447,34 @@ $(document).ready(function () {
             .addTo(smController);
     }
 
+    // Article Download Dropdown
+    var articleDownloadDropdown = $('.share-item.dropdown .share-link');
+    if (articleDownloadDropdown.length > 0) {
+        articleDownloadDropdown.click(function () {
+            var that = $(this),
+                icons = that.find('i'),
+                dropdown = that.next();
+
+            // Toggle Icon and Dropdown
+            icons.toggle();
+            dropdown.fadeToggle(200);
+
+            // Add Event Listener to Outside Click
+            $D.bind('click', closeDropdown);
+
+            // Close Dropdown on Outside Click Function
+            function closeDropdown(e) {
+                var originalTarget = $(e.originalEvent.target);
+
+                if (!originalTarget.hasClass('share-link') && originalTarget.parents('.share-link').length === 0) {
+                    icons.toggle();
+                    dropdown.fadeOut(200);
+                    $D.unbind('click', closeDropdown);
+                }
+            }
+        });
+    }
+
     // Toggle Panels Function
     function togglePanels(shiftIndex) {
         // Checking Animating State and Going On

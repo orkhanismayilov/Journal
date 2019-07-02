@@ -1431,6 +1431,9 @@ ul {
   width: 80%;
   margin: 0 auto;
 }
+.d-none {
+  display: none;
+}
 .btn {
   padding: 0;
   background: none;
@@ -1600,6 +1603,19 @@ ul {
 }
 .article-author strong {
   color: #0080ff;
+  transition: all 0.3s;
+}
+.article-author a {
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: #0080ff;
+  transition: all 0.3s;
+}
+.article-author a:hover {
+  background: #222;
+}
+.article-author a:hover strong {
+  color: #fff;
 }
 #header {
   display: flex;
@@ -2518,8 +2534,78 @@ ul {
   height: 0;
   visibility: hidden;
 }
+#article-page .article-wrapper {
+  padding: 30px 0 150px;
+}
+#article-page .article-top-bar {
+  display: flex;
+  width: 1000px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+#article-page .article-authors {
+  font-size: .9rem;
+}
+#article-page .article-authors .article-author {
+  margin: 0;
+}
+#article-page .article-authors i {
+  font-size: .9rem;
+}
+#article-page .share-print-buttons {
+  display: flex;
+}
+#article-page .share-item {
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-left: 7px;
+  line-height: 35px;
+}
+#article-page .share-item.dropdown {
+  position: relative;
+}
+#article-page .share-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: #001e3b;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+#article-page .share-link:hover {
+  background: #0080ff;
+  transform: translateY(-3px);
+}
+#article-page .dropdown-wrapper {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  width: auto;
+  padding: 20px 35px;
+  border-radius: 3px;
+  line-height: 1.2;
+  box-shadow: 0 0 5px rgba(34, 34, 34, 0.3);
+  white-space: nowrap;
+}
+#article-page .dropdown-download-link {
+  color: #004589;
+}
+#article-page .dropdown-download-link:hover {
+  color: #0080ff;
+}
+#article-page .dropdown-download-link i {
+  margin-right: 7px;
+}
 #article-page .article {
-  padding-top: 200px;
+  width: 1000px;
+  margin: 0 auto;
 }
 #article-page .overlay {
   position: absolute;
