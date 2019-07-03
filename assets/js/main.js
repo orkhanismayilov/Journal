@@ -393,6 +393,7 @@ $(document).ready(function () {
     // Article Page Functions
     var articlePage = $('#article-page');
     if (articlePage.length > 0) {
+        var articleContent = articlePage.find('.article');
 
         // Fill Header When Scroll is Over Article Excerpt
         var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper'),
@@ -445,6 +446,26 @@ $(document).ready(function () {
         })
             .setTween(excerptOpacityTween)
             .addTo(smController);
+
+        // Find Zoomable Images in Article and Add Zoom Icon
+        var zoomableImages = articleContent.find('.zoomable');
+
+        // Creating Figure Container
+        var figureContainer = $('<figure class="zoomable-image-figure"></figure>'),
+            zoomIcon = $('<span class="zoom-icon"><i class="far fa-plus-circle"></i></span>');
+
+        zoomableImages.each(function () {
+            var image = $(this),
+                figureClone = figureContainer.clone(),
+                iconClone = zoomIcon.clone(),
+                imageClone = image.clone();
+
+            figureClone.append(iconClone);
+            figureClone.append(imageClone);
+
+            image.before(figureClone);
+            image.remove();
+        });
     }
 
     // Article Download Dropdown

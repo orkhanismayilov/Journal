@@ -170,6 +170,12 @@ table {
   font-weight: bold;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Nobile';
+  src: url('../fonts/Nobile-Bold.woff2') format('woff2'), url('../fonts/Nobile-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
 .cssload-preloader {
   position: absolute;
   left: 50%;
@@ -2633,21 +2639,76 @@ ul {
 #article-page .article p a {
   padding: 0 3px 1px;
   color: #004589;
+  font-weight: 600;
   transition: all 0.2s;
+  border-bottom: 2px solid #004589;
   position: relative;
 }
 #article-page .article p a:hover {
   background: #004589;
   color: #fff;
 }
-#article-page .article p a:after {
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 0;
+#article-page .article img {
   width: 100%;
-  height: 2px;
-  background: #004589;
+  max-width: 100%;
+}
+#article-page .article .zoomable-image-figure {
+  width: 100%;
+  margin-bottom: 30px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(34, 34, 34, 0.5);
+  overflow: hidden;
+}
+#article-page .article .zoomable-image-figure .zoom-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  text-align: center;
+  line-height: 60px;
+  font-size: 1.75rem;
+  color: #001e3b;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+#article-page .article .zoomable-image-figure .zoom-icon:hover {
+  background: #001e3b;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(34, 34, 34, 0.7);
+}
+#article-page .article blockquote {
+  padding: 90px 0 40px;
+  color: #197a56;
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  clear: both;
+  position: relative;
+}
+#article-page .article blockquote:after {
+  content: '“';
+  font-family: 'Nobile', sans-serif !important;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 6rem;
+}
+#article-page .article blockquote.left-aligned {
+  width: 450px;
+  float: left;
+  padding: 90px 30px 30px 0;
+  margin-left: -90px;
+}
+#article-page .article blockquote.right-aligned {
+  width: 450px;
+  float: right;
+  padding: 90px 0 30px 30px;
+  margin-right: -90px;
 }
 #article-page .downloadable-resources {
   float: right;
