@@ -536,7 +536,57 @@ ul {
     }
 }
 
+// Our Research
+.our-research {
+    margin-bottom: 30px;
+    border-top: 1px solid @color-blue;
+    border-bottom: 1px solid @color-blue;
 
+    // Our Research Trigger
+    .or-trigger {
+        padding: 15px;
+        margin: 0 !important;
+        text-align: right;
+        color: @color-blue;
+        font-size: 1rem !important;
+        font-weight: 900 !important;
+        text-transform: uppercase;
+        transition: @transition-2ms;
+        position: relative;
+        cursor: pointer;
+
+        &:hover,
+        &.dark {
+            background: @color-blue;
+            color: #fff;
+
+            i {
+                color: #fff;
+            }
+        }
+
+        i {
+            color: @color-green;
+            font-size: 1.2rem;
+            margin-left: 10px;
+        }
+    }
+
+    // Our Research Dropdown
+    .or-dropdown {
+        display: none;
+        padding: 20px;
+        color: @color-blue-medium;
+
+        p {
+            font-size: 1rem !important;
+
+            &:last-child {
+                margin: 0 !important;
+            }
+        }
+    }
+}
 
 // Article Author
 .article-author {
@@ -2054,7 +2104,6 @@ ul {
             margin-right: 7px;
         }
     }
-
 
     // Overlay
     .overlay {

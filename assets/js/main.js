@@ -449,57 +449,82 @@ $(document).ready(function () {
 
         // Find Zoomable Images in Article and Add Zoom Icon
         var zoomableImages = articleContent.find('.zoomable');
+        if (zoomableImages.length > 0) {
+            // Creating Figure Container
+            var figureContainer = $('<figure class="zoomable-image-figure"></figure>'),
+                zoomIcon = $('<span class="zoom-icon"><i class="far fa-plus-circle"></i></span>'),
+                zoomModal = $('<div id="zoom-modal"></div>'),
+                zoomModalClose = $('<span class="close-zoom-modal"><i class="fal fa-times"></i></span>');
 
-        // Creating Figure Container
-        var figureContainer = $('<figure class="zoomable-image-figure"></figure>'),
-            zoomIcon = $('<span class="zoom-icon"><i class="far fa-plus-circle"></i></span>'),
-            zoomModal = $('<div id="zoom-modal"></div>'),
-            zoomModalClose = $('<span class="close-zoom-modal"><i class="fal fa-times"></i></span>');
+            // Cycle Through Zoomable Images
+            zoomableImages.each(function () {
+                var image = $(this),
+                    figureClone = figureContainer.clone(),
+                    iconClone = zoomIcon.clone(),
+                    imageClone = image.clone();
 
-        // Cycle Through Zoomable Images
-        zoomableImages.each(function () {
-            var image = $(this),
-                figureClone = figureContainer.clone(),
-                iconClone = zoomIcon.clone(),
-                imageClone = image.clone();
+                // Append Icon and Image to Figure
+                figureClone.append(iconClone);
+                figureClone.append(imageClone);
 
-            // Append Icon and Image to Figure
-            figureClone.append(iconClone);
-            figureClone.append(imageClone);
+                // Append Figure before Original Image
+                image.before(figureClone);
+                image.remove();
 
-            // Append Figure before Original Image
-            image.before(figureClone);
-            image.remove();
+                // Zoom on Zoom Icon Click
+                iconClone.click(function () {
+                    // Clone Target Image
+                    var zoomImageClone = $(this).next().clone();
+                    // Append Image and Close Icon to Zoom Modal
+                    zoomModal.append(zoomModalClose).append(zoomImageClone);
 
-            // Zoom on Zoom Icon Click
-            iconClone.click(function () {
-                // Clone Target Image
-                var zoomImageClone = $(this).next().clone();
-                // Append Image and Close Icon to Zoom Modal
-                zoomModal.append(zoomModalClose).append(zoomImageClone);
+                    // Append Zoom Modal to Body and Lock Scroll of Body
+                    $B.append(zoomModal).addClass('menu-opened');
+                    // Fade In Zoom Modal
+                    zoomModal.fadeIn(300);
 
-                // Append Zoom Modal to Body and Lock Scroll of Body
-                $B.append(zoomModal).addClass('menu-opened');
-                // Fade In Zoom Modal
-                zoomModal.fadeIn(300);
+                    // Close Zoom Modal on Close Icon Click
+                    zoomModalClose.click(function () {
+                        // Fade Out Zoom Modal
+                        zoomModal.fadeOut(300, function () {
+                            // Callback after Fade Out 
+                            // Clear Zoom Modal and Remove It from DOM
+                            zoomModal.empty().remove();
+                        });
 
-                // Close Zoom Modal on Close Icon Click
-                zoomModalClose.click(function () {
-                    // Fade Out Zoom Modal
-                    zoomModal.fadeOut(300, function () {
-                        // Callback after Fade Out 
-                        // Clear Zoom Modal and Remove It from DOM
-                        zoomModal.empty().remove();
+                        // Clear Image Clone
+                        zoomImageClone = null;
+
+                        // Unlock Scroll of Body
+                        $B.removeClass('menu-opened');
                     });
-
-                    // Clear Image Clone
-                    zoomImageClone = null;
-
-                    // Unlock Scroll of Body
-                    $B.removeClass('menu-opened');
                 });
             });
-        });
+        }
+
+        // Our Researches Blocks
+        var researches = articleContent.find('.our-research');
+        if (researches.length > 0) {
+            var researchTrigger = researches.find('.or-trigger');
+
+            researchTrigger.click(function () {
+                var targetDropdown = $(this).next(),
+                    triggerIcon = $(this).find('i');
+
+                reserchDropdownToggle(targetDropdown, triggerIcon);
+            });
+
+            // Research Dropdown Toggle Function
+            function reserchDropdownToggle(targetDropdown, triggerIcon) {
+                researchTrigger.toggleClass('dark');
+                targetDropdown.slideToggle();
+                if (triggerIcon.hasClass('fa-plus')) {
+                    triggerIcon.removeClass('fa-plus').addClass('fa-minus');
+                } else {
+                    triggerIcon.removeClass('fa-minus').addClass('fa-plus');
+                }
+            }
+        }
     }
 
     // Article Download Dropdown

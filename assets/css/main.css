@@ -1635,6 +1635,48 @@ ul {
 #zoom-modal .close-zoom-modal:hover {
   opacity: 1;
 }
+.our-research {
+  margin-bottom: 30px;
+  border-top: 1px solid #001e3b;
+  border-bottom: 1px solid #001e3b;
+}
+.our-research .or-trigger {
+  padding: 15px;
+  margin: 0 !important;
+  text-align: right;
+  color: #001e3b;
+  font-size: 1rem !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+.our-research .or-trigger:hover,
+.our-research .or-trigger.dark {
+  background: #001e3b;
+  color: #fff;
+}
+.our-research .or-trigger:hover i,
+.our-research .or-trigger.dark i {
+  color: #fff;
+}
+.our-research .or-trigger i {
+  color: #197a56;
+  font-size: 1.2rem;
+  margin-left: 10px;
+}
+.our-research .or-dropdown {
+  display: none;
+  padding: 20px;
+  color: #004589;
+}
+.our-research .or-dropdown p {
+  font-size: 1rem !important;
+}
+.our-research .or-dropdown p:last-child {
+  margin: 0 !important;
+}
 .article-author {
   margin-bottom: 30px;
   color: #222;
