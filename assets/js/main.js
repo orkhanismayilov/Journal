@@ -413,6 +413,33 @@ $(document).ready(function () {
             }
         });
 
+        // Animate Exhibit Items on Scroll
+        var exhibits = $('.exhibit-wrapper');
+        exhibits.each(function () {
+            var that = $(this),
+                columns = that.find('.exhibit-column');
+
+
+            $D.scroll(function () {
+                if ($D.scrollTop() > that.offset().top - 500 && !that.hasClass('animated')) {
+                    columns.each(function (i, el) {
+                        var items = $(el).find('.exhibit-item');
+
+                        items.each(function (i, el) {
+                            setTimeout(function () {
+                                $(el).animate({
+                                    top: 0,
+                                    opacity: 1
+                                }, 350 * (i + 1));
+                            });
+                        });
+                    });
+
+                    that.addClass('animated');
+                }
+            });
+        });
+
         // Apply ScrollMagic for Opacity Animations
         // Defining Controller and Tweens
         var smController = new ScrollMagic.Controller(),

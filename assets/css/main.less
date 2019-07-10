@@ -593,6 +593,7 @@ ul {
     padding: 20px 0 0;
     margin: 0 -90px 30px;
     border-top: 1px solid fade(@color-blue, 50%);
+    overflow: hidden;
 
     // Exhibit 1
     &.exhibit-1 {
@@ -656,11 +657,13 @@ ul {
     .exhibit-item {
         display: flex;
         justify-content: space-between;
+        top: 35%;
         padding: 20px 15px;
         margin-bottom: 10px;
         position: relative;
         color: #fff;
         font-size: 1.1rem;
+        opacity: 0;
         cursor: pointer;
         z-index: 1;
 
