@@ -552,6 +552,58 @@ $(document).ready(function () {
                 }
             }
         }
+
+        // Exhibits Slider
+        var exhibits = articleContent.find('.exhibit-wrapper');
+        if (exhibits.length > 0) {
+            exhibits.each(function () {
+                var sliderWrapper = $(this).find('.slider-wrapper'),
+                    sliderId = '#' + $(this).find('.swiper-container').prop('id'),
+                    exhibitItems = $(this).find('.exhibit-item'),
+                    closeButtons = $(this).find('.close');
+
+                // Init Exhibit Slider
+                var exhibitSlider = new Swiper(sliderId, {
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'fraction'
+                    },
+                    spaceBetween: 70,
+                    effect: 'fade'
+                });
+
+
+                // Open Slider on Exhibit Item Click
+                exhibitItems.click(function () {
+                    // Index of Slider
+                    var exhibitSlideIndex = $(this).data('slide');
+
+                    // Setting Active Slide
+                    exhibitSlider.slideTo(exhibitSlideIndex);
+
+                    // Show Slider
+                    sliderWrapper.css('visibility', 'visible');
+                    sliderWrapper.animate({
+                        opacity: 1
+                    }, 300);
+                });
+
+                // Close Slider on Close Click
+                closeButtons.click(function () {
+                    // Hide Slider
+                    sliderWrapper.animate({
+                        opacity: 0
+                    }, 300, function () {
+                        sliderWrapper.css('visibility', 'hidden');
+                    });
+                });
+            });
+        }
     }
 
     // Article Download Dropdown
