@@ -100,9 +100,11 @@ $(document).ready(function () {
                 clearTimeout(focusTimeout);
             }, 200);
 
-            // Hide Search Input on Blur
-            searchInput.blur(function () {
-                that.parent().removeClass('active');
+            // Hide Search Input if Clicked Outside of It
+            $B.click(function (e) {
+                if ($(e.originalEvent.target).parents('.search').length <= 0) {
+                    that.parent().removeClass('active');
+                }
             });
 
             // Close on ESC Key
