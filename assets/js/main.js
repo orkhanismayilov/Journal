@@ -636,6 +636,24 @@ $(document).ready(function () {
         });
     }
 
+    // User Page Functions
+    var userPage = $('#user-page');
+    if (userPage.length > 0) {
+        // Apply ScrollMagic for Parallax Animations
+        // Defining Controller and Tweens
+        var smController = new ScrollMagic.Controller(),
+            parallaxTween = new TweenMax.to('.parallax-container', 1, { top: '-500px' });
+
+        // Defining Parallax Scene
+        var overlayScene = new ScrollMagic.Scene({
+            offset: 0,
+            duration: $W.height(),
+            reverse: true
+        })
+            .setTween(parallaxTween)
+            .addTo(smController);
+    }
+
     // Toggle Panels Function
     function togglePanels(shiftIndex) {
         // Checking Animating State and Going On
