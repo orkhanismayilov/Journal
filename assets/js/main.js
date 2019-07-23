@@ -395,7 +395,9 @@ $(document).ready(function () {
     // Article Page Functions
     var articlePage = $('#article-page');
     if (articlePage.length > 0) {
-        var articleContent = articlePage.find('.article');
+        var articleContent = articlePage.find('.article'),
+            articleWrapper = articlePage.find('.article-wrapper'),
+            articleHeaderInfo = $('.article-header-info');
 
         // Fill Header When Scroll is Over Article Excerpt
         var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper'),
@@ -420,7 +422,6 @@ $(document).ready(function () {
         exhibits.each(function () {
             var that = $(this),
                 columns = that.find('.exhibit-column');
-
 
             $D.scroll(function () {
                 if ($D.scrollTop() > that.offset().top - 500 && !that.hasClass('animated')) {
@@ -447,7 +448,8 @@ $(document).ready(function () {
         var smController = new ScrollMagic.Controller(),
             whiteOpacityTween = new TweenMax.to('.overlay.white', 1, { opacity: 1 }),
             headingOpacityTween = new TweenMax.to('.article-heading', 1, { opacity: .3 }),
-            excerptOpacityTween = new TweenMax.to('.article-excerpt', 1, { opacity: 1 });
+            excerptOpacityTween = new TweenMax.to('.article-excerpt', 1, { opacity: 1 }),
+            progressBarTween = new TweenMax.to('.progress-bar', 1, { width: '100%' });
 
         // Defining White Overlay Scene
         var overlayScene = new ScrollMagic.Scene({
@@ -474,6 +476,20 @@ $(document).ready(function () {
             reverse: true
         })
             .setTween(excerptOpacityTween)
+            .addTo(smController);
+
+        var progressBarScene = new ScrollMagic.Scene({
+            offset: articleWrapper.offset().top,
+            duration: articleWrapper.offset().top + articleWrapper.height() - 2000,
+            reverse: true
+        })
+            .setTween(progressBarTween)
+            .addTo(smController);
+
+        var articleHeaderInfoScene = new ScrollMagic.Scene({
+            triggerElement: '.article'
+        })
+            .setClassToggle('.article-header-info', 'show')
             .addTo(smController);
 
         // Find Zoomable Images in Article and Add Zoom Icon

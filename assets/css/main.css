@@ -2037,6 +2037,40 @@ ul {
   font-size: 1.2rem;
   color: #001e3b;
 }
+#header .article-header-info {
+  height: 100%;
+  padding: 0 25px;
+  transform: translateY(-100%);
+  transition: all 0.3s;
+}
+#header .article-header-info.show {
+  transform: none;
+}
+#header .article-header-info .article-header-info-title {
+  color: #fff;
+  font-size: 1.2rem;
+  line-height: 85px;
+}
+#header .article-progress-bar {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+}
+#header .article-progress-bar .progress-bar-wrapper {
+  width: 100%;
+  height: 3px;
+  position: relative;
+}
+#header .article-progress-bar .progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #0080ff;
+  transition: all 0.4s;
+}
 #main-menu {
   position: fixed;
   top: 0;

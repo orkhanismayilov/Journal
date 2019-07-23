@@ -1065,6 +1065,51 @@ ul {
             color: @color-blue;
         }
     }
+
+    // Article Header Info
+    .article-header-info {
+        height: 100%;
+        padding: 0 25px;
+        transform: translateY(-100%);
+        transition: @transition-3ms;
+
+        &.show {
+            transform: none;
+        }
+
+        // Article Header Info Title
+        .article-header-info-title {
+            color: #fff;
+            font-size: 1.2rem;
+            line-height: @header-height;
+        }
+    }
+
+    // Article Progress Bar
+    .article-progress-bar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        // Progress Bar Wrapper
+        .progress-bar-wrapper {
+            width: 100%;
+            height: 3px;
+            position: relative;
+        }
+
+        // Progress Bar
+        .progress-bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: @color-blue-light;
+            transition: @transition-4ms;
+        }
+    }
 }
 
 // Main Menu
