@@ -396,8 +396,7 @@ $(document).ready(function () {
     var articlePage = $('#article-page');
     if (articlePage.length > 0) {
         var articleContent = articlePage.find('.article'),
-            articleWrapper = articlePage.find('.article-wrapper'),
-            articleHeaderInfo = $('.article-header-info');
+            articleWrapper = articlePage.find('.article-wrapper');
 
         // Fill Header When Scroll is Over Article Excerpt
         var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper'),
