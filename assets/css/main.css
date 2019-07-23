@@ -1831,6 +1831,7 @@ ul {
   font-size: 2rem;
   line-height: 44px;
   color: #fff;
+  text-align: center;
   transition: all 0.2s;
 }
 .exhibit-wrapper .swiper-button-prev:hover {
@@ -1842,6 +1843,7 @@ ul {
   font-size: 2rem;
   line-height: 44px;
   color: #fff;
+  text-align: center;
   transition: all 0.2s;
 }
 .exhibit-wrapper .swiper-button-next:hover {
