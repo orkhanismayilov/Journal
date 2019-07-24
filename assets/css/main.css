@@ -2904,9 +2904,41 @@ ul {
 #article-page .dropdown-download-link i {
   margin-right: 7px;
 }
+#article-page .user-card {
+  position: absolute;
+  top: 8px;
+  right: 100%;
+  width: 230px;
+  padding-right: 30px;
+}
+#article-page .user-card:hover .user-image {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 30, 59, 0.65);
+}
+#article-page .user-card:hover .user-fullname,
+#article-page .user-card:hover .user-title {
+  color: #197a56;
+}
+#article-page .user-card .user-image {
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transition: all 0.3s;
+}
+#article-page .user-card .user-fullname {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+  transition: all 0.3s;
+}
+#article-page .user-card .user-title {
+  text-align: center;
+  color: #001e3b;
+  transition: all 0.3s;
+}
 #article-page .article {
   width: 900px;
   margin: 0 auto;
+  position: relative;
 }
 #article-page .article:after {
   content: '';
@@ -2956,7 +2988,7 @@ ul {
   right: 0;
   width: 60px;
   height: 60px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.5);
   text-align: center;
   line-height: 60px;
   font-size: 1.75rem;
@@ -3056,9 +3088,10 @@ ul {
   opacity: 1;
 }
 .related-articles-wrapper {
-  width: 1000px;
+  width: 1200px;
   margin: 0 auto;
-  padding: 0 0 75px;
+  padding: 50px 150px 75px;
+  background: #dedede;
 }
 .related-articles-wrapper .related-title {
   padding-bottom: 20px;
@@ -3091,7 +3124,6 @@ ul {
 }
 .related-articles-wrapper .related-article-link:hover .related-article-title {
   position: absolute;
-  width: 90%;
   top: 50%;
   left: 5%;
   transform: translateY(-50%);
@@ -3105,12 +3137,15 @@ ul {
   width: 100%;
   height: 50px;
   color: #fff;
+  overflow: hidden;
   background: rgba(34, 34, 34, 0.65);
   transition: all 0.4s;
 }
 .related-articles-wrapper .related-article-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
+  width: 90%;
+  margin: 0 auto;
   padding: 0 15px;
   text-overflow: ellipsis;
   -webkit-line-clamp: 1;

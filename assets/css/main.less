@@ -2219,10 +2219,54 @@ ul {
         }
     }
 
+    // User Card
+    .user-card {
+        position: absolute;
+        top: 8px;
+        right: 100%;
+        width: 230px;
+        padding-right: 30px;
+
+        &:hover {
+            .user-image {
+                transform: scale(1.05);
+                box-shadow: 0 0 10px fade(@color-blue, 65%);
+            }
+
+            .user-fullname,
+            .user-title {
+                color: @color-green;
+            }
+        }
+
+        // User Image
+        .user-image {
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: @transition-3ms;
+        }
+
+        // User Fullname
+        .user-fullname {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1.3rem;
+            transition: @transition-3ms;
+        }
+
+        // User Title
+        .user-title {
+            text-align: center;
+            color: @color-blue;
+            transition: @transition-3ms;
+        }
+    }
+
     // Article Content
     .article {
         width: @container-900;
         margin: 0 auto;
+        position: relative;
 
         &:after {
             content: '';
@@ -2282,7 +2326,7 @@ ul {
                 right: 0;
                 width: 60px;
                 height: 60px;
-                background: #fff;
+                background: fade(#fff, 50%);
                 text-align: center;
                 line-height: 60px;
                 font-size: 1.75rem;
@@ -2408,9 +2452,10 @@ ul {
 
 // Related Articles Wrapper
 .related-articles-wrapper {
-    width: @container-1000;
+    width: @container-1200;
     margin: 0 auto;
-    padding: 0 0 75px;
+    padding: 50px 150px 75px;
+    background: @color-gray-light;
 
     // Related Title
     .related-title {
@@ -2451,7 +2496,6 @@ ul {
 
             .related-article-title {
                 position: absolute;
-                width: 90%;
                 top: 50%;
                 left: 5%;
                 transform: translateY(-50%);
@@ -2469,6 +2513,7 @@ ul {
         width: 100%;
         height: 50px;
         color: #fff;
+        overflow: hidden;
         background: fade(@color-black, 65%);
         transition: @transition-4ms;
     }
@@ -2477,6 +2522,8 @@ ul {
     .related-article-title {
         display: -webkit-box;
         -webkit-box-orient: vertical;
+        width: 90%;
+        margin: 0 auto;
         padding: 0 15px;
         text-overflow: ellipsis;
         -webkit-line-clamp: 1;
