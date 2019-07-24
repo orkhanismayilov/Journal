@@ -422,6 +422,25 @@ $(document).ready(function () {
             var that = $(this),
                 columns = that.find('.exhibit-column');
 
+            // Animate Exhibit Items on Page Load if In View
+            if ($D.scrollTop() > that.offset().top - 500 && !that.hasClass('animated')) {
+                columns.each(function (i, el) {
+                    var items = $(el).find('.exhibit-item');
+
+                    items.each(function (i, el) {
+                        setTimeout(function () {
+                            $(el).animate({
+                                top: 0,
+                                opacity: 1
+                            }, 350 * (i + 1));
+                        });
+                    });
+                });
+
+                that.addClass('animated');
+            }
+
+            // Animate Exhibit Items on Scroll
             $D.scroll(function () {
                 if ($D.scrollTop() > that.offset().top - 500 && !that.hasClass('animated')) {
                     columns.each(function (i, el) {
@@ -593,7 +612,6 @@ $(document).ready(function () {
                     spaceBetween: 70,
                     effect: 'fade'
                 });
-
 
                 // Open Slider on Exhibit Item Click
                 exhibitItems.click(function () {
