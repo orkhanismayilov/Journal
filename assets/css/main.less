@@ -2664,10 +2664,6 @@ ul {
     // User Image
     .user-image {
         transition: @transition-4ms;
-
-        &:hover {
-            filter: grayscale(100%);
-        }
     }
 
     // User Title
@@ -2699,6 +2695,32 @@ ul {
         width: @container-1000;
         margin: 0 auto;
         padding: 100px 0;
+        position: relative;
+
+        &:not(:last-child) {
+            &:before {
+                content: '';
+                position: absolute;
+                width: 250px;
+                height: 20px;
+                bottom: 0;
+                left: 50%;
+                transform: translate(-50%, 50%);
+                border-top: 1px dashed @color-blue;
+                border-bottom: 1px dashed @color-blue;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 60%;
+                height: 2px;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                background: @color-blue;
+            }
+        }
     }
 
     // User Section Heading
@@ -2719,6 +2741,47 @@ ul {
     .user-about {
         .user-section-text {
             text-align: center;
+        }
+    }
+
+    // User Experience Wrapper
+    .user-exp-wrapper {
+        display: flex;
+    }
+
+    // User Experience item
+    .user-exp-item {
+        flex: 1 1 50%;
+        max-width: 50%;
+        padding: 30px;
+        transition: @transition-3ms;
+
+        &:not(:last-child) {
+            border-right: 1px solid @color-gray-light;
+        }
+
+        &:hover {
+            box-shadow: 0 0 10px fade(@color-blue, 65%);
+        }
+    }
+
+    // Experience Icon
+    .exp-icon {
+        width: 70px;
+        margin: 0 auto 30px;
+    }
+
+    // Experience Text
+    .exp-text {
+        width: 60%;
+        margin: 0 auto;
+        text-align: center;
+        color: @color-black;
+        font-size: 1.2rem;
+        line-height: 1.4;
+
+        strong {
+            font-weight: 900;
         }
     }
 }

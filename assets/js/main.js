@@ -377,19 +377,7 @@ $(document).ready(function () {
     // Fill Header When Scroll is Over Category Articles
     var categoryArticlesWrapper = $('#category-articles');
     if (categoryArticlesWrapper.length > 0) {
-
-        // Check on Page Load
-        if ($D.scrollTop() > categoryArticlesWrapper.offset().top) {
-            $header.addClass('dark');
-        }
-
-        $D.scroll(function () {
-            if ($D.scrollTop() > categoryArticlesWrapper.offset().top - 150) {
-                $header.addClass('dark');
-            } else {
-                $header.removeClass('dark');
-            }
-        });
+        toggleDarkHeader(categoryArticlesWrapper);
     }
 
     // Article Page Functions
@@ -402,19 +390,7 @@ $(document).ready(function () {
         var articleExcerptWrapper = articlePage.find('.article-excerpt-wrapper'),
             articleLimit = articleExcerptWrapper.find('.article-excerpt').offset().top;
 
-        // Check on Page Load and Apply Dark on Header
-        if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
-            $header.addClass('dark');
-        }
-
-        // Check scrollTop and Apply Dark on Header
-        $D.scroll(function (e) {
-            if ($D.scrollTop() > articleExcerptWrapper.offset().top) {
-                $header.addClass('dark');
-            } else {
-                $header.removeClass('dark');
-            }
-        });
+        toggleDarkHeader(articleExcerptWrapper);
 
         // Animate Exhibit Items on Scroll
         var exhibits = $('.exhibit-wrapper');
@@ -672,6 +648,10 @@ $(document).ready(function () {
     // User Page Functions
     var userPage = $('#user-page');
     if (userPage.length > 0) {
+        var userTitle = userPage.find('.user-title');
+
+        toggleDarkHeader(userTitle);
+
         // Apply ScrollMagic for Parallax Animations
         // Defining Controller and Tweens
         var smController = new ScrollMagic.Controller(),
@@ -685,6 +665,8 @@ $(document).ready(function () {
         })
             .setTween(parallaxTween)
             .addTo(smController);
+
+
     }
 
     // Toggle Panels Function
@@ -728,6 +710,23 @@ $(document).ready(function () {
     function togglePagers(index) {
         pagers.parent().find('.active').removeClass('active');
         $(pagers[index]).addClass('active');
+    }
+
+    // Toggle Dark Header Function
+    function toggleDarkHeader(trigger) {
+        // Check on Page Load and Apply Dark on Header
+        if ($D.scrollTop() > trigger.offset().top) {
+            $header.addClass('dark');
+        }
+
+        // Check scrollTop and Apply Dark on Header
+        $D.scroll(function (e) {
+            if ($D.scrollTop() > trigger.offset().top) {
+                $header.addClass('dark');
+            } else {
+                $header.removeClass('dark');
+            }
+        });
     }
 });
 

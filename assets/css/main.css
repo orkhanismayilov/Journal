@@ -3251,9 +3251,6 @@ ul {
 #user-page .user-image {
   transition: all 0.4s;
 }
-#user-page .user-image:hover {
-  filter: grayscale(100%);
-}
 #user-page .user-title {
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.8);
@@ -3276,6 +3273,28 @@ ul {
   width: 1000px;
   margin: 0 auto;
   padding: 100px 0;
+  position: relative;
+}
+#user-page .user-section:not(:last-child):before {
+  content: '';
+  position: absolute;
+  width: 250px;
+  height: 20px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-top: 1px dashed #001e3b;
+  border-bottom: 1px dashed #001e3b;
+}
+#user-page .user-section:not(:last-child):after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #001e3b;
 }
 #user-page .user-section-heading {
   margin-bottom: 50px;
@@ -3289,6 +3308,36 @@ ul {
 }
 #user-page .user-about .user-section-text {
   text-align: center;
+}
+#user-page .user-exp-wrapper {
+  display: flex;
+}
+#user-page .user-exp-item {
+  flex: 1 1 50%;
+  max-width: 50%;
+  padding: 30px;
+  transition: all 0.3s;
+}
+#user-page .user-exp-item:not(:last-child) {
+  border-right: 1px solid #dedede;
+}
+#user-page .user-exp-item:hover {
+  box-shadow: 0 0 10px rgba(0, 30, 59, 0.65);
+}
+#user-page .exp-icon {
+  width: 70px;
+  margin: 0 auto 30px;
+}
+#user-page .exp-text {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  color: #222;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+#user-page .exp-text strong {
+  font-weight: 900;
 }
 #footer {
   background: #fff;
