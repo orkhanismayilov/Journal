@@ -3339,6 +3339,83 @@ ul {
 #user-page .exp-text strong {
   font-weight: 900;
 }
+#user-page .timeline-wrapper {
+  position: relative;
+}
+#user-page .timeline-wrapper:after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #001e3b;
+}
+#user-page .timeline-container {
+  width: 50%;
+  padding: 10px 40px;
+  position: relative;
+}
+#user-page .timeline-container:before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  width: 0;
+  height: 0;
+  border: medium solid #001e3b;
+  z-index: 1;
+}
+#user-page .timeline-container:after {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: -16px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border: 3px solid #001e3b;
+  border-radius: 50%;
+  z-index: 1;
+}
+#user-page .timeline-container.left {
+  left: 0;
+}
+#user-page .timeline-container.left:before {
+  right: 30px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #001e3b;
+}
+#user-page .timeline-container.right {
+  left: 50%;
+}
+#user-page .timeline-container.right:before {
+  left: 30px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #001e3b transparent transparent;
+}
+#user-page .timeline-container.right:after {
+  left: -15px;
+  right: unset;
+}
+#user-page .timeline-item {
+  position: relative;
+}
+#user-page .timeline-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#user-page .timeline-title {
+  padding: 15px 30px;
+  color: #001e3b;
+  text-align: center;
+}
+#user-page .timeline-date {
+  display: block;
+  color: #ccc;
+  text-align: center;
+}
 #footer {
   background: #fff;
   padding: 70px 0 20px;
