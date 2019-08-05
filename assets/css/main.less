@@ -2790,7 +2790,7 @@ ul {
     // Timeline Wrapper
     .timeline-wrapper {
         position: relative;
-        padding-bottom: 50px;
+        padding-bottom: 200px;
         margin-bottom: 100px;
 
         &:before {
@@ -2845,6 +2845,30 @@ ul {
                 text-align: center;
                 text-transform: uppercase;
                 font-weight: 900;
+            }
+        }
+
+        // More Button
+        .btn-more {
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            background: #fff;
+            text-transform: uppercase;
+            text-align: center;
+            color: @color-blue-medium;
+            font-size: 1.2rem;
+            font-weight: 900;
+            transition: @transition-3ms;
+            cursor: pointer;
+
+            &:hover {
+                color: #fff;
+                background: @color-blue-medium;
             }
         }
     }
