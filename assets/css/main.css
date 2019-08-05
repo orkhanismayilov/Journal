@@ -3471,6 +3471,25 @@ ul {
   color: #ccc;
   text-align: center;
 }
+#user-page .form-group {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+#user-page .form-group .form-control {
+  width: 75%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #197a56;
+  color: #001e3b;
+  font-weight: 900;
+}
+#user-page .form-group .btn-arrow-right {
+  width: 25%;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
 #footer {
   background: #fff;
   padding: 70px 0 20px;
