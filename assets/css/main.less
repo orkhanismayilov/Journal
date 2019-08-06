@@ -17,6 +17,7 @@
 @color-gray-light: #dedede;
 
 @header-height: 85px;
+@footer-height-fixed: 290px;
 
 @transition-2ms: all .2s;
 @transition-3ms: all .3s;
@@ -850,6 +851,47 @@ ul {
                 color: @color-blue;
             }
         }
+    }
+}
+
+// Author Socials
+.author-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    // Author Social Item
+    .author-social-item {
+        width: 40px;
+        height: 40px;
+        margin: 0 12px;
+        line-height: 40px;
+        border: 1px solid @color-blue;
+        text-align: center;
+        transform: rotate(45deg);
+        transition: @transition-3ms;
+
+        &:hover {
+            background: @color-blue;
+            transform: rotate(0) scale(1.3);
+            box-shadow: 0 0 5px fade(@color-blue, 65%);
+
+            .author-social-link {
+                color: #fff;
+                transform: rotate(0);
+            }
+        }
+    }
+
+    // Author Social Link
+    .author-social-link {
+        display: block;
+        width: 100%;
+        height: 100%;
+        font-size: 1.3rem;
+        transform: rotate(-45deg);
+        transition: @transition-3ms;
     }
 }
 
@@ -2301,47 +2343,6 @@ ul {
                 transition: @transition-2ms;
             }
         }
-
-        // Author Socials
-        .author-socials {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        // Author Social Item
-        .author-social-item {
-            width: 40px;
-            height: 40px;
-            margin: 0 12px;
-            line-height: 40px;
-            border: 1px solid @color-blue;
-            text-align: center;
-            transform: rotate(45deg);
-            transition: @transition-3ms;
-
-            &:hover {
-                background: @color-blue;
-                transform: rotate(0) scale(1.3);
-                box-shadow: 0 0 5px fade(@color-blue, 65%);
-
-                .author-social-link {
-                    color: #fff;
-                    transform: rotate(0);
-                }
-            }
-        }
-
-        // Author Social Link
-        .author-social-link {
-            display: block;
-            width: 100%;
-            height: 100%;
-            font-size: 1.3rem;
-            transform: rotate(-45deg);
-            transition: @transition-3ms;
-        }
     }
 
     // Article Content
@@ -2679,12 +2680,31 @@ ul {
 
     // User's Fullname
     .user-fullname {
+        margin-bottom: 30px;
         color: #fff;
         font-size: 4rem;
         font-weight: 900;
         letter-spacing: 2px;
         text-shadow: 0 0 10px fade(@color-black, 65%);
         text-align: center;
+    }
+
+    // Author Social Item
+    .author-social-item {
+        border: 1px solid #fff;
+
+        &:hover {
+            background: #fff;
+
+            .author-social-link {
+                color: @color-blue;
+            }
+        }
+
+        // Author Social Link
+        .author-social-link {
+            color: #fff;
+        }
     }
 
     // User Info
@@ -3027,6 +3047,43 @@ ul {
     }
 }
 
+// Issue Page
+#issue-page {
+    display: flex;
+    height: 100vh;
+    margin-bottom: @footer-height-fixed;
+    background: #fff;
+
+    // Current Issue Aside
+    .current-issue-aside {
+        flex: 1 1 40%;
+        max-width: 40%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    // Issue BG Cover Image
+    .issue-bg-cover-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 500%;
+        height: 500%;
+    }
+
+    // Issue Cover Image
+    .issue-cover-image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        width: 65%;
+    }
+}
+
 // Footer
 #footer {
     background: #fff;
@@ -3035,6 +3092,15 @@ ul {
     &.border-top {
         border-top: 2px solid @color-blue;
         padding-top: 50px;
+    }
+
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        height: @footer-height-fixed;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
     }
 
     // Footer Row
