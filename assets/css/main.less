@@ -2851,8 +2851,8 @@ ul {
         // More Button
         .btn-more {
             position: absolute;
-            width: 130px;
-            height: 130px;
+            width: 120px;
+            height: 120px;
             bottom: 50px;
             left: 50%;
             transform: translateX(-50%);
@@ -2865,10 +2865,30 @@ ul {
             font-weight: 900;
             transition: @transition-3ms;
             cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
 
             &:hover {
                 color: #fff;
-                background: @color-blue-medium;
+
+                &:after {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                height: 0;
+                width: 0;
+                border-radius: 50%;
+                background: @color-blue;
+                transition: @transition-3ms;
+                z-index: -1;
             }
         }
     }
