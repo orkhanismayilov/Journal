@@ -665,6 +665,29 @@ $(document).ready(function () {
         })
             .setTween(parallaxTween)
             .addTo(smController);
+    }
+
+    // Issue Page Functions
+    var issuePage = $('#issue-page');
+    if (issuePage.length > 0) {
+        var issueInfo = issuePage.find('.issue-info'),
+            currentIssueInfo = issuePage.find('.current-issue-info'),
+            currentIssueArticles = issuePage.find('.current-issue-articles'),
+            issueInfoHeight,
+            currentIssueHeight,
+            issueArticlesHeight;
+
+        $W.on('load resize', function () {
+            issueInfoHeight = issueInfo.height();
+            currentIssueHeight = currentIssueInfo.outerHeight(true);
+            issueArticlesHeight = issueInfoHeight - currentIssueHeight;
+
+            currentIssueArticles.outerHeight(issueArticlesHeight);
+
+            if (currentIssueArticles.css('display') == 'none') {
+                currentIssueArticles.fadeIn(400);
+            }
+        });
 
 
     }

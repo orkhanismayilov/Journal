@@ -1489,7 +1489,7 @@ ul {
   background: #001e3b;
   color: #fff;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: bold;
   transition: all 0.2s;
   cursor: pointer;
 }
@@ -2501,7 +2501,7 @@ ul {
   transform: translate3d(-50%, 450%, 0);
   padding: 10px 15px;
   font-size: 1.7rem;
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -2553,7 +2553,7 @@ ul {
 #login-signup-page .tab-header {
   margin-bottom: 30px;
   text-align: center;
-  font-weight: 900;
+  font-weight: bold;
   text-transform: uppercase;
 }
 #login-signup-page .tab-contents-wrapper {
@@ -2590,7 +2590,7 @@ ul {
 #login-signup-page .signup-tip a {
   color: #0080ff;
   font-size: 1.1rem;
-  font-weight: 900;
+  font-weight: bold;
   transition: all 0.2s;
 }
 #login-signup-page .signup-tip a:hover {
@@ -2623,7 +2623,7 @@ ul {
 }
 #category-page .category-title {
   font-size: 6rem;
-  font-weight: 900;
+  font-weight: bold;
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -2641,7 +2641,7 @@ ul {
 #category-page .category-tip {
   margin-bottom: 15px;
   font-size: 1.5rem;
-  font-weight: 900;
+  font-weight: bold;
   color: #fff;
   letter-spacing: 2px;
   text-align: center;
@@ -2763,7 +2763,7 @@ ul {
   margin-bottom: 20px;
   text-transform: uppercase;
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: 1px;
   color: #222;
   transition: all 0.2s;
@@ -3015,7 +3015,7 @@ ul {
   float: left;
   margin-right: 15px;
   font-size: 4.3rem;
-  font-weight: 900;
+  font-weight: bold;
   line-height: 0.8;
   margin-top: 8px;
 }
@@ -3065,7 +3065,7 @@ ul {
   padding: 90px 0 40px;
   color: #197a56;
   font-size: 1.75rem;
-  font-weight: 900;
+  font-weight: bold;
   line-height: 1.4;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -3102,7 +3102,7 @@ ul {
   padding-top: 8px;
   margin-bottom: 20px;
   font-size: 1rem;
-  font-weight: 900;
+  font-weight: bold;
   color: #001e3b;
   text-transform: uppercase;
 }
@@ -3264,7 +3264,7 @@ ul {
   margin-bottom: 30px;
   color: #fff;
   font-size: 4rem;
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: 2px;
   text-shadow: 0 0 10px rgba(34, 34, 34, 0.65);
   text-align: center;
@@ -3313,7 +3313,7 @@ ul {
 }
 #user-page .user-section-heading {
   margin-bottom: 50px;
-  font-weight: 900;
+  font-weight: bold;
   text-align: center;
 }
 #user-page .user-section-text {
@@ -3352,7 +3352,7 @@ ul {
   line-height: 1.4;
 }
 #user-page .exp-text strong {
-  font-weight: 900;
+  font-weight: bold;
 }
 #user-page .timeline-wrapper {
   position: relative;
@@ -3396,7 +3396,7 @@ ul {
   display: block;
   margin-bottom: 5px;
   color: #197a56;
-  font-weight: 900;
+  font-weight: bold;
   text-align: center;
 }
 #user-page .timeline-wrapper .join-timestamp .join-text {
@@ -3404,7 +3404,7 @@ ul {
   color: #001e3b;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: bold;
 }
 #user-page .timeline-wrapper .btn-more {
   position: absolute;
@@ -3419,7 +3419,7 @@ ul {
   text-align: center;
   color: #004589;
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: bold;
   transition: all 0.3s;
   cursor: pointer;
   overflow: hidden;
@@ -3534,41 +3534,102 @@ ul {
   padding: 10px;
   border: 1px solid #197a56;
   color: #001e3b;
-  font-weight: 900;
+  font-weight: bold;
 }
 #user-page .form-group .btn-arrow-right {
   width: 25%;
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: bold;
   letter-spacing: 1px;
 }
 #issue-page {
   display: flex;
   height: 100vh;
+  padding-top: 85px;
   margin-bottom: 290px;
   background: #fff;
 }
-#issue-page .current-issue-aside {
+#issue-page .current-issue {
   flex: 1 1 40%;
   max-width: 40%;
   position: relative;
   overflow: hidden;
-}
-#issue-page .issue-bg-cover-image {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 500%;
-  height: 500%;
+  box-shadow: 5px 0 10px rgba(0, 30, 59, 0.65);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #issue-page .issue-cover-image {
   position: absolute;
+  width: 65%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  box-shadow: 0 0 10px 5px rgba(0, 30, 59, 0.55);
   z-index: 1;
-  width: 65%;
+}
+#issue-page .issue-info {
+  flex: 1 1 60%;
+  max-width: 60%;
+  padding: 45px 45px 45px 55px;
+}
+#issue-page .current-issue-info {
+  margin-bottom: 45px;
+}
+#issue-page .current-issue-title {
+  font-size: 4rem;
+  font-weight: bold;
+}
+#issue-page .current-issue-date {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #001e3b;
+}
+#issue-page .current-issue-desc {
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+#issue-page .current-issue-authors {
+  margin-bottom: 0;
+}
+#issue-page .current-issue-authors strong {
+  font-weight: bold;
+}
+#issue-page .current-issue-authors .author-link {
+  color: #004589;
+  transition: all 0.2s;
+}
+#issue-page .current-issue-authors .author-link:hover {
+  color: #0080ff;
+}
+#issue-page .current-issue-articles {
+  display: none;
+  padding: 30px;
+  background: #004589;
+}
+#issue-page .current-issue-articles-title {
+  margin-bottom: 10px;
+  color: #fff;
+}
+#issue-page .issue-article-item {
+  padding: 20px 15px;
+}
+#issue-page .issue-article-item:not(:last-child) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+#issue-page .issue-article-item:hover .issue-article-link {
+  transform: translateX(15px);
+}
+#issue-page .issue-article-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  transition: all 0.3s;
+}
+#issue-page .issue-article-title {
+  margin-bottom: 10px;
 }
 #footer {
   background: #fff;
@@ -3624,7 +3685,7 @@ ul {
   padding: 10px;
   border: 1px solid #197a56;
   color: #001e3b;
-  font-weight: 900;
+  font-weight: bold;
 }
 #footer .footer-menu {
   display: flex;
@@ -3640,7 +3701,7 @@ ul {
   position: relative;
   padding-bottom: 7px;
   color: #001e3b;
-  font-weight: 900;
+  font-weight: bold;
   transition: all 0.2s;
 }
 #footer .footer-menu-link:hover {
