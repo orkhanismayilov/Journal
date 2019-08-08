@@ -1637,6 +1637,14 @@ ul {
 #zoom-modal .close-zoom-modal:hover {
   opacity: 1;
 }
+.simplebar-track.simplebar-vertical {
+  width: 7px;
+}
+.simplebar-track .simplebar-scrollbar:before {
+  background: #fff;
+  opacity: .7;
+  border-radius: 0;
+}
 .our-research {
   margin-bottom: 30px;
   border-top: 1px solid #001e3b;
@@ -3576,44 +3584,89 @@ ul {
 #issue-page .current-issue-info {
   margin-bottom: 45px;
 }
-#issue-page .current-issue-title {
-  font-size: 4rem;
-  font-weight: bold;
-}
-#issue-page .current-issue-date {
+#issue-page .current-issue-top-wrapper {
+  display: flex;
+  align-items: center;
   padding-bottom: 30px;
   margin-bottom: 30px;
   border-bottom: 2px solid #001e3b;
+}
+#issue-page .current-issue-top-left {
+  flex: 1;
+}
+#issue-page .current-issue-top-right .btn-download {
+  margin-bottom: 15px;
+  text-align: right;
+  color: #004589;
+  transition: all 0.3s;
+}
+#issue-page .current-issue-top-right .btn-download:hover {
+  color: #0080ff;
+  text-shadow: 0 0 3px rgba(0, 30, 59, 0.65);
+}
+#issue-page .current-issue-top-right .btn-download i {
+  font-size: 4.5rem;
+}
+#issue-page .current-issue-title {
+  font-size: 4rem;
+  font-weight: bold;
 }
 #issue-page .current-issue-desc {
   margin-bottom: 30px;
   font-size: 1.5rem;
   line-height: 1.5;
 }
-#issue-page .current-issue-authors {
+#issue-page .current-issue-author-link-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#issue-page .current-issue-author-link-wrapper .current-issue-authors {
+  flex: 1 1 70%;
+  max-width: 70%;
   margin-bottom: 0;
 }
-#issue-page .current-issue-authors strong {
+#issue-page .current-issue-author-link-wrapper .current-issue-authors strong {
   font-weight: bold;
 }
-#issue-page .current-issue-authors .author-link {
+#issue-page .current-issue-author-link-wrapper .current-issue-authors .author-link {
   color: #004589;
   transition: all 0.2s;
 }
-#issue-page .current-issue-authors .author-link:hover {
+#issue-page .current-issue-author-link-wrapper .current-issue-authors .author-link:hover {
   color: #0080ff;
+}
+#issue-page .current-issue-author-link-wrapper .all-issues-link {
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  color: #004589;
+  transition: all 0.3s;
+}
+#issue-page .current-issue-author-link-wrapper .all-issues-link:hover {
+  background: #001e3b;
+  color: #fff;
 }
 #issue-page .current-issue-articles {
   display: none;
   padding: 30px;
   background: #004589;
+  position: relative;
+  overflow-x: hidden;
+}
+#issue-page .current-issue-articles:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  background: #004589;
+  background: linear-gradient(0deg, #004589 35%, transparent 90%);
 }
 #issue-page .current-issue-articles-title {
   margin-bottom: 10px;
   color: #fff;
-}
-#issue-page .issue-article-item {
-  padding: 20px 15px;
 }
 #issue-page .issue-article-item:not(:last-child) {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
@@ -3625,6 +3678,7 @@ ul {
   display: block;
   width: 100%;
   height: 100%;
+  padding: 20px 15px;
   color: #fff;
   transition: all 0.3s;
 }
@@ -3684,7 +3738,6 @@ ul {
   height: 50px;
   padding: 10px;
   border: 1px solid #197a56;
-  color: #001e3b;
   font-weight: bold;
 }
 #footer .footer-menu {
