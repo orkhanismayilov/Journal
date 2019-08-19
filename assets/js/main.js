@@ -692,6 +692,19 @@ $(document).ready(function () {
 
     }
 
+    // All Issues Page Functions
+    var allIssuesPage = $('#all-issues-page');
+    if (allIssuesPage.length > 0) {
+        var issueSwiper = new Swiper('.issues-list', {
+            pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+                dynamicBullets: true,
+                clickable: true
+            }
+        });
+    }
+
     // Toggle Panels Function
     function togglePanels(shiftIndex) {
         // Checking Animating State and Going On
