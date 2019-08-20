@@ -2001,6 +2001,57 @@ ul {
   text-transform: capitalize;
   text-align: center;
 }
+.social-share-buttons {
+  position: fixed;
+  top: 85px;
+  right: 0;
+  padding: 25px;
+  z-index: 10;
+}
+.social-share-buttons:hover .btn-social-buttons-trigger {
+  opacity: 1;
+}
+.social-share-buttons:hover .social-share-buttons-list {
+  height: 135px;
+}
+.social-share-buttons .btn-social-buttons-trigger {
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  line-height: 50px;
+  text-align: center;
+  background: #001e3b;
+  border-radius: 50%;
+  color: #fff;
+  opacity: .3;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.social-share-buttons .social-share-buttons-list {
+  position: absolute;
+  height: 0;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.social-share-buttons .social-share-item {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+  line-height: 40px;
+  text-align: center;
+  color: #001e3b;
+  border-radius: 50%;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.social-share-buttons .social-share-item:hover {
+  background: #001e3b;
+  color: #fff;
+}
 #header {
   display: flex;
   align-items: center;
