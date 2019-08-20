@@ -2001,6 +2001,17 @@ ul {
   text-transform: capitalize;
   text-align: center;
 }
+.all-issues-link {
+  display: block;
+  padding: 5px;
+  border-radius: 3px;
+  color: #004589;
+  transition: all 0.3s;
+}
+.all-issues-link:hover {
+  background: #001e3b;
+  color: #fff;
+}
 .social-share-buttons {
   position: fixed;
   top: 85px;
@@ -2383,6 +2394,14 @@ ul {
   display: flex;
   flex-wrap: wrap;
   margin: 0 -10px;
+}
+#main-menu .all-issues-link-wrapper {
+  text-align: right;
+}
+#main-menu .all-issues-link-wrapper .all-issues-link {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 1.3rem;
 }
 #main-menu .mm-overlay {
   position: absolute;
@@ -3696,17 +3715,6 @@ ul {
 }
 #issue-page .current-issue-author-link-wrapper .current-issue-authors .author-link:hover {
   color: #0080ff;
-}
-#issue-page .current-issue-author-link-wrapper .all-issues-link {
-  display: block;
-  padding: 5px;
-  border-radius: 3px;
-  color: #004589;
-  transition: all 0.3s;
-}
-#issue-page .current-issue-author-link-wrapper .all-issues-link:hover {
-  background: #001e3b;
-  color: #fff;
 }
 #issue-page .current-issue-articles {
   display: none;

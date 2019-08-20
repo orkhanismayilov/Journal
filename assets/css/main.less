@@ -1020,6 +1020,20 @@ ul {
     }
 }
 
+// All Issues Link
+.all-issues-link {
+    display: block;
+    padding: 5px;
+    border-radius: 3px;
+    color: @color-blue-medium;
+    transition: @transition-3ms;
+
+    &:hover {
+        background: @color-blue;
+        color: #fff;
+    }
+}
+
 // Social Share Buttons
 .social-share-buttons {
     position: fixed;
@@ -1525,6 +1539,17 @@ ul {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -10px;
+    }
+
+    // All Issue Link Wrapper
+    .all-issues-link-wrapper {
+        text-align: right;
+
+        .all-issues-link {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 1.3rem;
+        }
     }
 
     // Main Menu Backdrop Overlay
@@ -3254,20 +3279,6 @@ ul {
                 &:hover {
                     color: @color-blue-light;
                 }
-            }
-        }
-
-        // All Issues Link
-        .all-issues-link {
-            display: block;
-            padding: 5px;
-            border-radius: 3px;
-            color: @color-blue-medium;
-            transition: @transition-3ms;
-
-            &:hover {
-                background: @color-blue;
-                color: #fff;
             }
         }
     }
