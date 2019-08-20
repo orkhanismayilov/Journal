@@ -699,9 +699,12 @@ $(document).ready(function () {
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
-                dynamicBullets: true,
-                clickable: true
-            }
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '">' + (index + 1) + '</span>';
+                }
+            },
+
         });
     }
 

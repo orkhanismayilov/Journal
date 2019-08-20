@@ -3715,8 +3715,18 @@ ul {
   flex-wrap: wrap;
 }
 #all-issues-page .swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
+  width: 35px;
+  height: 35px;
+  font-size: 1.4rem;
+  line-height: 32px;
+  text-align: center;
+  color: #fff;
+}
+#all-issues-page .swiper-pagination-bullet:hover {
+  background: #001e3b;
+}
+#all-issues-page .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #001e3b;
 }
 #footer {
   background: #fff;
