@@ -695,7 +695,14 @@ $(document).ready(function () {
     // All Issues Page Functions
     var allIssuesPage = $('#all-issues-page');
     if (allIssuesPage.length > 0) {
+        var initialSlideIndex = 0;
+
+        if (window.location.hash) {
+            initialSlideIndex = (window.location.hash.split('-')[1] - 1);
+        }
+
         var issueSwiper = new Swiper('.issues-list', {
+            initialSlide: initialSlideIndex,
             pagination: {
                 el: '.swiper-pagination',
                 type: 'bullets',
@@ -703,8 +710,11 @@ $(document).ready(function () {
                 renderBullet: function (index, className) {
                     return '<span class="' + className + '">' + (index + 1) + '</span>';
                 }
-            },
+            }
+        });
 
+        issueSwiper.on('slideChange', function () {
+            window.location.hash = '#page-' + (this.realIndex + 1);
         });
     }
 
