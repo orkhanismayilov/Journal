@@ -453,12 +453,9 @@ ul {
     }
 }
 
-// Form Control
-.form-control {
-    display: block;
-    border: none;
-    box-shadow: none;
-    outline: none;
+// Form Row
+.form-row {
+    display: flex;
 }
 
 // Form Group
@@ -468,6 +465,14 @@ ul {
     label {
         display: block;
     }
+}
+
+// Form Control
+.form-control {
+    display: block;
+    border: none;
+    box-shadow: none;
+    outline: none;
 }
 
 // Particles
@@ -3389,6 +3394,88 @@ ul {
         }
     }
 
+}
+
+// Profile Info Page
+#profile-info-page {
+    margin-top: @header-height;
+    padding: 30px 0 100px;
+
+    // Profile Info Header
+    .profile-info-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    // Profile Form Wrapper
+    .profile-form-wrapper {
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    // Profile Form
+    #profile-form {
+        padding: 0 10px;
+
+        .form-row {
+            margin: 0 -10px;
+            justify-content: space-between;
+        }
+
+        hr {
+            margin-bottom: 40px;
+        }
+
+        .form-group {
+            padding: 0 10px;
+            margin-bottom: 40px;
+
+            &.w-16 {
+                flex: 1 1 16.6666%;
+                max-width: 16.6666%;
+            }
+
+            &.w-25 {
+                flex: 1 1 25%;
+                max-width: 25%;
+            }
+
+            &.w-33 {
+                flex: 1 1 33.3333%;
+                max-width: 33.3333%;
+            }
+
+            &.w-50 {
+                flex: 1 1 50%;
+                max-width: 50%;
+            }
+
+            &.w-66 {
+                flex: 1 1 66.6666%;
+                max-width: 66.6666%;
+            }
+
+            &.w-75 {
+                flex: 1 1 75%;
+                max-width: 75%;
+            }
+        }
+
+        .form-control {
+            width: 100%;
+            height: 60px;
+            padding: 10px 15px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+            border: 1px solid @color-blue;
+            border-radius: 3px;
+            transition: @transition-4ms;
+
+            &:focus {
+                box-shadow: 0 0 10px fade(@color-blue, 50%);
+            }
+        }
+    }
 }
 
 // Footer
