@@ -229,6 +229,10 @@ body {
     &.menu-opened {
         overflow: hidden;
     }
+
+    &.no-scroll{
+        overflow: hidden;
+    }
 }
 
 a {
@@ -558,6 +562,11 @@ ul {
             border-radius: 0;
         }
     }
+}
+
+// Swiper
+.swiper-container{
+    height: 100vh;
 }
 
 // Our Research
@@ -1570,32 +1579,29 @@ ul {
 }
 
 // Sections
-.section-scroll {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
+.section-item {
     width: 100%;
     height: 100vh;
-    min-height: 600px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
 
     &.active {
 
+        .section-link{
+            transform: translate3d(0, -50%, 0);
+            opacity: 1;
+            transition: all .6s;
+        }
+
         .section-category,
         .section-title,
         .section-desc,
         .section-author,
         .section-button {
-            transform: translate3d(0, 0, 0);
+            transition: @transition-4ms;
+            transition-delay: .2s;
             opacity: 1;
-        }
-
-        &.long {
-            position: static;
-            height: auto;
         }
     }
 
@@ -1607,8 +1613,9 @@ ul {
         position: absolute;
         top: 50%;
         left: 10%;
-        transform: translateY(-50%);
         color: #fff;
+        transform: translate3d(0, 150%, 0);
+        opacity: 0;
         text-shadow: 0 0 10px fade(@color-black, 65%);
         z-index: 5;
 
@@ -1625,20 +1632,20 @@ ul {
         line-height: 1;
         margin-bottom: 20px;
         color: @color-blue-light;
-        transform: translate3d(0, -150%, 0);
+        // transform: translate3d(0, -150%, 0);
         opacity: 0;
-        transition: @transition-8ms;
-        transition-delay: .4s;
+        // transition: @transition-8ms;
+        // transition-delay: .4s;
     }
 
     // Article Title
     .section-title {
         margin-bottom: 20px;
         text-transform: capitalize;
-        transform: translate3d(-70%, 0, 0);
+        // transform: translate3d(-70%, 0, 0);
         opacity: 0;
-        transition: @transition-8ms;
-        transition-delay: .4s;
+        // transition: @transition-8ms;
+        // transition-delay: .4s;
     }
 
     // Article Description
@@ -1646,26 +1653,26 @@ ul {
         margin-bottom: 20px;
         font-size: 1.5rem;
         line-height: 1.5;
-        transform: translate3d(-100%, 0, 0);
+        // transform: translate3d(-100%, 0, 0);
         opacity: 0;
-        transition: @transition-8ms;
-        transition-delay: .4s;
+        // transition: @transition-8ms;
+        // transition-delay: .4s;
     }
 
     // Article Author
     .section-author {
         color: #fff;
-        transform: translate3d(0, 120%, 0);
+        // transform: translate3d(0, 120%, 0);
         opacity: 0;
-        transition: @transition-8ms;
-        transition-delay: .4s;
+        // transition: @transition-8ms;
+        // transition-delay: .4s;
     }
 
     // Section Button
     .section-button {
+        // transform: translate3d(0, 150%, 0);
         opacity: 0;
-        transform: translate3d(0, 150%, 0);
-        transition: @transition-8ms, background .2s;
+        transition: background .2s;
     }
 
     // Section Overlay
@@ -3692,6 +3699,7 @@ ul {
         padding: 0 5px;
         margin-bottom: 10px;
         position: relative;
+        outline: none;
         cursor: pointer;
 
         &:hover {

@@ -21,10 +21,11 @@
     <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="/assets/css/hamburgers.min.css">
     <link rel="stylesheet" href="/assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="/assets/css/swiper.min.css">
     <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 
-<body>
+<body class="main-page no-scroll">
     <!-- Preloader -->
     <div id="preloader">
         <div class="cssload-preloader cssload-loading">
@@ -429,358 +430,393 @@
         </div>
     </header>
 
-    <!-- Welcome Panel -->
-    <section class="section-scroll" style="background-image: url('/assets/images/section-1.jpg')" data-panel="0">
-        <a href="#" class="section-link">
-            <p class="section-category">@Technology</p>
-            <h1 class="section-title">Budgeting Software Options to Keep Linux Users From Seeing Red</h1>
-            <p class="section-desc">Budgeting apps come in all sizes and shapes. Budget apps for Linux are part of a
-                software category that has been all but abandoned. But take heart. A number of Web-based solutions will
-                more than meet your budget-tracking needs. If you still insist on finding a pure Linux-based
-                application, do not mix the concept of open source with free.</p>
-            <p class="article-author section-author"><i class="fas fa-feather-alt"></i>by <strong>Orkhan
-                    Ismayilov</strong></p>
-            <span class="btn btn-secondary section-button">Explore<i class="fal fa-arrow-right"></i></span>
-        </a>
-
-        <div class="overlay"></div>
-
-        <div id="particles"></div>
-    </section>
-
-    <!-- Trending Panel -->
-    <section class="section-scroll" style="background-image: url('/assets/images/section-2.jpg')" data-panel="1">
-        <a href="#" class="section-link">
-            <p class="section-category">@Healthcare</p>
-            <h2 class="section-title">Safer sleeping pills keep brain alert to danger</h2>
-            <p class="section-desc">Most sleeping pills are so strong that the sound of a fire alarm is unlikely to wake
-                those who take them. However, a new study, published in the journal Frontiers in Behavioral
-                Neuroscience, proposes a safer alternative to these drugs.</p>
-            <p class="article-author section-author"><i class="fas fa-feather-alt"></i>by <strong>Orkhan
-                    Ismayilov</strong> and
-                <strong>Ahmad Fataliyev</strong></p>
-            <span class="btn btn-secondary section-button">Explore<i class="fal fa-arrow-right"></i></span>
-        </a>
-
-        <div class="overlay"></div>
-    </section>
-
-    <!-- Featured Panel -->
-    <section class="section-scroll" data-panel="2">
-        <!-- Featured Slider -->
-        <div id="featured-slider">
-
-            <!-- Featured Item -->
-            <div class="featured-item active" style="background-image: url('/assets/images/featured-1.jpg')">
-                <div class="featured-info-wrapper">
-
-                    <a href="#" class="featured-link">
-                        <p class="featured-category">@Architecture</p>
-                        <h3 class="featured-title">How to Boost Profits at Your Architecture Firm, Without Taking on New
-                            Clients</h3>
-                        <p class="featured-desc">Bringing in new clients isn’t always a scalable solution, especially if
-                            it requires you to hire more architects. Here are the alternative ways to improve profit
-                            margins at your architectural firm - including upselling, adjusting your rates and
-                            streamlining processes.</p>
+    <!-- Slider main container -->
+    <div class="swiper-container" id="main-swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <!-- Welcome Panel -->
+                <section class="section-item" style="background-image: url('/assets/images/section-1.jpg')">
+                    <a href="#" class="section-link">
+                        <p class="section-category">@Technology</p>
+                        <h1 class="section-title">Budgeting Software Options to Keep Linux Users From Seeing Red</h1>
+                        <p class="section-desc">Budgeting apps come in all sizes and shapes. Budget apps for Linux are
+                            part of a
+                            software category that has been all but abandoned. But take heart. A number of Web-based
+                            solutions will
+                            more than meet your budget-tracking needs. If you still insist on finding a pure Linux-based
+                            application, do not mix the concept of open source with free.</p>
+                        <p class="article-author section-author"><i class="fas fa-feather-alt"></i>by <strong>Orkhan
+                                Ismayilov</strong></p>
+                        <span class="btn btn-secondary section-button">Explore<i class="fal fa-arrow-right"></i></span>
                     </a>
 
-                    <!-- Slider Pagination -->
-                    <div class="slider-pagination-wrapper">
-                        <ul class="slider-pagination">
-                            <li class="slider-page active" data-page="0">01</li>
-                            <li class="slider-page" data-page="1">02</li>
-                            <li class="slider-page" data-page="2">03</li>
-                            <li class="slider-page" data-page="3">04</li>
-                            <li class="slider-page" data-page="4">05</li>
-                        </ul>
-                    </div>
+                    <div class="overlay"></div>
 
-                </div>
+                    <div id="particles"></div>
+                </section>
             </div>
 
-            <!-- Featured Item -->
-            <div class="featured-item" style="background-image: url('/assets/images/featured-2.jpg')">
-                <div class="featured-info-wrapper">
-
-                    <a href="#" class="featured-link">
-                        <p class="featured-category">@Finance</p>
-                        <h3 class="featured-title">The journey to an agile organization</h3>
-                        <p class="featured-desc">You know what an agile organization is, and why it’s important. But
-                            figuring out how to pull off an agile transformation is another question.</p>
+            <div class="swiper-slide">
+                <!-- Trending Panel -->
+                <section class="section-item" style="background-image: url('/assets/images/section-2.jpg')">
+                    <a href="#" class="section-link">
+                        <p class="section-category">@Healthcare</p>
+                        <h2 class="section-title">Safer sleeping pills keep brain alert to danger</h2>
+                        <p class="section-desc">Most sleeping pills are so strong that the sound of a fire alarm is
+                            unlikely to wake
+                            those who take them. However, a new study, published in the journal Frontiers in Behavioral
+                            Neuroscience, proposes a safer alternative to these drugs.</p>
+                        <p class="article-author section-author"><i class="fas fa-feather-alt"></i>by <strong>Orkhan
+                                Ismayilov</strong> and
+                            <strong>Ahmad Fataliyev</strong></p>
+                        <span class="btn btn-secondary section-button">Explore<i class="fal fa-arrow-right"></i></span>
                     </a>
 
-                    <!-- Slider Pagination -->
-                    <div class="slider-pagination-wrapper">
-                        <ul class="slider-pagination">
-                            <li class="slider-page" data-page="0">01</li>
-                            <li class="slider-page active" data-page="1">02</li>
-                            <li class="slider-page" data-page="2">03</li>
-                            <li class="slider-page" data-page="3">04</li>
-                            <li class="slider-page" data-page="4">05</li>
-                        </ul>
-                    </div>
-
-                </div>
+                    <div class="overlay"></div>
+                </section>
             </div>
 
-            <!-- Featured Item -->
-            <div class="featured-item" style="background-image: url('/assets/images/featured-3.jpg')">
-                <div class="featured-info-wrapper">
+            <div class="swiper-slide">
+                <!-- Featured Panel -->
+                <section class="section-item">
+                    <!-- Featured Slider -->
+                    <div id="featured-slider">
 
-                    <a href="#" class="featured-link">
-                        <p class="featured-category">@Marketing</p>
-                        <h3 class="featured-title">What Creativity Looks Like in Marketing Today</h3>
-                        <p class="featured-desc">“It’s tricky to choose a single marketing article as my favorite, but
-                            the one that has had a lasting impression on me is HBR’s ‘What Creativity in Marketing Looks
-                            Like Today’</p>
-                    </a>
+                        <!-- Featured Item -->
+                        <div class="featured-item active"
+                            style="background-image: url('/assets/images/featured-1.jpg')">
+                            <div class="featured-info-wrapper">
 
-                    <!-- Slider Pagination -->
-                    <div class="slider-pagination-wrapper">
-                        <ul class="slider-pagination">
-                            <li class="slider-page" data-page="0">01</li>
-                            <li class="slider-page" data-page="1">02</li>
-                            <li class="slider-page active" data-page="2">03</li>
-                            <li class="slider-page" data-page="3">04</li>
-                            <li class="slider-page" data-page="4">05</li>
-                        </ul>
+                                <a href="#" class="featured-link">
+                                    <p class="featured-category">@Architecture</p>
+                                    <h3 class="featured-title">How to Boost Profits at Your Architecture Firm, Without
+                                        Taking on New
+                                        Clients</h3>
+                                    <p class="featured-desc">Bringing in new clients isn’t always a scalable solution,
+                                        especially if
+                                        it requires you to hire more architects. Here are the alternative ways to
+                                        improve profit
+                                        margins at your architectural firm - including upselling, adjusting your rates
+                                        and
+                                        streamlining processes.</p>
+                                </a>
+
+                                <!-- Slider Pagination -->
+                                <div class="slider-pagination-wrapper">
+                                    <ul class="slider-pagination">
+                                        <li class="slider-page active" data-page="0">01</li>
+                                        <li class="slider-page" data-page="1">02</li>
+                                        <li class="slider-page" data-page="2">03</li>
+                                        <li class="slider-page" data-page="3">04</li>
+                                        <li class="slider-page" data-page="4">05</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Featured Item -->
+                        <div class="featured-item" style="background-image: url('/assets/images/featured-2.jpg')">
+                            <div class="featured-info-wrapper">
+
+                                <a href="#" class="featured-link">
+                                    <p class="featured-category">@Finance</p>
+                                    <h3 class="featured-title">The journey to an agile organization</h3>
+                                    <p class="featured-desc">You know what an agile organization is, and why it’s
+                                        important. But
+                                        figuring out how to pull off an agile transformation is another question.</p>
+                                </a>
+
+                                <!-- Slider Pagination -->
+                                <div class="slider-pagination-wrapper">
+                                    <ul class="slider-pagination">
+                                        <li class="slider-page" data-page="0">01</li>
+                                        <li class="slider-page active" data-page="1">02</li>
+                                        <li class="slider-page" data-page="2">03</li>
+                                        <li class="slider-page" data-page="3">04</li>
+                                        <li class="slider-page" data-page="4">05</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Featured Item -->
+                        <div class="featured-item" style="background-image: url('/assets/images/featured-3.jpg')">
+                            <div class="featured-info-wrapper">
+
+                                <a href="#" class="featured-link">
+                                    <p class="featured-category">@Marketing</p>
+                                    <h3 class="featured-title">What Creativity Looks Like in Marketing Today</h3>
+                                    <p class="featured-desc">“It’s tricky to choose a single marketing article as my
+                                        favorite, but
+                                        the one that has had a lasting impression on me is HBR’s ‘What Creativity in
+                                        Marketing Looks
+                                        Like Today’</p>
+                                </a>
+
+                                <!-- Slider Pagination -->
+                                <div class="slider-pagination-wrapper">
+                                    <ul class="slider-pagination">
+                                        <li class="slider-page" data-page="0">01</li>
+                                        <li class="slider-page" data-page="1">02</li>
+                                        <li class="slider-page active" data-page="2">03</li>
+                                        <li class="slider-page" data-page="3">04</li>
+                                        <li class="slider-page" data-page="4">05</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Featured Item -->
+                        <div class="featured-item" style="background-image: url('/assets/images/featured-4.jpg')">
+                            <div class="featured-info-wrapper">
+
+                                <a href="#" class="featured-link">
+                                    <p class="featured-category">@Marketing</p>
+                                    <h3 class="featured-title">How To Become A Customer Acquisition Expert</h3>
+                                    <p class="featured-desc">I started my career out as a “product guy”. But about 4
+                                        years ago I
+                                        realized that product was a small piece of the startup puzzle. I became
+                                        fascinated with how
+                                        products were growing. Thus, my journey on learning growth and customer
+                                        acquisition began.
+                                    </p>
+                                </a>
+
+                                <!-- Slider Pagination -->
+                                <div class="slider-pagination-wrapper">
+                                    <ul class="slider-pagination">
+                                        <li class="slider-page" data-page="0">01</li>
+                                        <li class="slider-page" data-page="1">02</li>
+                                        <li class="slider-page" data-page="2">03</li>
+                                        <li class="slider-page active" data-page="3">04</li>
+                                        <li class="slider-page" data-page="4">05</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Featured Item -->
+                        <div class="featured-item" style="background-image: url('/assets/images/featured-5.jpg')">
+                            <div class="featured-info-wrapper">
+
+                                <a href="#" class="featured-link">
+                                    <p class="featured-category">@Legal</p>
+                                    <h3 class="featured-title">Back From the Brink</h3>
+                                    <p class="featured-desc">Revenue Performance Is Rock Solid as States Climb Out of
+                                        the Great
+                                        Recession’s Abyss</p>
+                                </a>
+
+                                <!-- Slider Pagination -->
+                                <div class="slider-pagination-wrapper">
+                                    <ul class="slider-pagination">
+                                        <li class="slider-page" data-page="0">01</li>
+                                        <li class="slider-page" data-page="1">02</li>
+                                        <li class="slider-page" data-page="2">03</li>
+                                        <li class="slider-page" data-page="3">04</li>
+                                        <li class="slider-page active" data-page="4">05</li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
-
-                </div>
+                </section>
             </div>
 
-            <!-- Featured Item -->
-            <div class="featured-item" style="background-image: url('/assets/images/featured-4.jpg')">
-                <div class="featured-info-wrapper">
+            <div class="swiper-slide">
+                <!-- Categorires Panel -->
+                <section class="section-item long">
 
-                    <a href="#" class="featured-link">
-                        <p class="featured-category">@Marketing</p>
-                        <h3 class="featured-title">How To Become A Customer Acquisition Expert</h3>
-                        <p class="featured-desc">I started my career out as a “product guy”. But about 4 years ago I
-                            realized that product was a small piece of the startup puzzle. I became fascinated with how
-                            products were growing. Thus, my journey on learning growth and customer acquisition began.
-                        </p>
-                    </a>
+                    <!-- Categories Wrapper -->
+                    <div id="categories-wrapper" style="background-image: url('/assets/images/cat-bg-1.jpg')">
+                        <div class="container-wide">
+                            <h2 class="categories-title">
+                                Choose category you are interested in
+                            </h2>
 
-                    <!-- Slider Pagination -->
-                    <div class="slider-pagination-wrapper">
-                        <ul class="slider-pagination">
-                            <li class="slider-page" data-page="0">01</li>
-                            <li class="slider-page" data-page="1">02</li>
-                            <li class="slider-page" data-page="2">03</li>
-                            <li class="slider-page active" data-page="3">04</li>
-                            <li class="slider-page" data-page="4">05</li>
-                        </ul>
+                            <!-- Categories List -->
+                            <div class="categories-list">
+
+                                <!-- Category Item -->
+                                <div class="category-item">
+                                    <a href="category.html" class="category-link">
+                                        <img src="/assets/images/cat-finance-400x300.jpg" class="category-img"
+                                            alt="Finance">
+                                        <h6 class="category-title">Finance</h6>
+                                    </a>
+                                </div>
+
+                                <!-- Category Item -->
+                                <div class="category-item">
+                                    <a href="category.html" class="category-link">
+                                        <img src="/assets/images/cat-marketing-400x300.jpg" class="category-img"
+                                            alt="Marketing">
+                                        <h6 class="category-title">Marketing</h6>
+                                    </a>
+                                </div>
+
+                                <!-- Category Item -->
+                                <div class="category-item">
+                                    <a href="category.html" class="category-link">
+                                        <img src="/assets/images/cat-legal-400x300.jpg" class="category-img"
+                                            alt="Legal">
+                                        <h6 class="category-title">Legal</h6>
+                                    </a>
+                                </div>
+
+                                <!-- Category Item -->
+                                <div class="category-item">
+                                    <a href="category.html" class="category-link">
+                                        <img src="/assets/images/cat-tech-400x300.jpg" class="category-img"
+                                            alt="Technology">
+                                        <h6 class="category-title">Technology</h6>
+                                    </a>
+                                </div>
+
+                                <!-- Category Item -->
+                                <div class="category-item">
+                                    <a href="category.html" class="category-link">
+                                        <img src="/assets/images/cat-health-400x300.jpg" class="category-img"
+                                            alt="Healthcare">
+                                        <h6 class="category-title">Healthcare</h6>
+                                    </a>
+                                </div>
+
+                                <!-- Category Item -->
+                                <div class="category-item">
+                                    <a href="category.html" class="category-link">
+                                        <img src="/assets/images/cat-architecture-400x300.jpg" class="category-img"
+                                            alt="Architecture">
+                                        <h6 class="category-title">Architecture</h6>
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
                     </div>
+                </section>
+            </div>
+        </div>
+    </div>
 
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container-wide">
+
+            <!-- Footer Row -->
+            <div class="footer-row mb-50">
+
+                <!-- Footer Logo -->
+                <div class="footer-logo">
+                    <img src="/assets/logo/journal_logo_black.svg" alt="Logo">
                 </div>
+
+                <!-- Subscribe Wrapper -->
+                <div class="subscribe-wrapper">
+                    <label for="subscribe-to">Subscribe to our latest insights</label>
+                    <input type="email" id="subscribe-to" class="form-control" placeholder="E-mail">
+                    <button class="btn btn-arrow-right"><i class="fal fa-angle-right"></i></button>
+                </div>
+
             </div>
 
-            <!-- Featured Item -->
-            <div class="featured-item" style="background-image: url('/assets/images/featured-5.jpg')">
-                <div class="featured-info-wrapper">
+            <!-- Footer Row -->
+            <div class="footer-row mb-20">
 
-                    <a href="#" class="featured-link">
-                        <p class="featured-category">@Legal</p>
-                        <h3 class="featured-title">Back From the Brink</h3>
-                        <p class="featured-desc">Revenue Performance Is Rock Solid as States Climb Out of the Great
-                            Recession’s Abyss</p>
-                    </a>
+                <!-- Footer Menu -->
+                <ul class="footer-menu">
 
-                    <!-- Slider Pagination -->
-                    <div class="slider-pagination-wrapper">
-                        <ul class="slider-pagination">
-                            <li class="slider-page" data-page="0">01</li>
-                            <li class="slider-page" data-page="1">02</li>
-                            <li class="slider-page" data-page="2">03</li>
-                            <li class="slider-page" data-page="3">04</li>
-                            <li class="slider-page active" data-page="4">05</li>
-                        </ul>
-                    </div>
+                    <!-- Footer Menu Item -->
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">Contact us</a>
+                    </li>
 
-                </div>
+                    <!-- Footer Menu Item -->
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">FAQ</a>
+                    </li>
+
+                    <!-- Footer Menu Item -->
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">Privacy policy</a>
+                    </li>
+
+                    <!-- Footer Menu Item -->
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">Cookie policy</a>
+                    </li>
+
+                    <!-- Footer Menu Item -->
+                    <li class="footer-menu-item">
+                        <a href="#" class="footer-menu-link">Terms of use</a>
+                    </li>
+
+                </ul>
+
+                <!-- Footer Socials -->
+                <ul class="footer-socials">
+
+                    <!-- Footer Social Item -->
+                    <li class="footer-social-item">
+                        <a href="#" class="footer-social-link facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </li>
+
+                    <!-- Footer Social Item -->
+                    <li class="footer-social-item">
+                        <a href="#" class="footer-social-link twitter"><i
+                                class="fab fa-twitter"></i></a>
+                    </li>
+
+                    <!-- Footer Social Item -->
+                    <li class="footer-social-item">
+                        <a href="#" class="footer-social-link instagram"><i
+                                class="fab fa-instagram"></i></i></a>
+                    </li>
+
+                    <!-- Footer Social Item -->
+                    <li class="footer-social-item">
+                        <a href="#" class="footer-social-link vkontakte"><i class="fab fa-vk"></i></a>
+                    </li>
+
+                    <!-- Footer Social Item -->
+                    <li class="footer-social-item">
+                        <a href="#" class="footer-social-link linkedin"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </li>
+
+                    <!-- Footer Social Item -->
+                    <li class="footer-social-item">
+                        <a href="#" class="footer-social-link youtube"><i
+                                class="fab fa-youtube"></i></a>
+                    </li>
+
+                </ul>
+
             </div>
+
+            <!-- Copyright -->
+            <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
 
         </div>
-    </section>
-
-    <!-- Categorires Panel -->
-    <section class="section-scroll long" data-panel="3">
-
-        <!-- Categories Wrapper -->
-        <div id="categories-wrapper" style="background-image: url('/assets/images/cat-bg-1.jpg')">
-            <div class="container-wide">
-                <h2 class="categories-title">
-                    Choose category you are interested in
-                </h2>
-
-                <!-- Categories List -->
-                <div class="categories-list">
-
-                    <!-- Category Item -->
-                    <div class="category-item">
-                        <a href="category.html" class="category-link">
-                            <img src="/assets/images/cat-finance-400x300.jpg" class="category-img" alt="Finance">
-                            <h6 class="category-title">Finance</h6>
-                        </a>
-                    </div>
-
-                    <!-- Category Item -->
-                    <div class="category-item">
-                        <a href="category.html" class="category-link">
-                            <img src="/assets/images/cat-marketing-400x300.jpg" class="category-img" alt="Marketing">
-                            <h6 class="category-title">Marketing</h6>
-                        </a>
-                    </div>
-
-                    <!-- Category Item -->
-                    <div class="category-item">
-                        <a href="category.html" class="category-link">
-                            <img src="/assets/images/cat-legal-400x300.jpg" class="category-img" alt="Legal">
-                            <h6 class="category-title">Legal</h6>
-                        </a>
-                    </div>
-
-                    <!-- Category Item -->
-                    <div class="category-item">
-                        <a href="category.html" class="category-link">
-                            <img src="/assets/images/cat-tech-400x300.jpg" class="category-img" alt="Technology">
-                            <h6 class="category-title">Technology</h6>
-                        </a>
-                    </div>
-
-                    <!-- Category Item -->
-                    <div class="category-item">
-                        <a href="category.html" class="category-link">
-                            <img src="/assets/images/cat-health-400x300.jpg" class="category-img" alt="Healthcare">
-                            <h6 class="category-title">Healthcare</h6>
-                        </a>
-                    </div>
-
-                    <!-- Category Item -->
-                    <div class="category-item">
-                        <a href="category.html" class="category-link">
-                            <img src="/assets/images/cat-architecture-400x300.jpg" class="category-img"
-                                alt="Architecture">
-                            <h6 class="category-title">Architecture</h6>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer -->
-        <footer id="footer">
-            <div class="container-wide">
-
-                <!-- Footer Row -->
-                <div class="footer-row mb-50">
-
-                    <!-- Footer Logo -->
-                    <div class="footer-logo">
-                        <img src="/assets/logo/journal_logo_black.svg" alt="Logo">
-                    </div>
-
-                    <!-- Subscribe Wrapper -->
-                    <div class="subscribe-wrapper">
-                        <label for="subscribe-to">Subscribe to our latest insights</label>
-                        <input type="email" id="subscribe-to" class="form-control" placeholder="E-mail">
-                        <button class="btn btn-arrow-right"><i class="fal fa-angle-right"></i></button>
-                    </div>
-
-                </div>
-
-                <!-- Footer Row -->
-                <div class="footer-row mb-20">
-
-                    <!-- Footer Menu -->
-                    <ul class="footer-menu">
-
-                        <!-- Footer Menu Item -->
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">Contact us</a>
-                        </li>
-
-                        <!-- Footer Menu Item -->
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">FAQ</a>
-                        </li>
-
-                        <!-- Footer Menu Item -->
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">Privacy policy</a>
-                        </li>
-
-                        <!-- Footer Menu Item -->
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">Cookie policy</a>
-                        </li>
-
-                        <!-- Footer Menu Item -->
-                        <li class="footer-menu-item">
-                            <a href="#" class="footer-menu-link">Terms of use</a>
-                        </li>
-
-                    </ul>
-
-                    <!-- Footer Socials -->
-                    <ul class="footer-socials">
-
-                        <!-- Footer Social Item -->
-                        <li class="footer-social-item">
-                            <a href="#" class="footer-social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                        </li>
-
-                        <!-- Footer Social Item -->
-                        <li class="footer-social-item">
-                            <a href="#" class="footer-social-link twitter"><i class="fab fa-twitter"></i></a>
-                        </li>
-
-                        <!-- Footer Social Item -->
-                        <li class="footer-social-item">
-                            <a href="#" class="footer-social-link instagram"><i class="fab fa-instagram"></i></i></a>
-                        </li>
-
-                        <!-- Footer Social Item -->
-                        <li class="footer-social-item">
-                            <a href="#" class="footer-social-link vkontakte"><i class="fab fa-vk"></i></a>
-                        </li>
-
-                        <!-- Footer Social Item -->
-                        <li class="footer-social-item">
-                            <a href="#" class="footer-social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        </li>
-
-                        <!-- Footer Social Item -->
-                        <li class="footer-social-item">
-                            <a href="#" class="footer-social-link youtube"><i class="fab fa-youtube"></i></a>
-                        </li>
-
-                    </ul>
-
-                </div>
-
-                <!-- Copyright -->
-                <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
-
-            </div>
-        </footer>
-
-    </section>
+    </footer>
 
     <!-- Pager -->
     <div class="pager-wrapper">
-        <ul class="pager">
-            <li class="pager-item active" data-panel="0"></li>
-            <li class="pager-item" data-panel="1"></li>
-            <li class="pager-item" data-panel="2"></li>
-            <li class="pager-item long" data-panel="3"></li>
-        </ul>
+        <ul class="pager"></ul>
     </div>
 
     <script src="/assets/js/jquery.min.js"></script>
     <script src="/assets/js/particles.min.js"></script>
+    <script src="/assets/js/swiper.min.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 

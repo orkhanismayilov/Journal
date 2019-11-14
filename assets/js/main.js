@@ -9,6 +9,15 @@ $(document).ready(function () {
         $HB = $('html, body'),
         $header = $('#header');
 
+    // Scroll To Top on Main Page Refresh
+    window.addEventListener('beforeunload', function (e) {
+        $B.hide();
+
+        if ($B.hasClass('main-page')) {
+            $D.scrollTop(0);
+        }
+    });
+
     // Go Up Button
     var btnUp = $('.btn-up');
     if (btnUp.length > 0) {
@@ -217,93 +226,57 @@ $(document).ready(function () {
         }
     }
 
-    // Panel Scroll
-    var panels = $('.section-scroll');
-    if (panels.length > 0) {
-        var activePanel = panels.first(),
-            activePanelIndex = activePanel.data('panel'),
-            shiftIndex = activePanelIndex,
-            zIndex = 0,
-            animating = false,
-            menuOpened = $B.hasClass('menu-opened'),
-            posY = 0,
-            diff = 0,
-            verticalTreshold = 150;
-
-
-
-        // Scroll to Section on Mouse Scroll
-        $D.on('mousewheel', function (e) {
-            e = e || window.event;
-            menuOpened = $B.hasClass('menu-opened');
-
-            if (e.originalEvent.deltaY > 99 && activePanelIndex != panels.last().data('panel') && !menuOpened) {
-                shiftIndex = activePanelIndex + 1;
-                togglePanels(shiftIndex);
-            } else if (e.originalEvent.deltaY < -99 && activePanelIndex != panels.first().data('panel') && $D.scrollTop() === 0 && !menuOpened) {
-                shiftIndex = activePanelIndex - 1;
-                togglePanels(shiftIndex);
-            }
-        });
-
-        // Scroll To Section On TouchDrag
-        panels.on({
-            'touchstart': function () {
-                dragStart();
-            },
-            'touchend': function () {
-                dragEnd();
-            }
-        });
-
-        // Drag Start Function
-        function dragStart(e) {
-            e = e || window.event;
-            e.preventDefault();
-
-            if (e.type == 'touchstart') {
-                posY = e.touches[0].clientY;
-            }
-        }
-
-        // Drag End Function
-        function dragEnd(e) {
-            e = e || window.event;
-
-            if (e.type == 'touchend') {
-                diff = posY - e.changedTouches[0].clientY;
-
-                if (diff < -verticalTreshold) {
-                    if (activePanelIndex - 1 >= 0) {
-                        shiftIndex = activePanelIndex - 1;
-
-                        togglePanels(shiftIndex);
-                    }
-                } else if (diff > verticalTreshold) {
-                    if (activePanelIndex + 1 < panels.length) {
-                        shiftIndex = activePanelIndex + 1;
-
-                        togglePanels(shiftIndex);
-                    }
+    // Main Page Swiper
+    var mainSwiper = new Swiper('#main-swiper', {
+        direction: 'vertical',
+        autoHeight: true,
+        speed: 500,
+        effect: 'fade',
+        pagination: {
+            el: '.pager',
+            clickable: true,
+            bulletClass: 'pager-item',
+            bulletActiveClass: 'active',
+            renderBullet: function (index, className) {
+                if (index === (this.slides.length - 1)) {
+                    return '<li class="' + className + ' long"></li>';
+                } else {
+                    return '<li class="' + className + '"></li>';
                 }
             }
+        },
+        mousewheel: {
+            releaseOnEdges: true
+        },
+        fadeEffec: {
+            crossFade: true
+        },
+        on: {
+            init: function () {
+                var firstSlide = $(this.slides[0]);
+                firstSlide.find('.section-item').addClass('active');
+            },
+            slideChangeTransitionEnd: function () {
+                var activeSlide = $(this.slides[this.realIndex]),
+                    prevSlide = $(this.slides[this.previousIndex]);
 
-            document.onmouseup = null;
-            document.onmousemove = null;
-        }
-    }
+                prevSlide.find('.section-item').removeClass('active');
+                activeSlide.find('.section-item').addClass('active');
+            },
+            reachEnd: function () {
+                $B.removeClass('no-scroll');
 
-    // Pagers Scroll
-    var pagers = $('.pager-item');
-    if (pagers.length > 0) {
-        pagers.click(function () {
-            shiftIndex = $(this).data('panel');
-
-            if (!$(this).hasClass('active')) {
-                togglePanels(shiftIndex);
+                $D.scroll(function () {
+                    if ($D.scrollTop() > 0) {
+                        mainSwiper.mousewheel.disable();
+                    } else {
+                        $B.addClass('no-scroll');
+                        mainSwiper.mousewheel.enable();
+                    }
+                });
             }
-        });
-    }
+        }
+    });
 
     // Toggle Login SignUp Forms
     var lsPage = $('#login-signup-page');
@@ -781,7 +754,6 @@ $(document).ready(function () {
 
 // Page Load
 $(window).on('load', function () {
-
     // Hide Preloader on Page Load
     $('#preloader').fadeOut('fast');
 
@@ -794,18 +766,4 @@ $(window).on('load', function () {
             });
         }
     }
-
-    // Changing Panels Z-Index and Initializing Active
-    var panels = $('.section-scroll'),
-        zIndex = 0;
-
-    panels.each(function () {
-        $(this).css('z-index', zIndex);
-
-        if (zIndex === 0) {
-            $(this).fadeIn().addClass('active');
-        }
-
-        zIndex--;
-    });
 });
