@@ -230,7 +230,7 @@ body {
         overflow: hidden;
     }
 
-    &.no-scroll{
+    &.no-scroll {
         overflow: hidden;
     }
 }
@@ -564,10 +564,11 @@ ul {
     }
 }
 
-// Swiper
-.swiper-container{
+// Main Swiper Container
+#main-swiper {
     height: 100vh;
 }
+
 
 // Our Research
 .our-research {
@@ -1223,7 +1224,7 @@ ul {
         }
 
         #search-form-header {
-            width: ~'calc(100vw - 300px)' !important;
+            width: calc(100vw - 300px) !important;
         }
 
         .btn-search {
@@ -1368,7 +1369,7 @@ ul {
 
         &.active {
             #search-form-header {
-                width: ~'calc(100% - 185px)';
+                width: calc(100% - 185px);
             }
 
             .btn-search {
@@ -1526,8 +1527,8 @@ ul {
 
     // Main Menu Submenu
     .mm-submenu {
-        flex: 1 1 ~'calc(100% - 300px)';
-        max-width: ~'calc(100% - 300px)';
+        flex: 1 1 calc(100% - 300px);
+        max-width: calc(100% - 300px);
         transition: @transition-3ms;
 
         // Main Menu Submenu Item
@@ -1588,7 +1589,7 @@ ul {
 
     &.active {
 
-        .section-link{
+        .section-link {
             transform: translate3d(0, -50%, 0);
             opacity: 1;
             transition: all .6s;
@@ -2093,8 +2094,8 @@ ul {
             }
 
             &:before {
-                width: @widthMouse - @borderMouse;
-                height: @heightMouse - @borderMouse;
+                width: calc(@widthMouse - @borderMouse);
+                height: calc(@heightMouse - @borderMouse);
                 background-color: @color-blue;
                 border-radius: 100px;
             }
@@ -2388,7 +2389,7 @@ ul {
 
     // Authors Wrapper
     .authors-wrapper {
-        width: ~'calc((100% - 900px) / 2)';
+        width: calc((100% - 900px) / 2);
 
         // Author Card
         .author-card {

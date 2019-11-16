@@ -1651,7 +1651,7 @@ ul {
   opacity: 0.7;
   border-radius: 0;
 }
-.swiper-container {
+#main-swiper {
   height: 100vh;
 }
 .our-research {
@@ -2804,8 +2804,8 @@ ul {
   margin: auto;
 }
 #category-page .category-tip-icon .mouse:before {
-  width: 45px - 5px;
-  height: 80px - 5px;
+  width: calc(45px - 5px);
+  height: calc(80px - 5px);
   background-color: #001e3b;
   border-radius: 100px;
 }
