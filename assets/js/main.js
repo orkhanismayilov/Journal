@@ -228,7 +228,7 @@ $(document).ready(function () {
 
     // Main Page Swiper
     var mainPageSlider = $('#main-swiper');
-    if(mainPageSlider.length > 0){
+    if (mainPageSlider.length > 0) {
         var mainSwiper = new Swiper('#main-swiper', {
             direction: 'vertical',
             autoHeight: true,
@@ -258,29 +258,33 @@ $(document).ready(function () {
                     var firstSlide = $(this.slides[0]);
                     firstSlide.find('.section-item').addClass('active');
                 },
+                slideChangeTransitionStart: function () {
+                    if (this.realIndex === this.slides.length - 2) {
+                        $B.addClass('no-scroll');
+                    }
+                },
                 slideChangeTransitionEnd: function () {
                     var activeSlide = $(this.slides[this.realIndex]),
                         prevSlide = $(this.slides[this.previousIndex]);
-    
+
                     prevSlide.find('.section-item').removeClass('active');
                     activeSlide.find('.section-item').addClass('active');
                 },
                 reachEnd: function () {
                     $B.removeClass('no-scroll');
-    
+
                     $D.scroll(function () {
                         if ($D.scrollTop() > 0) {
                             mainSwiper.mousewheel.disable();
                         } else {
-                            $B.addClass('no-scroll');
                             mainSwiper.mousewheel.enable();
                         }
                     });
                 }
             }
-        });    
+        });
     }
-    
+
     // Toggle Login SignUp Forms
     var lsPage = $('#login-signup-page');
     if (lsPage.length > 0) {
