@@ -75,21 +75,6 @@ $(document).ready(function () {
 
         // Close Menu on Outside Click
         overlay.click(toggleMainMenu);
-
-        // Toggle Main Menu
-        function toggleMainMenu() {
-            // Toggle Hamburger State
-            menuTrigger.toggleClass('is-active');
-
-            // Toggle Main Menu
-            mainMenu.toggleClass('active');
-
-            // Toggle Search Bar and Logo Background
-            $header.toggleClass('menu-opened');
-
-            // Toggle Sections Scroll Event
-            $B.toggleClass('menu-opened');
-        }
     }
 
     // Search Trigger [Header]
@@ -257,6 +242,17 @@ $(document).ready(function () {
                 init: function () {
                     var firstSlide = $(this.slides[0]);
                     firstSlide.find('.section-item').addClass('active');
+
+                    $('#featured-link').click(function (e) {
+                        e.preventDefault();
+
+                        var that = $(this),
+                            target = that.attr('href'),
+                            featuredSlideIndex = $('.swiper-slide').index($(target)[0]);
+
+                        toggleMainMenu();
+                        mainSwiper.slideTo(featuredSlideIndex);
+                    });
                 },
                 slideChangeTransitionStart: function () {
                     if (this.realIndex === this.slides.length - 2) {
@@ -756,6 +752,21 @@ $(document).ready(function () {
                 $header.removeClass('dark');
             }
         });
+    }
+
+    // Toggle Main Menu
+    function toggleMainMenu() {
+        // Toggle Hamburger State
+        menuTrigger.toggleClass('is-active');
+
+        // Toggle Main Menu
+        mainMenu.toggleClass('active');
+
+        // Toggle Search Bar and Logo Background
+        $header.toggleClass('menu-opened');
+
+        // Toggle Sections Scroll Event
+        $B.toggleClass('menu-opened');
     }
 });
 
