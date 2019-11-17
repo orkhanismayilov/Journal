@@ -219,6 +219,7 @@ $(document).ready(function () {
             autoHeight: true,
             speed: 500,
             effect: 'fade',
+            treshold: 40,
             pagination: {
                 el: '.pager',
                 clickable: true,
