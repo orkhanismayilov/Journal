@@ -3593,7 +3593,7 @@ ul {
 }
 #user-page .timeline-date {
   display: block;
-  margin-bottom: 15px;
+  padding-bottom: 15px;
   color: #ccc;
   text-align: center;
 }
