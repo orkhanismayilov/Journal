@@ -1,778 +1,877 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Journal</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
-    <link rel="stylesheet" href="assets/css/simplebar.min.css">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
+    <link rel="stylesheet" href="assets/css/simplebar.min.css" />
     <!-- <link rel="stylesheet" href="assets/css/sweetalert2.min.css"> -->
     <!-- <link rel="stylesheet" href="assets/css/swiper.min.css"> -->
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div class="cssload-preloader cssload-loading">
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-        </div>
+      <div class="cssload-preloader cssload-loading">
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+      </div>
     </div>
 
     <!-- Header -->
     <header id="header" class="fixed dark">
-        <!-- Menu -->
-        <div class="menu">
-            <button id="menu-trigger" class="hamburger hamburger--stand" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+      <!-- Menu -->
+      <div class="menu">
+        <button
+          id="menu-trigger"
+          class="hamburger hamburger--stand"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
 
-            <!-- Menu Content -->
-            <div id="main-menu">
-                <div class="mm-content">
+        <!-- Menu Content -->
+        <div id="main-menu">
+          <div class="mm-content">
+            <!-- Main Menu Content Wrapper -->
+            <div class="mm-content-wrapper">
+              <!-- Main Menu Links List -->
+              <div class="mm-list-wrapper">
+                <ul class="mm-list">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item active">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#journal"
+                    >
+                      Journal<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                    <!-- Main Menu Content Wrapper -->
-                    <div class="mm-content-wrapper">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#categories"
+                    >
+                      Categories<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                        <!-- Main Menu Links List -->
-                        <div class="mm-list-wrapper">
-                            <ul class="mm-list">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#media"
+                    >
+                      Media<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item active">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#journal">
-                                        Journal<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="#" class="mm-list-link"> Featured </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#categories">
-                                        Categories<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="#" class="mm-list-link"> About Us </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#media">
-                                        Media<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="auth.html#login" class="mm-list-link">
+                      Log In<i class="fal fa-sign-in-alt"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link">
-                                        Featured
-                                    </a>
-                                </li>
+              <!-- Main Menu Submenu -->
+              <div class="mm-submenu">
+                <!-- Submenu Item -->
+                <div id="journal" class="mm-submenu-item active">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Recent issues</h4>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link">
-                                        About Us
-                                    </a>
-                                </li>
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-1.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="auth.html#login" class="mm-list-link">
-                                        Log In<i class="fal fa-sign-in-alt"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                        <!-- Main Menu Submenu -->
-                        <div class="mm-submenu">
-
-                            <!-- Submenu Item -->
-                            <div id="journal" class="mm-submenu-item active">
-
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Recent issues</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-1.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        All Out Black
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">May 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-2.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Fat Pie
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">April 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-3.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Workspace
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">March 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-4.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Art of Design
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">February 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-5.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Clubbing
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">January 2019</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              All Out Black
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">May 2019</span>
+                      </a>
+                    </li>
 
-                            <!-- Submenu Item -->
-                            <div id="categories" class="mm-submenu-item">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-2.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Categories</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-finance-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Finance
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-marketing-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Marketing
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-legal-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Legal
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-tech-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Technology
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-health-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Healthcare
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-architecture-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Architecture
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Fat Pie
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">April 2019</span>
+                      </a>
+                    </li>
 
-                            <!-- Submenu Item -->
-                            <div id="media" class="mm-submenu-item">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-3.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Media</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/audio-400x300.jpg" alt="Media"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Audio Podcasts
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="#" class="submenu-image-link more-soon">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/more_soon.jpg" alt="Media"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        More Coming Soon
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Workspace
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">March 2019</span>
+                      </a>
+                    </li>
 
-                        </div>
-                    </div>
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-4.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Art of Design
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                        <span class="date">February 2019</span>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-5.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Clubbing
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                        <span class="date">January 2019</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="mm-overlay"></div>
+
+                <!-- Submenu Item -->
+                <div id="categories" class="mm-submenu-item">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Categories</h4>
+
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-finance-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Finance
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-marketing-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Marketing
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-legal-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Legal
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-tech-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Technology
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-health-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Healthcare
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-architecture-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Architecture
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Submenu Item -->
+                <div id="media" class="mm-submenu-item">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Media</h4>
+
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/audio-400x300.jpg"
+                            alt="Media"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Audio Podcasts
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="#" class="submenu-image-link more-soon">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/more_soon.jpg"
+                            alt="Media"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">More Coming Soon</div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="mm-overlay"></div>
         </div>
+      </div>
 
-        <!-- Logo -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/logo/journal_logo_white.svg" alt="Journal Logo">
-            </a>
-        </div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo/journal_logo_white.svg" alt="Journal Logo" />
+        </a>
+      </div>
 
-        <!-- Lang Switcher -->
-        <div class="lang-switcher">
-            <ul class="langs">
-                <li class="lang-item active">
-                    <a class="lang-link" href="#">EN</a>
-                </li>
-                <li class="lang-item">
-                    <a class="lang-link" href="#">AZ</a>
-                </li>
-            </ul>
-        </div>
+      <!-- Lang Switcher -->
+      <div class="lang-switcher">
+        <ul class="langs">
+          <li class="lang-item active">
+            <a class="lang-link" href="#">EN</a>
+          </li>
+          <li class="lang-item">
+            <a class="lang-link" href="#">AZ</a>
+          </li>
+        </ul>
+      </div>
 
-        <!-- User -->
-        <div class="user-info">
-            <a href="auth.html#login" class="btn btn-login"><i class="fal fa-sign-in-alt"></i> Log In</a>
-        </div>
+      <!-- User -->
+      <div class="user-info">
+        <a href="auth.html#login" class="btn btn-login"
+          ><i class="fal fa-sign-in-alt"></i> Log In</a
+        >
+      </div>
 
-        <!-- Search -->
-        <div class="search">
-            <button id="search-trigger-header" class="btn btn-search"><i class="far fa-search"></i></button>
-            <form id="search-form-header" action="#" method="get">
-                <label>
-                    <input type="text" class="form-control search-input" name="query" placeholder="Search" />
-                </label>
-            </form>
-        </div>
+      <!-- Search -->
+      <div class="search">
+        <button id="search-trigger-header" class="btn btn-search">
+          <i class="far fa-search"></i>
+        </button>
+        <form id="search-form-header" action="#" method="get">
+          <label>
+            <input
+              type="text"
+              class="form-control search-input"
+              name="query"
+              placeholder="Search"
+            />
+          </label>
+        </form>
+      </div>
     </header>
 
     <!-- Journal Issue Page -->
     <div id="issue-page">
+      <!-- Current Issue Aside -->
+      <div
+        class="current-issue"
+        style="background-image: url('assets/images/journal-2-blurred.jpg')"
+      >
+        <!-- Issue Cover Image -->
+        <img
+          src="assets/images/journal-2.jpg"
+          class="issue-cover-image"
+          alt="Issue Cover Image"
+        />
+      </div>
 
-        <!-- Current Issue Aside -->
-        <div class="current-issue" style="background-image: url('assets/images/journal-2-blurred.jpg')">
-            <!-- Issue Cover Image -->
-            <img src="assets/images/journal-2.jpg" class="issue-cover-image" alt="Issue Cover Image">
-        </div>
+      <!-- Issue Info -->
+      <div class="issue-info">
+        <!-- Current Issue Info -->
+        <div class="current-issue-info">
+          <!-- Current Issue Top Wrapper -->
+          <div class="current-issue-top-wrapper">
+            <!-- Current Issue Top Left -->
+            <div class="current-issue-top-left">
+              <!-- Current Issue Title -->
+              <h1 class="current-issue-title">Fat Pie</h1>
 
-        <!-- Issue Info -->
-        <div class="issue-info">
+              <!-- Current Issue Date -->
+              <h6 class="current-issue-date">April 2019</h6>
 
-            <!-- Current Issue Info -->
-            <div class="current-issue-info">
-                <!-- Current Issue Top Wrapper -->
-                <div class="current-issue-top-wrapper">
-                    <!-- Current Issue Top Left -->
-                    <div class="current-issue-top-left">
-                        <!-- Current Issue Title -->
-                        <h1 class="current-issue-title">Fat Pie</h1>
+              <!-- Share & Print Buttons -->
+              <ul class="share-print-buttons">
+                <!-- Share Item -->
+                <li class="share-item">
+                  <a href="#" class="share-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
 
-                        <!-- Current Issue Date -->
-                        <h6 class="current-issue-date">April 2019</h6>
+                <!-- Share Item -->
+                <li class="share-item">
+                  <a href="#" class="share-link">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
 
-                        <!-- Share & Print Buttons -->
-                        <ul class="share-print-buttons">
-                            <!-- Share Item -->
-                            <li class="share-item">
-                                <a href="#" class="share-link">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
+                <!-- Share Item -->
+                <li class="share-item">
+                  <a href="#" class="share-link">
+                    <i class="fab fa-vk"></i>
+                  </a>
+                </li>
 
-                            <!-- Share Item -->
-                            <li class="share-item">
-                                <a href="#" class="share-link">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
+                <!-- Share Item -->
+                <li class="share-item">
+                  <a href="#" class="share-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
 
-                            <!-- Share Item -->
-                            <li class="share-item">
-                                <a href="#" class="share-link">
-                                    <i class="fab fa-vk"></i>
-                                </a>
-                            </li>
-
-                            <!-- Share Item -->
-                            <li class="share-item">
-                                <a href="#" class="share-link">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
-
-                            <!-- Share Item -->
-                            <li class="share-item">
-                                <a href="#" class="share-link">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <!-- Current Issue Top Right -->
-                    <div class="current-issue-top-right">
-                        <!-- Current Issue Download Button -->
-                        <a href="javascript:" class="btn btn-download"><i class="fal fa-file-download"></i></a>
-                    </div>
-
-                </div>
-
-                <!-- Current Issue Description -->
-                <p class="current-issue-desc">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eos tempore hic temporibus fugiat
-                    voluptatibus reiciendis id deleniti fugit repellendus! Impedit vitae saepe numquam reiciendis
-                    tempore, nihil magnam quasi eligendi, dolorem magni, adipisci incidunt aliquid maxime laborum
-                    repudiandae. Enim culpa non, hic nulla ratione veritatis!
-                </p>
-
-                <!-- Current Issue Authors and All Issues Link Wrapper -->
-                <div class="current-issue-author-link-wrapper">
-                    <!-- Current Issue Athors -->
-                    <p class="current-issue-authors">
-                        <strong>Authors: </strong>
-                        <a href="user.html" class="author-link">Ahmad Fataliyev</a>,
-                        <a href="user.html" class="author-link">Orkhan Ismayilov</a>,
-                        <a href="user.html" class="author-link">Mike Wazowski</a> and others.
-                    </p>
-
-                    <!-- All Issues Link -->
-                    <a href="all-issues.html" class="all-issues-link">
-                        See all issues
-                    </a>
-                </div>
+                <!-- Share Item -->
+                <li class="share-item">
+                  <a href="#" class="share-link">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
 
-            <!-- Current Issue Articles -->
-            <div class="current-issue-articles" data-simplebar data-simplebar-auto-hide="false">
-                <!-- Current Issue Articles Title -->
-                <h4 class="current-issue-articles-title">Articles from this issue</h4>
-
-                <!-- Issue Articles List -->
-                <ul class="issue-articles-list">
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                How a foreign country hacks a power grid
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Volvo Group's new military vehicle can drive sideways, like a crab
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Last week in tech: A MacBook Pro recall, the new Kindle, and Facebook’s cryptocurrency
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Saab's new spy plane has a powerful piece of hardware on top
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                How a foreign country hacks a power grid
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Volvo Group's new military vehicle can drive sideways, like a crab
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Last week in tech: A MacBook Pro recall, the new Kindle, and Facebook’s cryptocurrency
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Saab's new spy plane has a powerful piece of hardware on top
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                How a foreign country hacks a power grid
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Volvo Group's new military vehicle can drive sideways, like a crab
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Last week in tech: A MacBook Pro recall, the new Kindle, and Facebook’s cryptocurrency
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                    <!-- Issue Article Item -->
-                    <li class="issue-article-item">
-                        <a href="article.html" class="issue-article-link">
-                            <!-- Issue Article Title -->
-                            <h6 class="issue-article-title">
-                                Saab's new spy plane has a powerful piece of hardware on top
-                            </h6>
-                            <!-- Issue Article Date -->
-                            <p class="issue-article-date">31.07.2019</p>
-                        </a>
-                    </li>
-
-                </ul>
+            <!-- Current Issue Top Right -->
+            <div class="current-issue-top-right">
+              <!-- Current Issue Download Button -->
+              <a href="javascript:" class="btn btn-download"
+                ><i class="fal fa-file-download"></i
+              ></a>
             </div>
+          </div>
 
+          <!-- Current Issue Description -->
+          <p class="current-issue-desc">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis eos
+            tempore hic temporibus fugiat voluptatibus reiciendis id deleniti
+            fugit repellendus! Impedit vitae saepe numquam reiciendis tempore,
+            nihil magnam quasi eligendi, dolorem magni, adipisci incidunt
+            aliquid maxime laborum repudiandae. Enim culpa non, hic nulla
+            ratione veritatis!
+          </p>
+
+          <!-- Current Issue Authors and All Issues Link Wrapper -->
+          <div class="current-issue-author-link-wrapper">
+            <!-- Current Issue Athors -->
+            <p class="current-issue-authors">
+              <strong>Authors: </strong>
+              <a href="user.html" class="author-link">Ahmad Fataliyev</a>,
+              <a href="user.html" class="author-link">Orkhan Ismayilov</a>,
+              <a href="user.html" class="author-link">Mike Wazowski</a> and
+              others.
+            </p>
+
+            <!-- All Issues Link -->
+            <a href="all-issues.html" class="all-issues-link">
+              See all issues
+            </a>
+          </div>
         </div>
+
+        <!-- Current Issue Articles -->
+        <div
+          class="current-issue-articles"
+          data-simplebar
+          data-simplebar-auto-hide="false"
+        >
+          <!-- Current Issue Articles Title -->
+          <h4 class="current-issue-articles-title">Articles from this issue</h4>
+
+          <!-- Issue Articles List -->
+          <ul class="issue-articles-list">
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  How a foreign country hacks a power grid
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Volvo Group's new military vehicle can drive sideways, like a
+                  crab
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Last week in tech: A MacBook Pro recall, the new Kindle, and
+                  Facebook’s cryptocurrency
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Saab's new spy plane has a powerful piece of hardware on top
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  How a foreign country hacks a power grid
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Volvo Group's new military vehicle can drive sideways, like a
+                  crab
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Last week in tech: A MacBook Pro recall, the new Kindle, and
+                  Facebook’s cryptocurrency
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Saab's new spy plane has a powerful piece of hardware on top
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  How a foreign country hacks a power grid
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Volvo Group's new military vehicle can drive sideways, like a
+                  crab
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Last week in tech: A MacBook Pro recall, the new Kindle, and
+                  Facebook’s cryptocurrency
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+
+            <!-- Issue Article Item -->
+            <li class="issue-article-item">
+              <a href="article.html" class="issue-article-link">
+                <!-- Issue Article Title -->
+                <h6 class="issue-article-title">
+                  Saab's new spy plane has a powerful piece of hardware on top
+                </h6>
+                <!-- Issue Article Date -->
+                <p class="issue-article-date">31.07.2019</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer id="footer" class="border-top fixed">
-        <div class="container-wide">
+      <div class="container-wide">
+        <!-- Footer Row -->
+        <div class="footer-row mb-50">
+          <!-- Footer Logo -->
+          <div class="footer-logo">
+            <img src="assets/logo/journal_logo_black.svg" alt="Logo" />
+          </div>
 
-            <!-- Footer Row -->
-            <div class="footer-row mb-50">
-
-                <!-- Footer Logo -->
-                <div class="footer-logo">
-                    <img src="assets/logo/journal_logo_black.svg" alt="Logo">
-                </div>
-
-                <!-- Subscribe Wrapper -->
-                <div class="subscribe-wrapper">
-                    <label for="subscribe-to">Subscribe to our latest insights</label>
-                    <input type="email" id="subscribe-to" class="form-control" placeholder="E-mail">
-                    <button class="btn btn-arrow-right"><i class="fal fa-angle-right"></i></button>
-                </div>
-
-            </div>
-
-            <!-- Footer Row -->
-            <div class="footer-row mb-20">
-
-                <!-- Footer Menu -->
-                <ul class="footer-menu">
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Contact us</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">FAQ</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Privacy policy</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Cookie policy</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Terms of use</a>
-                    </li>
-
-                </ul>
-
-                <!-- Footer Socials -->
-                <ul class="footer-socials">
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link twitter"><i class="fab fa-twitter"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link instagram"><i class="fab fa-instagram"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link vkontakte"><i class="fab fa-vk"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link youtube"><i class="fab fa-youtube"></i></a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Copyright -->
-            <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
-
+          <!-- Subscribe Wrapper -->
+          <div class="subscribe-wrapper">
+            <label for="subscribe-to">Subscribe to our latest insights</label>
+            <input
+              type="email"
+              id="subscribe-to"
+              class="form-control"
+              placeholder="E-mail"
+            />
+            <button class="btn btn-arrow-right">
+              <i class="fal fa-angle-right"></i>
+            </button>
+          </div>
         </div>
+
+        <!-- Footer Row -->
+        <div class="footer-row mb-20">
+          <!-- Footer Menu -->
+          <ul class="footer-menu">
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Contact us</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">FAQ</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Privacy policy</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Cookie policy</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Terms of use</a>
+            </li>
+          </ul>
+
+          <!-- Footer Socials -->
+          <ul class="footer-socials">
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link vkontakte"
+                ><i class="fab fa-vk"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
+      </div>
     </footer>
 
     <!-- Go Up Button -->
@@ -786,6 +885,5 @@
     <!-- <script src="assets/js/animation.gsap.js"></script> -->
     <!-- <script src="assets/js/swiper.min.js"></script> -->
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

@@ -1,1422 +1,1668 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Journal</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
     <!-- <link rel="stylesheet" href="assets/css/sweetalert2.min.css"> -->
-    <link rel="stylesheet" href="assets/css/swiper.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
+    <link rel="stylesheet" href="assets/css/swiper.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div class="cssload-preloader cssload-loading">
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-        </div>
+      <div class="cssload-preloader cssload-loading">
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+      </div>
     </div>
 
     <!-- Header -->
     <header id="header" class="fixed">
-        <!-- Menu -->
-        <div class="menu">
-            <button id="menu-trigger" class="hamburger hamburger--stand" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+      <!-- Menu -->
+      <div class="menu">
+        <button
+          id="menu-trigger"
+          class="hamburger hamburger--stand"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
 
-            <!-- Menu Content -->
-            <div id="main-menu">
-                <div class="mm-content">
+        <!-- Menu Content -->
+        <div id="main-menu">
+          <div class="mm-content">
+            <!-- Main Menu Content Wrapper -->
+            <div class="mm-content-wrapper">
+              <!-- Main Menu Links List -->
+              <div class="mm-list-wrapper">
+                <ul class="mm-list">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item active">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#journal"
+                    >
+                      Journal<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                    <!-- Main Menu Content Wrapper -->
-                    <div class="mm-content-wrapper">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#categories"
+                    >
+                      Categories<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                        <!-- Main Menu Links List -->
-                        <div class="mm-list-wrapper">
-                            <ul class="mm-list">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#media"
+                    >
+                      Media<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item active">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#journal">
-                                        Journal<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="#" class="mm-list-link"> Featured </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#categories">
-                                        Categories<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="#" class="mm-list-link"> About Us </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#media">
-                                        Media<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="auth.html#login" class="mm-list-link">
+                      Log In<i class="fal fa-sign-in-alt"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link">
-                                        Featured
-                                    </a>
-                                </li>
+              <!-- Main Menu Submenu -->
+              <div class="mm-submenu">
+                <!-- Submenu Item -->
+                <div id="journal" class="mm-submenu-item active">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Recent issues</h4>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link">
-                                        About Us
-                                    </a>
-                                </li>
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-1.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="auth.html#login" class="mm-list-link">
-                                        Log In<i class="fal fa-sign-in-alt"></i>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                        <!-- Main Menu Submenu -->
-                        <div class="mm-submenu">
-
-                            <!-- Submenu Item -->
-                            <div id="journal" class="mm-submenu-item active">
-
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Recent issues</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-1.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        All Out Black
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">May 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-2.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Fat Pie
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">April 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-3.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Workspace
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">March 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-4.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Art of Design
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">February 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-5.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Clubbing
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">January 2019</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              All Out Black
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">May 2019</span>
+                      </a>
+                    </li>
 
-                            <!-- Submenu Item -->
-                            <div id="categories" class="mm-submenu-item">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-2.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Categories</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-finance-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Finance
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-marketing-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Marketing
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-legal-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Legal
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-tech-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Technology
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-health-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Healthcare
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-architecture-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Architecture
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Fat Pie
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">April 2019</span>
+                      </a>
+                    </li>
 
-                            <!-- Submenu Item -->
-                            <div id="media" class="mm-submenu-item">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-3.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Media</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/audio-400x300.jpg" alt="Media"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Audio Podcasts
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="#" class="submenu-image-link more-soon">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/more_soon.jpg" alt="Media"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        More Coming Soon
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Workspace
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">March 2019</span>
+                      </a>
+                    </li>
 
-                        </div>
-                    </div>
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-4.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Art of Design
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                        <span class="date">February 2019</span>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-5.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Clubbing
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                        <span class="date">January 2019</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="mm-overlay"></div>
+
+                <!-- Submenu Item -->
+                <div id="categories" class="mm-submenu-item">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Categories</h4>
+
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-finance-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Finance
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-marketing-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Marketing
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-legal-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Legal
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-tech-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Technology
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-health-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Healthcare
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-architecture-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Architecture
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Submenu Item -->
+                <div id="media" class="mm-submenu-item">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Media</h4>
+
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/audio-400x300.jpg"
+                            alt="Media"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Audio Podcasts
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="#" class="submenu-image-link more-soon">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/more_soon.jpg"
+                            alt="Media"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">More Coming Soon</div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="mm-overlay"></div>
         </div>
+      </div>
 
-        <!-- Logo -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/logo/journal_logo_white.svg" alt="Journal Logo">
-            </a>
-        </div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo/journal_logo_white.svg" alt="Journal Logo" />
+        </a>
+      </div>
 
-        <!-- Article Header Info -->
-        <div class="article-header-info">
-            <p class="article-header-info-title">Saab's new spy plane has a powerful piece of hardware on top</p>
-        </div>
+      <!-- Article Header Info -->
+      <div class="article-header-info">
+        <p class="article-header-info-title">
+          Saab's new spy plane has a powerful piece of hardware on top
+        </p>
+      </div>
 
-        <!-- Lang Switcher -->
-        <div class="lang-switcher">
-            <ul class="langs">
-                <li class="lang-item active">
-                    <a class="lang-link" href="#">EN</a>
-                </li>
-                <li class="lang-item">
-                    <a class="lang-link" href="#">AZ</a>
-                </li>
-            </ul>
-        </div>
+      <!-- Lang Switcher -->
+      <div class="lang-switcher">
+        <ul class="langs">
+          <li class="lang-item active">
+            <a class="lang-link" href="#">EN</a>
+          </li>
+          <li class="lang-item">
+            <a class="lang-link" href="#">AZ</a>
+          </li>
+        </ul>
+      </div>
 
-        <!-- User -->
-        <div class="user-info">
-            <a href="auth.html#login" class="btn btn-login"><i class="fal fa-sign-in-alt"></i> Log In</a>
-        </div>
+      <!-- User -->
+      <div class="user-info">
+        <a href="auth.html#login" class="btn btn-login"
+          ><i class="fal fa-sign-in-alt"></i> Log In</a
+        >
+      </div>
 
-        <!-- Search -->
-        <div class="search">
-            <button id="search-trigger-header" class="btn btn-search"><i class="far fa-search"></i></button>
-            <form id="search-form-header" action="#" method="get">
-                <label>
-                    <input type="text" class="form-control search-input" name="query" placeholder="Search" />
-                </label>
-            </form>
-        </div>
+      <!-- Search -->
+      <div class="search">
+        <button id="search-trigger-header" class="btn btn-search">
+          <i class="far fa-search"></i>
+        </button>
+        <form id="search-form-header" action="#" method="get">
+          <label>
+            <input
+              type="text"
+              class="form-control search-input"
+              name="query"
+              placeholder="Search"
+            />
+          </label>
+        </form>
+      </div>
 
-        <!-- Article Progress Bar -->
-        <div class="article-progress-bar">
-            <!-- Progress Bar Wrapper -->
-            <div class="progress-bar-wrapper">
-                <!-- Progress Bar -->
-                <div class="progress-bar"></div>
-            </div>
+      <!-- Article Progress Bar -->
+      <div class="article-progress-bar">
+        <!-- Progress Bar Wrapper -->
+        <div class="progress-bar-wrapper">
+          <!-- Progress Bar -->
+          <div class="progress-bar"></div>
         </div>
+      </div>
     </header>
 
     <!-- Article Page -->
     <div id="article-page">
+      <!-- Article Background -->
+      <div
+        class="article-bg"
+        style="background-image: url('assets/images/tech-article-landing.jpg')"
+      >
+        <!-- Overlay -->
+        <div class="overlay"></div>
 
-        <!-- Article Background -->
-        <div class="article-bg" style="background-image: url('assets/images/tech-article-landing.jpg')">
+        <!-- White Overlay -->
+        <div class="overlay white"></div>
+      </div>
 
-            <!-- Overlay -->
-            <div class="overlay"></div>
+      <!-- Article Landing -->
+      <div class="article-landing">
+        <!-- Article Heading -->
+        <div class="article-heading">
+          <!-- Article Category -->
+          <p class="article-category">
+            <a href="category.html" class="article-category-link">Technology</a>
+          </p>
 
-            <!-- White Overlay -->
-            <div class="overlay white"></div>
+          <!-- Article Title -->
+          <h1 class="article-title">
+            Saab's new spy plane has a powerful piece of hardware on top
+          </h1>
+
+          <!-- Article Date -->
+          <p class="article-date">25 June 2019</p>
+        </div>
+      </div>
+
+      <!-- Article Excerpt Wrapper-->
+      <div class="article-excerpt-wrapper">
+        <!-- Article Excerpt -->
+        <h6 class="article-excerpt">The aircraft is called GlobalEye.</h6>
+      </div>
+
+      <!-- Article Limit -->
+      <div id="article-limit"></div>
+
+      <!-- Article Wrapper -->
+      <div class="article-wrapper">
+        <!-- Article Top Bar -->
+        <div class="article-top-bar">
+          <!-- Article Publishing Date -->
+          <p class="article-publishing-date">25 June 2019</p>
+
+          <!-- Article Authors -->
+          <div class="article-authors">
+            <p class="article-author section-author">
+              <i class="fas fa-feather-alt"></i>by
+              <a href="user.html"><strong>Mike Wazowski</strong></a>
+            </p>
+          </div>
+
+          <!-- Share & Print Buttons -->
+          <ul class="share-print-buttons">
+            <!-- Share Item -->
+            <li class="share-item">
+              <a href="#" class="share-link">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+
+            <!-- Share Item -->
+            <li class="share-item">
+              <a href="#" class="share-link">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+
+            <!-- Share Item -->
+            <li class="share-item">
+              <a href="#" class="share-link">
+                <i class="fab fa-vk"></i>
+              </a>
+            </li>
+
+            <!-- Share Item -->
+            <li class="share-item">
+              <a href="#" class="share-link">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+
+            <!-- Share Item -->
+            <li class="share-item">
+              <a href="#" class="share-link">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </li>
+
+            <!-- Share Item -->
+            <li class="share-item">
+              <a href="#" class="share-link">
+                <i class="fas fa-print"></i>
+              </a>
+            </li>
+
+            <!-- Share Item -->
+            <li class="share-item dropdown">
+              <a class="share-link" role="button">
+                <i class="fas fa-arrow-square-down"></i>
+                <i class="far fa-times d-none"></i>
+              </a>
+              <!-- Download Dropdown -->
+              <div class="dropdown-wrapper">
+                <a href="#" class="dropdown-download-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Briefing Note - 145KB
+                </a>
+                <a href="#" class="dropdown-download-link" target="_blank">
+                  <i class="fas fa-file-pdf"></i> Summary - 312KB
+                </a>
+              </div>
+            </li>
+          </ul>
         </div>
 
-        <!-- Article Landing -->
-        <div class="article-landing">
+        <!-- Article -->
+        <div class="article">
+          <!-- Authors Wrapper -->
+          <div class="authors-wrapper">
+            <!-- Author Card -->
+            <div class="author-card">
+              <!-- Author Card Link -->
+              <a href="user.html" class="author-card-link">
+                <!-- Author Image -->
+                <img
+                  src="assets/images/profile-photo-ex.jpg"
+                  class="author-image"
+                  alt="Profile Phot"
+                />
 
-            <!-- Article Heading -->
-            <div class="article-heading">
+                <!-- Author Fullname -->
+                <p class="author-fullname">Mike Wazowski</p>
 
-                <!-- Article Category -->
-                <p class="article-category">
-                    <a href="category.html" class="article-category-link">Technology</a>
-                </p>
-
-                <!-- Article Title -->
-                <h1 class="article-title">
-                    Saab's new spy plane has a powerful piece of hardware on top
-                </h1>
-
-                <!-- Article Date -->
-                <p class="article-date">
-                    25 June 2019
-                </p>
-
-            </div>
-        </div>
-
-        <!-- Article Excerpt Wrapper-->
-        <div class="article-excerpt-wrapper">
-
-            <!-- Article Excerpt -->
-            <h6 class="article-excerpt">
-                The aircraft is called GlobalEye.
-            </h6>
-
-        </div>
-
-        <!-- Article Limit -->
-        <div id="article-limit"></div>
-
-        <!-- Article Wrapper -->
-        <div class="article-wrapper">
-
-            <!-- Article Top Bar -->
-            <div class="article-top-bar">
-
-                <!-- Article Publishing Date -->
-                <p class="article-publishing-date">25 June 2019</p>
-
-                <!-- Article Authors -->
-                <div class="article-authors">
-                    <p class="article-author section-author">
-                        <i class="fas fa-feather-alt"></i>by <a href="user.html"><strong>Mike Wazowski</strong></a>
-                    </p>
-                </div>
-
-                <!-- Share & Print Buttons -->
-                <ul class="share-print-buttons">
-                    <!-- Share Item -->
-                    <li class="share-item">
-                        <a href="#" class="share-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-
-                    <!-- Share Item -->
-                    <li class="share-item">
-                        <a href="#" class="share-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </li>
-
-                    <!-- Share Item -->
-                    <li class="share-item">
-                        <a href="#" class="share-link">
-                            <i class="fab fa-vk"></i>
-                        </a>
-                    </li>
-
-                    <!-- Share Item -->
-                    <li class="share-item">
-                        <a href="#" class="share-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-
-                    <!-- Share Item -->
-                    <li class="share-item">
-                        <a href="#" class="share-link">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </li>
-
-                    <!-- Share Item -->
-                    <li class="share-item">
-                        <a href="#" class="share-link">
-                            <i class="fas fa-print"></i>
-                        </a>
-                    </li>
-
-                    <!-- Share Item -->
-                    <li class="share-item dropdown">
-                        <a class="share-link" role="button">
-                            <i class="fas fa-arrow-square-down"></i>
-                            <i class="far fa-times d-none"></i>
-                        </a>
-                        <!-- Download Dropdown -->
-                        <div class="dropdown-wrapper">
-                            <a href="#" class="dropdown-download-link" target="_blank">
-                                <i class="fas fa-file-pdf"></i> Briefing Note - 145KB
-                            </a>
-                            <a href="#" class="dropdown-download-link" target="_blank">
-                                <i class="fas fa-file-pdf"></i> Summary - 312KB
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-
-            </div>
-
-            <!-- Article -->
-            <div class="article">
-
-                <!-- Authors Wrapper -->
-                <div class="authors-wrapper">
-                    <!-- Author Card -->
-                    <div class="author-card">
-                        <!-- Author Card Link -->
-                        <a href="user.html" class="author-card-link">
-                            <!-- Author Image -->
-                            <img src="assets/images/profile-photo-ex.jpg" class="author-image" alt="Profile Phot">
-
-                            <!-- Author Fullname -->
-                            <p class="author-fullname">Mike Wazowski</p>
-
-                            <!-- Author Title -->
-                            <p class="author-title">Software Developer</p>
-                        </a>
-                        <!-- Author Email -->
-                        <!-- <div class="author-email">
+                <!-- Author Title -->
+                <p class="author-title">Software Developer</p>
+              </a>
+              <!-- Author Email -->
+              <!-- <div class="author-email">
                             <i class="fal fa-envelope"></i>johnwick@gmail.com
                         </div> -->
-                        <!-- Author Socials -->
-                        <ul class="author-socials">
-                            <!-- Author Social Item -->
-                            <li class="author-social-item">
-                                <!-- Author Social Link -->
-                                <a href="mailto:johnwick@gmail.com" class="author-social-link">
-                                    <i class="fal fa-envelope"></i>
-                                </a>
-                            </li>
+              <!-- Author Socials -->
+              <ul class="author-socials">
+                <!-- Author Social Item -->
+                <li class="author-social-item">
+                  <!-- Author Social Link -->
+                  <a
+                    href="mailto:johnwick@gmail.com"
+                    class="author-social-link"
+                  >
+                    <i class="fal fa-envelope"></i>
+                  </a>
+                </li>
 
-                            <!-- Author Social Item -->
-                            <li class="author-social-item">
-                                <!-- Author Social Link -->
-                                <a href="#" class="author-social-link">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </li>
+                <!-- Author Social Item -->
+                <li class="author-social-item">
+                  <!-- Author Social Link -->
+                  <a href="#" class="author-social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
 
-                            <!-- Author Social Item -->
-                            <li class="author-social-item">
-                                <!-- Author Social Link -->
-                                <a href="#" class="author-social-link">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <!-- Article Content -->
-                <div class="article-content">
-
-                    <!-- Downloadable Resources -->
-                    <section class="downloadable-resources">
-                        <!-- Donwloadable Resources Heading -->
-                        <h6 class="dr-heading">
-                            Downloadable Resources
-                        </h6>
-
-                        <!-- Downloadable Resources List -->
-                        <ul class="dr-list">
-                            <!-- Downloadable Resource Item -->
-                            <li class="dr-item">
-                                <!-- Donwloadable Resource Link -->
-                                <a href="#" class="dr-link">
-                                    <i class="fas fa-file-pdf"></i> Briefing Note - 145KB
-                                </a>
-                            </li>
-
-                            <!-- Downloadable Resource Item -->
-                            <li class="dr-item">
-                                <!-- Donwloadable Resource Link -->
-                                <a href="#" class="dr-link">
-                                    <i class="fas fa-file-pdf"></i> Summary - 312KB
-                                </a>
-                            </li>
-                        </ul>
-                    </section>
-
-                    <!-- Article Text -->
-                    <p class="drop-cap">
-                        If you ever see a plane that looks as though someone has stuck a large handle, or a giant
-                        push-button on the top, then what you're seeing is an AWACS: a military aircraft that provides
-                        countries with an eye in the sky to <a href="#">take a sneak peek from far away</a> at other
-                        nations' aircraft, missiles, ships, and vehicles.
-                    </p>
-                    <p>Of course <a href="#">drones</a> or satellites can also accomplish those tasks. But satellites
-                        especially can be much pricier than a plane, and they are just eyes: they cannot jam enemy
-                        radars, for example. Meanwhile, an AWACS—that stands for "airborne warning and control
-                        system"—can do that, thanks to the host of electronic warfare equipment it carries.</p>
-                    <p>The newest AWACS is called the GlobalEye. The plane itself is a Bombardier Global business jet,
-                        but Swedish defense company Saab has equipped it with an Erieye ER radar. That's the
-                        26-foot-long, 1.1-ton “handle” on the top of the plane.</p>
-                    <p>Americans will recognize Saab as a car-maker, but the company actually launched in 1937 as the
-                        manufacturer of aircraft for the Swedish Air Force (hence its name, which is an acronym of
-                        Svenska Aeroplan Aktiebolaget, or Swedish Aircraft Company). They started making cars 10 years
-                        later. Saab sold its vehicle business to General Motors in 2000, and since then has concentrated
-                        on the defense sector. Amongst its most notable products are the Gripen combat fighter, the
-                        Gotland Class submarine, and the Carl-Gustaf rifle.</p>
-                    <!-- Blockquote - LEft Aligned -->
-                    <blockquote class="left-aligned">
-                        But radar waves can be detected and jammed by adversaries.
-                    </blockquote>
-                    <p>So why put a radar on top of a plane when there are powerful ground radars? Because however
-                        powerful a ground radar, it cannot cope with the fact that the Earth is curved— and so a missile
-                        flying low will not be seen until a few minutes before it hits its target. If the radar is up
-                        high, it will have a higher angle of view, and so can detect a low-flying missile or aircraft 20
-                        minutes before it hits the target.</p>
-                    <p>“Most radars detect and measure objects by emitting a very short impulse of an electromagnetic
-                        wave that is reflected back by the objects in question,” explains Odile Adrian, who develops
-                        radars for French company Thales. “They can 'see' in all weather conditions, day or night,
-                        several hundred miles away and can distinguish between something that is moving and something
-                        that is still,” she adds. They can also measure the object’s distance, the azimuth (the compass
-                        direction), elevation (height above ground or sea level), the speed of movement, and what the
-                        military call its “signature,” or its shape.</p>
-                    <!-- Blockquote - Right Aligned -->
-                    <blockquote class="right-aligned">
-                        Most radars detect and measure objects by emitting a very short impulse of an electromagnetic
-                        wave that is reflected back by the objects in question
-                    </blockquote>
-                    <p>But radar waves can be detected and jammed by adversaries. To combat this, the Erieye ER (the ER
-                        stands for "extended range") on GlobalEye uses a narrow, tough-to-jam radar frequency called the
-                        S band.</p>
-                    <p>Erik Weinberg, senior director radar solutions at Saab, explains that the wave must also not lose
-                        too much intensity absorbed by water vapor as it travels through the atmosphere, a phenomenon
-                        known as atmospheric attenuation. “The choice of radar frequency depends on what you need it
-                        for,” Weinberg says. “For long range surveillance, which requires low atmospheric attenuation,
-                        the L or S bands are best if you can have a large antenna such as the Erieye.”</p>
-                    <p>Between the two types, the S band is harder to jam thanks to its “small beam and ultra low side
-                        lobes,” Weinberg says.</p>
-                    <img src="assets/images/cat_tech_page_bg.jpg" class="zoomable" alt="Inline Image">
-                    <p>To picture what “side lobes” are in radar, imagine a flashlight. In that case, the side lobes
-                        would be like the light spilling out on either side of the main beam. If there's a lot of
-                        spilled light, then your beam is easier to spot by the enemy. “But,” adds Weinberg, “the S-band
-                        is more complex to use.”</p>
-                    <!-- Exhibit Wrapper -->
-                    <div class="exhibit-wrapper exhibit-1">
-                        <!-- Exhibit Heading -->
-                        <p class="exhibit-heading">Exhibit 1</p>
-
-                        <!-- Exhibit Content -->
-                        <div class="exhibit-content">
-                            <!-- Exhibit Title -->
-                            <h5 class="exhibit-title">Unintended consequences of AI</h5>
-
-                            <!-- Exhibit Excerpt -->
-                            <p class="exhibit-excerpt">While AI and advanced analytics offer many positive benefits,
-                                they can lead to significant unintended (or maliciously intended) consequences for
-                                individuals, organizations, and society.</p>
-
-                            <!-- Exhibit Row -->
-                            <div class="exhibit-row">
-
-                                <!-- Exhibit Column -->
-                                <div class="exhibit-column" style="width: 33.3333%;">
-
-                                    <!-- Exhibit Column Title -->
-                                    <h6 class="exhibit-column-title">
-                                        <i class="fas fa-male"></i>Individuals
-                                    </h6>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="1" style="background: #00A9F4;">
-                                        <span class="exhibit-item-text">Physical safety</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="2" style="background: #00A9F4;">
-                                        <span class="exhibit-item-text">Privacy and reputation</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="3" style="background: #00A9F4;">
-                                        <span class="exhibit-item-text">Digital safety</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="4" style="background: #00A9F4;">
-                                        <span class="exhibit-item-text">Financial health</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="5" style="background: #00A9F4;">
-                                        <span class="exhibit-item-text">Equity and fair treatment</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-                                </div>
-
-                                <!-- Exhibit Column -->
-                                <div class="exhibit-column" style="width: 33.3333%;">
-
-                                    <!-- Exhibit Column Title -->
-                                    <h6 class="exhibit-column-title">
-                                        <i class="fas fa-sitemap"></i>Organizations
-                                    </h6>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="6" style="background: #1E40E6;">
-                                        <span class="exhibit-item-text">Financial performance</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="7" style="background: #1E40E6;">
-                                        <span class="exhibit-item-text">Nonfinancial performance</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="8" style="background: #1E40E6;">
-                                        <span class="exhibit-item-text">Legal and compliance</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="9" style="background: #1E40E6;">
-                                        <span class="exhibit-item-text">Reputational integrity</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-                                </div>
-
-                                <!-- Exhibit Column -->
-                                <div class="exhibit-column" style="width: 33.3333%;">
-
-                                    <!-- Exhibit Column Title -->
-                                    <h6 class="exhibit-column-title">
-                                        <i class="fas fa-users"></i>Social
-                                    </h6>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="10" style="background: #3C96B4;">
-                                        <span class="exhibit-item-text">National security</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="11" style="background: #3C96B4;">
-                                        <span class="exhibit-item-text">Economic stability</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="12" style="background: #3C96B4;">
-                                        <span class="exhibit-item-text">Political stability</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-
-                                    <!-- Exhibit Item -->
-                                    <div class="exhibit-item" data-slide="13" style="background: #3C96B4;">
-                                        <span class="exhibit-item-text">Infrastructure integrity</span>
-                                        <i class="far fa-arrow-right"></i>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Slider Wrapper -->
-                            <div class="slider-wrapper">
-                                <!-- Slider Container -->
-                                <div class="swiper-container" id="13">
-                                    <!-- Additional Required Wrapper -->
-                                    <div class="swiper-wrapper">
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background:#00A9F4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-male"></i>Individuals
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Physical safety</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Autonomous-vehicle malfunction leads to injury or death
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Overreliance on inadequate equipment predictive-
-                                                            maintenance decisions leads to worker injury
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Machine-learning models misdiagnose medical conditions
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #00A9F4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-male"></i>Individuals
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Privacy and reputation</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Private data used without consumers’ consent
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Personally identifiable information (PII) data are not
-                                                            securely stored, resulting in data breach and downstream
-                                                            individual implications
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #00A9F4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-male"></i>Individuals
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Digital safety</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Distortion of individual data/information leads to digital
-                                                            libel or defamation
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #00A9F4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-male"></i>Individuals
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Financial health</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Poor financial recommendations result in mismanagement
-                                                            of consumer or employee funds
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Machine-driven, sophisticated phishing steals and exploits
-                                                            financial information
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #00A9F4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-male"></i>Individuals
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Equity and fair treatment</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Underwriting model inadvertently discriminates based on
-                                                            race, rejecting minority customers from acquiring
-                                                            mortgages
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Lending algorithm takes into account social-media
-                                                            connections, giving better rates to people who have
-                                                            perceived “higher quality” networks and penalizing those
-                                                            who don’t
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #1E40E6">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-sitemap"></i>Organizations
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Financial performance</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Trading algorithms unable to correctly adapt to new
-                                                            circumstances (eg, similar to a flash crash) lead to sudden
-                                                            financial losses
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Organization makes adverse pricing decisions that
-                                                            materially misgauge consumer price elasticity, leading
-                                                            to poor production decisions
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #1E40E6">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-sitemap"></i>Organizations
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Nonfinancial performance</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Hiring and promotion use complex algorithms that
-                                                            unintentionally lead to nondiverse workforce or unintended
-                                                            behavior
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Suboptimal estimates of funds and resources required
-                                                            during different natural disasters/emergencies result in
-                                                            inadequate preparation
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #1E40E6">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-sitemap"></i>Organizations
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Legal and compliance</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Unintended discrimination embedded into lending
-                                                            decisions results in litigation
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Disclosure of protected consumer healthcare data
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #1E40E6">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-sitemap"></i>Organizations
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Reputational integrity</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Lack of clarity regarding consumer data-privacy settings
-                                                            causes social backlash
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Advertising algorithm utilizing invasive PII (or other
-                                                            personal information) causes public to view company as
-                                                            intrusive/dishonest
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #3C96B4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-users"></i>Social
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">National security</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Actors with malicious intent coopt AI-enabled products (eg,
-                                                            weaponry, drones, cybertools) and use for illegal activity
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Data breaches of sensitive data expose key military
-                                                            vulnerabilities/technical secrets
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #3C96B4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-users"></i>Social
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Economic stability</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Automated trading algorithms increase volatility
-                                                            in financial markets
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Algorithms create instability in currency markets, resulting
-                                                            in decreased trade
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Black-box financial instruments lead to unintended
-                                                            systemic risk
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #3C96B4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-users"></i>Social
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Political stability</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Manipulation of national institutional processes (eg,
-                                                            elections, appointments) through misrepresentation
-                                                            of information and false messaging
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Slide Item -->
-                                        <div class="swiper-slide">
-                                            <!-- Slide Wrapper -->
-                                            <div class="slide-wrapper" style="background: #3C96B4">
-                                                <div class="slide-heading">
-                                                    <h6 class="slide-column-title">
-                                                        <i class="fas fa-users"></i>Social
-                                                    </h6>
-                                                    <span class="close"><i class="fal fa-times"></i></span>
-                                                </div>
-
-                                                <!-- Slide Body -->
-                                                <div class="slide-body">
-                                                    <h5 class="slide-title">Infrastructure integrity</h5>
-                                                    <ul class="slide-text-list">
-                                                        <li class="slide-text">
-                                                            Risk concentration materially affects societal
-                                                            infrastructure as more processes and decisions become
-                                                            interconnected (eg, disabling power, water supplies,
-                                                            communications)
-                                                        </li>
-                                                        <li class="slide-text">
-                                                            Intelligent systems lead to overuse/misuse of
-                                                            infrastructure (eg, GPS routes cars through side streets,
-                                                            causing unprecedented traffic in residential areas)
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-                                    <!-- Slider Navigation Buttons -->
-                                    <div class="swiper-button-prev"><i class="fal fa-arrow-left"></i></div>
-                                    <div class="swiper-button-next"><i class="fal fa-arrow-right"></i></div>
-                                </div>
-
-                                <!-- Slider Pagination -->
-                                <div class="swiper-pagination"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <p>Petter Bedoire, head of electronic warfare at Saab, explains that they've developed GlobalEye
-                        because “there has been a dramatic change over the past 10 years,” with the growth of
-                        sophisticated jamming equipment. Jamming turns a clear picture into a useless, heavily pixelated
-                        one. In order to make it difficult to jam, the beam being emitted by the radar must be as narrow
-                        as possible.</p>
-                    <blockquote>
-                        To picture what “side lobes” are in radar, imagine a flashlight. In that case, the side lobes
-                        would be like the light spilling out on either side of the main beam. If there's a lot of
-                        spilled light, then your beam is easier to spot by the enemy. “But,” adds Weinberg, “the S-band
-                        is more complex to use.”
-                    </blockquote>
-                    <p>In addition to the main radar on top of the plane, the GlobalEye can heft a maritime surveillance
-                        radar under its belly, as well as a third radar system designed to spot a moving target on the
-                        land, such as a pick-up truck, and then precisely indicate its position to a combat jet or
-                        ground troops— which could then attack it.</p>
-                    <!-- Our Research -->
-                    <div class="our-research">
-
-                        <!-- Our Research Heaging -->
-                        <div class="or-heading">
-                            <!-- Our Resarch Trigger -->
-                            <p class="or-trigger">Our Research <i class="fal fa-plus"></i></p>
-
-                            <!-- Our Research Dropdown -->
-                            <div class="or-dropdown">
-                                <p>Americans will recognize Saab as a car-maker, but the company actually launched in
-                                    1937 as the manufacturer of aircraft for the Swedish Air Force (hence its name,
-                                    which is an acronym of Svenska Aeroplan Aktiebolaget, or Swedish Aircraft Company).
-                                    They started making cars 10 years later. Saab sold its vehicle business to General
-                                    Motors in 2000, and since then has concentrated on the defense sector. Amongst its
-                                    most notable products are the Gripen combat fighter, the Gotland Class submarine,
-                                    and the Carl-Gustaf rifle.</p>
-                                <p>“Most radars detect and measure objects by emitting a very short impulse of an
-                                    electromagnetic wave that is reflected back by the objects in question,” explains
-                                    Odile Adrian, who develops radars for French company Thales. “They can 'see' in all
-                                    weather conditions, day or night, several hundred miles away and can distinguish
-                                    between something that is moving and something that is still,” she adds. They can
-                                    also measure the object’s distance, the azimuth (the compass direction), elevation
-                                    (height above ground or sea level), the speed of movement, and what the military
-                                    call its “signature,” or its shape.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p>Saab is creating these planes with a specific user in mind: the United Arab Emirates, which will
-                        fly three of them once they’re ready. Future customers buying the jet will be able to decide
-                        which combination of radars they’d like, although it always comes with that key Erieye “handle”
-                        on top.</p>
-                </div>
+                <!-- Author Social Item -->
+                <li class="author-social-item">
+                  <!-- Author Social Link -->
+                  <a href="#" class="author-social-link">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div>
+          </div>
 
-        <!-- Related Articles Wrapper-->
-        <div class="related-articles-wrapper">
-            <h4 class="related-title">Related Articles</h4>
-            <!-- Related Articles -->
-            <div class="related-articles">
+          <!-- Article Content -->
+          <div class="article-content">
+            <!-- Downloadable Resources -->
+            <section class="downloadable-resources">
+              <!-- Donwloadable Resources Heading -->
+              <h6 class="dr-heading">Downloadable Resources</h6>
 
-                <!-- Related Article Item -->
-                <div class="related-article-item">
-                    <!-- Related Article Link -->
-                    <a href="article.html" class="related-article-link">
-                        <!-- Related Article Image -->
-                        <img src="assets/images/tech-article-2.jpg"
-                            alt="Volvo Group's new military vehicle can drive sideways, like a crab"
-                            class="related-article-image">
+              <!-- Downloadable Resources List -->
+              <ul class="dr-list">
+                <!-- Downloadable Resource Item -->
+                <li class="dr-item">
+                  <!-- Donwloadable Resource Link -->
+                  <a href="#" class="dr-link">
+                    <i class="fas fa-file-pdf"></i> Briefing Note - 145KB
+                  </a>
+                </li>
 
-                        <!-- Related Article Overlay -->
-                        <div class="related-article-overlay">
-                            <!-- Related Article Title -->
-                            <h6 class="related-article-title">
-                                Volvo Group's new military vehicle can drive sideways, like a crab
-                            </h6>
-                        </div>
-                    </a>
+                <!-- Downloadable Resource Item -->
+                <li class="dr-item">
+                  <!-- Donwloadable Resource Link -->
+                  <a href="#" class="dr-link">
+                    <i class="fas fa-file-pdf"></i> Summary - 312KB
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <!-- Article Text -->
+            <p class="drop-cap">
+              If you ever see a plane that looks as though someone has stuck a
+              large handle, or a giant push-button on the top, then what you're
+              seeing is an AWACS: a military aircraft that provides countries
+              with an eye in the sky to
+              <a href="#">take a sneak peek from far away</a> at other nations'
+              aircraft, missiles, ships, and vehicles.
+            </p>
+            <p>
+              Of course <a href="#">drones</a> or satellites can also accomplish
+              those tasks. But satellites especially can be much pricier than a
+              plane, and they are just eyes: they cannot jam enemy radars, for
+              example. Meanwhile, an AWACS—that stands for "airborne warning and
+              control system"—can do that, thanks to the host of electronic
+              warfare equipment it carries.
+            </p>
+            <p>
+              The newest AWACS is called the GlobalEye. The plane itself is a
+              Bombardier Global business jet, but Swedish defense company Saab
+              has equipped it with an Erieye ER radar. That's the 26-foot-long,
+              1.1-ton “handle” on the top of the plane.
+            </p>
+            <p>
+              Americans will recognize Saab as a car-maker, but the company
+              actually launched in 1937 as the manufacturer of aircraft for the
+              Swedish Air Force (hence its name, which is an acronym of Svenska
+              Aeroplan Aktiebolaget, or Swedish Aircraft Company). They started
+              making cars 10 years later. Saab sold its vehicle business to
+              General Motors in 2000, and since then has concentrated on the
+              defense sector. Amongst its most notable products are the Gripen
+              combat fighter, the Gotland Class submarine, and the Carl-Gustaf
+              rifle.
+            </p>
+            <!-- Blockquote - LEft Aligned -->
+            <blockquote class="left-aligned">
+              But radar waves can be detected and jammed by adversaries.
+            </blockquote>
+            <p>
+              So why put a radar on top of a plane when there are powerful
+              ground radars? Because however powerful a ground radar, it cannot
+              cope with the fact that the Earth is curved— and so a missile
+              flying low will not be seen until a few minutes before it hits its
+              target. If the radar is up high, it will have a higher angle of
+              view, and so can detect a low-flying missile or aircraft 20
+              minutes before it hits the target.
+            </p>
+            <p>
+              “Most radars detect and measure objects by emitting a very short
+              impulse of an electromagnetic wave that is reflected back by the
+              objects in question,” explains Odile Adrian, who develops radars
+              for French company Thales. “They can 'see' in all weather
+              conditions, day or night, several hundred miles away and can
+              distinguish between something that is moving and something that is
+              still,” she adds. They can also measure the object’s distance, the
+              azimuth (the compass direction), elevation (height above ground or
+              sea level), the speed of movement, and what the military call its
+              “signature,” or its shape.
+            </p>
+            <!-- Blockquote - Right Aligned -->
+            <blockquote class="right-aligned">
+              Most radars detect and measure objects by emitting a very short
+              impulse of an electromagnetic wave that is reflected back by the
+              objects in question
+            </blockquote>
+            <p>
+              But radar waves can be detected and jammed by adversaries. To
+              combat this, the Erieye ER (the ER stands for "extended range") on
+              GlobalEye uses a narrow, tough-to-jam radar frequency called the S
+              band.
+            </p>
+            <p>
+              Erik Weinberg, senior director radar solutions at Saab, explains
+              that the wave must also not lose too much intensity absorbed by
+              water vapor as it travels through the atmosphere, a phenomenon
+              known as atmospheric attenuation. “The choice of radar frequency
+              depends on what you need it for,” Weinberg says. “For long range
+              surveillance, which requires low atmospheric attenuation, the L or
+              S bands are best if you can have a large antenna such as the
+              Erieye.”
+            </p>
+            <p>
+              Between the two types, the S band is harder to jam thanks to its
+              “small beam and ultra low side lobes,” Weinberg says.
+            </p>
+            <img
+              src="assets/images/cat_tech_page_bg.jpg"
+              class="zoomable"
+              alt="Inline Image"
+            />
+            <p>
+              To picture what “side lobes” are in radar, imagine a flashlight.
+              In that case, the side lobes would be like the light spilling out
+              on either side of the main beam. If there's a lot of spilled
+              light, then your beam is easier to spot by the enemy. “But,” adds
+              Weinberg, “the S-band is more complex to use.”
+            </p>
+            <!-- Exhibit Wrapper -->
+            <div class="exhibit-wrapper exhibit-1">
+              <!-- Exhibit Heading -->
+              <p class="exhibit-heading">Exhibit 1</p>
+
+              <!-- Exhibit Content -->
+              <div class="exhibit-content">
+                <!-- Exhibit Title -->
+                <h5 class="exhibit-title">Unintended consequences of AI</h5>
+
+                <!-- Exhibit Excerpt -->
+                <p class="exhibit-excerpt">
+                  While AI and advanced analytics offer many positive benefits,
+                  they can lead to significant unintended (or maliciously
+                  intended) consequences for individuals, organizations, and
+                  society.
+                </p>
+
+                <!-- Exhibit Row -->
+                <div class="exhibit-row">
+                  <!-- Exhibit Column -->
+                  <div class="exhibit-column" style="width: 33.3333%">
+                    <!-- Exhibit Column Title -->
+                    <h6 class="exhibit-column-title">
+                      <i class="fas fa-male"></i>Individuals
+                    </h6>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="1"
+                      style="background: #00a9f4"
+                    >
+                      <span class="exhibit-item-text">Physical safety</span>
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="2"
+                      style="background: #00a9f4"
+                    >
+                      <span class="exhibit-item-text"
+                        >Privacy and reputation</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="3"
+                      style="background: #00a9f4"
+                    >
+                      <span class="exhibit-item-text">Digital safety</span>
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="4"
+                      style="background: #00a9f4"
+                    >
+                      <span class="exhibit-item-text">Financial health</span>
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="5"
+                      style="background: #00a9f4"
+                    >
+                      <span class="exhibit-item-text"
+                        >Equity and fair treatment</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+                  </div>
+
+                  <!-- Exhibit Column -->
+                  <div class="exhibit-column" style="width: 33.3333%">
+                    <!-- Exhibit Column Title -->
+                    <h6 class="exhibit-column-title">
+                      <i class="fas fa-sitemap"></i>Organizations
+                    </h6>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="6"
+                      style="background: #1e40e6"
+                    >
+                      <span class="exhibit-item-text"
+                        >Financial performance</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="7"
+                      style="background: #1e40e6"
+                    >
+                      <span class="exhibit-item-text"
+                        >Nonfinancial performance</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="8"
+                      style="background: #1e40e6"
+                    >
+                      <span class="exhibit-item-text"
+                        >Legal and compliance</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="9"
+                      style="background: #1e40e6"
+                    >
+                      <span class="exhibit-item-text"
+                        >Reputational integrity</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+                  </div>
+
+                  <!-- Exhibit Column -->
+                  <div class="exhibit-column" style="width: 33.3333%">
+                    <!-- Exhibit Column Title -->
+                    <h6 class="exhibit-column-title">
+                      <i class="fas fa-users"></i>Social
+                    </h6>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="10"
+                      style="background: #3c96b4"
+                    >
+                      <span class="exhibit-item-text">National security</span>
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="11"
+                      style="background: #3c96b4"
+                    >
+                      <span class="exhibit-item-text">Economic stability</span>
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="12"
+                      style="background: #3c96b4"
+                    >
+                      <span class="exhibit-item-text">Political stability</span>
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+
+                    <!-- Exhibit Item -->
+                    <div
+                      class="exhibit-item"
+                      data-slide="13"
+                      style="background: #3c96b4"
+                    >
+                      <span class="exhibit-item-text"
+                        >Infrastructure integrity</span
+                      >
+                      <i class="far fa-arrow-right"></i>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- Related Article Item -->
-                <div class="related-article-item">
-                    <!-- Related Article Link -->
-                    <a href="article.html" class="related-article-link">
-                        <!-- Related Article Image -->
-                        <img src="assets/images/tech-article-3.jpg"
-                            alt="Last week in tech: A MacBook Pro recall, the new Kindle, and Facebook’s cryptocurrency"
-                            class="related-article-image">
-
-                        <!-- Related Article Overlay -->
-                        <div class="related-article-overlay">
-                            <!-- Related Article Title -->
-                            <h6 class="related-article-title">
-                                Last week in tech: A MacBook Pro recall, the new Kindle, and Facebook’s
-                                cryptocurrency
+                <!-- Slider Wrapper -->
+                <div class="slider-wrapper">
+                  <!-- Slider Container -->
+                  <div class="swiper-container" id="13">
+                    <!-- Additional Required Wrapper -->
+                    <div class="swiper-wrapper">
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #00a9f4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-male"></i>Individuals
                             </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Physical safety</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Autonomous-vehicle malfunction leads to injury
+                                or death
+                              </li>
+                              <li class="slide-text">
+                                Overreliance on inadequate equipment predictive-
+                                maintenance decisions leads to worker injury
+                              </li>
+                              <li class="slide-text">
+                                Machine-learning models misdiagnose medical
+                                conditions
+                              </li>
+                            </ul>
+                          </div>
                         </div>
-                    </a>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #00a9f4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-male"></i>Individuals
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Privacy and reputation</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Private data used without consumers’ consent
+                              </li>
+                              <li class="slide-text">
+                                Personally identifiable information (PII) data
+                                are not securely stored, resulting in data
+                                breach and downstream individual implications
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #00a9f4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-male"></i>Individuals
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Digital safety</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Distortion of individual data/information leads
+                                to digital libel or defamation
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #00a9f4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-male"></i>Individuals
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Financial health</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Poor financial recommendations result in
+                                mismanagement of consumer or employee funds
+                              </li>
+                              <li class="slide-text">
+                                Machine-driven, sophisticated phishing steals
+                                and exploits financial information
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #00a9f4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-male"></i>Individuals
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">
+                              Equity and fair treatment
+                            </h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Underwriting model inadvertently discriminates
+                                based on race, rejecting minority customers from
+                                acquiring mortgages
+                              </li>
+                              <li class="slide-text">
+                                Lending algorithm takes into account
+                                social-media connections, giving better rates to
+                                people who have perceived “higher quality”
+                                networks and penalizing those who don’t
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #1e40e6">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-sitemap"></i>Organizations
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Financial performance</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Trading algorithms unable to correctly adapt to
+                                new circumstances (eg, similar to a flash crash)
+                                lead to sudden financial losses
+                              </li>
+                              <li class="slide-text">
+                                Organization makes adverse pricing decisions
+                                that materially misgauge consumer price
+                                elasticity, leading to poor production decisions
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #1e40e6">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-sitemap"></i>Organizations
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">
+                              Nonfinancial performance
+                            </h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Hiring and promotion use complex algorithms that
+                                unintentionally lead to nondiverse workforce or
+                                unintended behavior
+                              </li>
+                              <li class="slide-text">
+                                Suboptimal estimates of funds and resources
+                                required during different natural
+                                disasters/emergencies result in inadequate
+                                preparation
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #1e40e6">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-sitemap"></i>Organizations
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Legal and compliance</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Unintended discrimination embedded into lending
+                                decisions results in litigation
+                              </li>
+                              <li class="slide-text">
+                                Disclosure of protected consumer healthcare data
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #1e40e6">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-sitemap"></i>Organizations
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Reputational integrity</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Lack of clarity regarding consumer data-privacy
+                                settings causes social backlash
+                              </li>
+                              <li class="slide-text">
+                                Advertising algorithm utilizing invasive PII (or
+                                other personal information) causes public to
+                                view company as intrusive/dishonest
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #3c96b4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-users"></i>Social
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">National security</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Actors with malicious intent coopt AI-enabled
+                                products (eg, weaponry, drones, cybertools) and
+                                use for illegal activity
+                              </li>
+                              <li class="slide-text">
+                                Data breaches of sensitive data expose key
+                                military vulnerabilities/technical secrets
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #3c96b4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-users"></i>Social
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Economic stability</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Automated trading algorithms increase volatility
+                                in financial markets
+                              </li>
+                              <li class="slide-text">
+                                Algorithms create instability in currency
+                                markets, resulting in decreased trade
+                              </li>
+                              <li class="slide-text">
+                                Black-box financial instruments lead to
+                                unintended systemic risk
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #3c96b4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-users"></i>Social
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">Political stability</h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Manipulation of national institutional processes
+                                (eg, elections, appointments) through
+                                misrepresentation of information and false
+                                messaging
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- Slide Item -->
+                      <div class="swiper-slide">
+                        <!-- Slide Wrapper -->
+                        <div class="slide-wrapper" style="background: #3c96b4">
+                          <div class="slide-heading">
+                            <h6 class="slide-column-title">
+                              <i class="fas fa-users"></i>Social
+                            </h6>
+                            <span class="close"
+                              ><i class="fal fa-times"></i
+                            ></span>
+                          </div>
+
+                          <!-- Slide Body -->
+                          <div class="slide-body">
+                            <h5 class="slide-title">
+                              Infrastructure integrity
+                            </h5>
+                            <ul class="slide-text-list">
+                              <li class="slide-text">
+                                Risk concentration materially affects societal
+                                infrastructure as more processes and decisions
+                                become interconnected (eg, disabling power,
+                                water supplies, communications)
+                              </li>
+                              <li class="slide-text">
+                                Intelligent systems lead to overuse/misuse of
+                                infrastructure (eg, GPS routes cars through side
+                                streets, causing unprecedented traffic in
+                                residential areas)
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Slider Navigation Buttons -->
+                    <div class="swiper-button-prev">
+                      <i class="fal fa-arrow-left"></i>
+                    </div>
+                    <div class="swiper-button-next">
+                      <i class="fal fa-arrow-right"></i>
+                    </div>
+                  </div>
+
+                  <!-- Slider Pagination -->
+                  <div class="swiper-pagination"></div>
                 </div>
-
-
+              </div>
             </div>
+            <p>
+              Petter Bedoire, head of electronic warfare at Saab, explains that
+              they've developed GlobalEye because “there has been a dramatic
+              change over the past 10 years,” with the growth of sophisticated
+              jamming equipment. Jamming turns a clear picture into a useless,
+              heavily pixelated one. In order to make it difficult to jam, the
+              beam being emitted by the radar must be as narrow as possible.
+            </p>
+            <blockquote>
+              To picture what “side lobes” are in radar, imagine a flashlight.
+              In that case, the side lobes would be like the light spilling out
+              on either side of the main beam. If there's a lot of spilled
+              light, then your beam is easier to spot by the enemy. “But,” adds
+              Weinberg, “the S-band is more complex to use.”
+            </blockquote>
+            <p>
+              In addition to the main radar on top of the plane, the GlobalEye
+              can heft a maritime surveillance radar under its belly, as well as
+              a third radar system designed to spot a moving target on the land,
+              such as a pick-up truck, and then precisely indicate its position
+              to a combat jet or ground troops— which could then attack it.
+            </p>
+            <!-- Our Research -->
+            <div class="our-research">
+              <!-- Our Research Heaging -->
+              <div class="or-heading">
+                <!-- Our Resarch Trigger -->
+                <p class="or-trigger">
+                  Our Research <i class="fal fa-plus"></i>
+                </p>
+
+                <!-- Our Research Dropdown -->
+                <div class="or-dropdown">
+                  <p>
+                    Americans will recognize Saab as a car-maker, but the
+                    company actually launched in 1937 as the manufacturer of
+                    aircraft for the Swedish Air Force (hence its name, which is
+                    an acronym of Svenska Aeroplan Aktiebolaget, or Swedish
+                    Aircraft Company). They started making cars 10 years later.
+                    Saab sold its vehicle business to General Motors in 2000,
+                    and since then has concentrated on the defense sector.
+                    Amongst its most notable products are the Gripen combat
+                    fighter, the Gotland Class submarine, and the Carl-Gustaf
+                    rifle.
+                  </p>
+                  <p>
+                    “Most radars detect and measure objects by emitting a very
+                    short impulse of an electromagnetic wave that is reflected
+                    back by the objects in question,” explains Odile Adrian, who
+                    develops radars for French company Thales. “They can 'see'
+                    in all weather conditions, day or night, several hundred
+                    miles away and can distinguish between something that is
+                    moving and something that is still,” she adds. They can also
+                    measure the object’s distance, the azimuth (the compass
+                    direction), elevation (height above ground or sea level),
+                    the speed of movement, and what the military call its
+                    “signature,” or its shape.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <p>
+              Saab is creating these planes with a specific user in mind: the
+              United Arab Emirates, which will fly three of them once they’re
+              ready. Future customers buying the jet will be able to decide
+              which combination of radars they’d like, although it always comes
+              with that key Erieye “handle” on top.
+            </p>
+          </div>
         </div>
+      </div>
+
+      <!-- Related Articles Wrapper-->
+      <div class="related-articles-wrapper">
+        <h4 class="related-title">Related Articles</h4>
+        <!-- Related Articles -->
+        <div class="related-articles">
+          <!-- Related Article Item -->
+          <div class="related-article-item">
+            <!-- Related Article Link -->
+            <a href="article.html" class="related-article-link">
+              <!-- Related Article Image -->
+              <img
+                src="assets/images/tech-article-2.jpg"
+                alt="Volvo Group's new military vehicle can drive sideways, like a crab"
+                class="related-article-image"
+              />
+
+              <!-- Related Article Overlay -->
+              <div class="related-article-overlay">
+                <!-- Related Article Title -->
+                <h6 class="related-article-title">
+                  Volvo Group's new military vehicle can drive sideways, like a
+                  crab
+                </h6>
+              </div>
+            </a>
+          </div>
+
+          <!-- Related Article Item -->
+          <div class="related-article-item">
+            <!-- Related Article Link -->
+            <a href="article.html" class="related-article-link">
+              <!-- Related Article Image -->
+              <img
+                src="assets/images/tech-article-3.jpg"
+                alt="Last week in tech: A MacBook Pro recall, the new Kindle, and Facebook’s cryptocurrency"
+                class="related-article-image"
+              />
+
+              <!-- Related Article Overlay -->
+              <div class="related-article-overlay">
+                <!-- Related Article Title -->
+                <h6 class="related-article-title">
+                  Last week in tech: A MacBook Pro recall, the new Kindle, and
+                  Facebook’s cryptocurrency
+                </h6>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer id="footer" class="border-top">
-        <div class="container-wide">
+      <div class="container-wide">
+        <!-- Footer Row -->
+        <div class="footer-row mb-50">
+          <!-- Footer Logo -->
+          <div class="footer-logo">
+            <img src="assets/logo/journal_logo_black.svg" alt="Logo" />
+          </div>
 
-            <!-- Footer Row -->
-            <div class="footer-row mb-50">
-
-                <!-- Footer Logo -->
-                <div class="footer-logo">
-                    <img src="assets/logo/journal_logo_black.svg" alt="Logo">
-                </div>
-
-                <!-- Subscribe Wrapper -->
-                <div class="subscribe-wrapper">
-                    <label for="subscribe-to">Subscribe to our latest insights</label>
-                    <input type="email" id="subscribe-to" class="form-control" placeholder="E-mail">
-                    <button class="btn btn-arrow-right"><i class="fal fa-angle-right"></i></button>
-                </div>
-
-            </div>
-
-            <!-- Footer Row -->
-            <div class="footer-row mb-20">
-
-                <!-- Footer Menu -->
-                <ul class="footer-menu">
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Contact us</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">FAQ</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Privacy policy</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Cookie policy</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Terms of use</a>
-                    </li>
-
-                </ul>
-
-                <!-- Footer Socials -->
-                <ul class="footer-socials">
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link twitter"><i class="fab fa-twitter"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link instagram"><i class="fab fa-instagram"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link vkontakte"><i class="fab fa-vk"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link youtube"><i class="fab fa-youtube"></i></a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Copyright -->
-            <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
-
+          <!-- Subscribe Wrapper -->
+          <div class="subscribe-wrapper">
+            <label for="subscribe-to">Subscribe to our latest insights</label>
+            <input
+              type="email"
+              id="subscribe-to"
+              class="form-control"
+              placeholder="E-mail"
+            />
+            <button class="btn btn-arrow-right">
+              <i class="fal fa-angle-right"></i>
+            </button>
+          </div>
         </div>
+
+        <!-- Footer Row -->
+        <div class="footer-row mb-20">
+          <!-- Footer Menu -->
+          <ul class="footer-menu">
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Contact us</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">FAQ</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Privacy policy</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Cookie policy</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Terms of use</a>
+            </li>
+          </ul>
+
+          <!-- Footer Socials -->
+          <ul class="footer-socials">
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link vkontakte"
+                ><i class="fab fa-vk"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
+      </div>
     </footer>
 
     <!-- Go Up Button -->
@@ -1429,6 +1675,5 @@
     <script src="assets/js/animation.gsap.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>

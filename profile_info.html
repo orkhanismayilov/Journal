@@ -1,626 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Journal</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
-    <link rel="manifest" href="assets/favicons/site.webmanifest">
-    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#2b5797">
-    <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="assets/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="assets/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta
+      name="msapplication-config"
+      content="assets/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-    <link rel="shortcut icon" href="#">
-    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/hamburgers.min.css">
-    <link rel="stylesheet" href="assets/css/sweetalert2.min.css">
-    <link rel="stylesheet" href="assets/css/main.css">
-</head>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/hamburgers.min.css" />
+    <link rel="stylesheet" href="assets/css/sweetalert2.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
 
-<body>
+  <body>
     <!-- Preloader -->
     <div id="preloader">
-        <div class="cssload-preloader cssload-loading">
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-            <span class="cssload-slice"></span>
-        </div>
+      <div class="cssload-preloader cssload-loading">
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+        <span class="cssload-slice"></span>
+      </div>
     </div>
 
     <!-- Header -->
     <header id="header" class="fixed dark">
-        <!-- Menu -->
-        <div class="menu">
-            <button id="menu-trigger" class="hamburger hamburger--stand" type="button">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
-                </span>
-            </button>
+      <!-- Menu -->
+      <div class="menu">
+        <button
+          id="menu-trigger"
+          class="hamburger hamburger--stand"
+          type="button"
+        >
+          <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+          </span>
+        </button>
 
-            <!-- Menu Content -->
-            <div id="main-menu">
-                <div class="mm-content">
+        <!-- Menu Content -->
+        <div id="main-menu">
+          <div class="mm-content">
+            <!-- Main Menu Content Wrapper -->
+            <div class="mm-content-wrapper">
+              <!-- Main Menu Links List -->
+              <div class="mm-list-wrapper">
+                <ul class="mm-list">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item active">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#journal"
+                    >
+                      Journal<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                    <!-- Main Menu Content Wrapper -->
-                    <div class="mm-content-wrapper">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#categories"
+                    >
+                      Categories<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                        <!-- Main Menu Links List -->
-                        <div class="mm-list-wrapper">
-                            <ul class="mm-list">
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a
+                      href="#"
+                      class="mm-list-link has-submenu"
+                      data-submenu="#media"
+                    >
+                      Media<i class="far fa-angle-right"></i>
+                    </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item active">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#journal">
-                                        Journal<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="#" class="mm-list-link"> Featured </a>
+                  </li>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#categories">
-                                        Categories<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+                  <!-- Main Menu List Item -->
+                  <li class="mm-list-item">
+                    <a href="#" class="mm-list-link"> About Us </a>
+                  </li>
+                </ul>
+              </div>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link has-submenu" data-submenu="#media">
-                                        Media<i class="far fa-angle-right"></i>
-                                    </a>
-                                </li>
+              <!-- Main Menu Submenu -->
+              <div class="mm-submenu">
+                <!-- Submenu Item -->
+                <div id="journal" class="mm-submenu-item active">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Recent issues</h4>
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link">
-                                        Featured
-                                    </a>
-                                </li>
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-1.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Main Menu List Item -->
-                                <li class="mm-list-item">
-                                    <a href="#" class="mm-list-link">
-                                        About Us
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                        <!-- Main Menu Submenu -->
-                        <div class="mm-submenu">
-
-                            <!-- Submenu Item -->
-                            <div id="journal" class="mm-submenu-item active">
-
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Recent issues</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-1.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        All Out Black
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">May 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-2.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Fat Pie
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">April 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-3.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Workspace
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">March 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-4.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Art of Design
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">February 2019</span>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/journal-5.jpg" alt="Journal"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Clubbing
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                            <span class="date">January 2019</span>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              All Out Black
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">May 2019</span>
+                      </a>
+                    </li>
 
-                            <!-- Submenu Item -->
-                            <div id="categories" class="mm-submenu-item">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-2.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Categories</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-finance-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Finance
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-marketing-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Marketing
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-legal-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Legal
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-tech-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Technology
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-health-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Healthcare
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/cat-architecture-400x300.jpg" alt="Category"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Architecture
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Fat Pie
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">April 2019</span>
+                      </a>
+                    </li>
 
-                            <!-- Submenu Item -->
-                            <div id="media" class="mm-submenu-item">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-3.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
 
-                                <!-- Submenu Title -->
-                                <h4 class="submenu-title">Media</h4>
-
-                                <!-- Submenu List with Images -->
-                                <ul class="submenu-image-list">
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="category.html" class="submenu-image-link">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/audio-400x300.jpg" alt="Media"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        Audio Podcasts
-                                                        <span class="overlay-explore">explore
-                                                            <i class="fal fa-arrow-right"></i></span>
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                    <!-- Submenu List Image Item -->
-                                    <li class="submenu-image-item w-16">
-                                        <a href="#" class="submenu-image-link more-soon">
-                                            <figure class="submenu-figure">
-                                                <img src="assets/images/more_soon.jpg" alt="Media"
-                                                    class="submenu-image">
-
-                                                <div class="overlay">
-                                                    <div class="overlay-title">
-                                                        More Coming Soon
-                                                    </div>
-                                                </div>
-                                            </figure>
-                                        </a>
-                                    </li>
-
-                                </ul>
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Workspace
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
                             </div>
+                          </div>
+                        </figure>
+                        <span class="date">March 2019</span>
+                      </a>
+                    </li>
 
-                        </div>
-                    </div>
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-4.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Art of Design
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                        <span class="date">February 2019</span>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/journal-5.jpg"
+                            alt="Journal"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Clubbing
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                        <span class="date">January 2019</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
-                <div class="mm-overlay"></div>
+
+                <!-- Submenu Item -->
+                <div id="categories" class="mm-submenu-item">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Categories</h4>
+
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-finance-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Finance
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-marketing-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Marketing
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-legal-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Legal
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-tech-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Technology
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-health-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Healthcare
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/cat-architecture-400x300.jpg"
+                            alt="Category"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Architecture
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Submenu Item -->
+                <div id="media" class="mm-submenu-item">
+                  <!-- Submenu Title -->
+                  <h4 class="submenu-title">Media</h4>
+
+                  <!-- Submenu List with Images -->
+                  <ul class="submenu-image-list">
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="category.html" class="submenu-image-link">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/audio-400x300.jpg"
+                            alt="Media"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">
+                              Audio Podcasts
+                              <span class="overlay-explore"
+                                >explore <i class="fal fa-arrow-right"></i
+                              ></span>
+                            </div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+
+                    <!-- Submenu List Image Item -->
+                    <li class="submenu-image-item w-16">
+                      <a href="#" class="submenu-image-link more-soon">
+                        <figure class="submenu-figure">
+                          <img
+                            src="assets/images/more_soon.jpg"
+                            alt="Media"
+                            class="submenu-image"
+                          />
+
+                          <div class="overlay">
+                            <div class="overlay-title">More Coming Soon</div>
+                          </div>
+                        </figure>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="mm-overlay"></div>
         </div>
+      </div>
 
-        <!-- Logo -->
-        <div class="logo">
-            <a href="index.html">
-                <img src="assets/logo/journal_logo_white.svg" alt="Journal Logo">
-            </a>
-        </div>
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/logo/journal_logo_white.svg" alt="Journal Logo" />
+        </a>
+      </div>
 
-        <!-- Lang Switcher -->
-        <div class="lang-switcher">
-            <ul class="langs">
-                <li class="lang-item active">
-                    <a class="lang-link" href="#">EN</a>
-                </li>
-                <li class="lang-item">
-                    <a class="lang-link" href="#">AZ</a>
-                </li>
-            </ul>
-        </div>
+      <!-- Lang Switcher -->
+      <div class="lang-switcher">
+        <ul class="langs">
+          <li class="lang-item active">
+            <a class="lang-link" href="#">EN</a>
+          </li>
+          <li class="lang-item">
+            <a class="lang-link" href="#">AZ</a>
+          </li>
+        </ul>
+      </div>
 
-        <!-- Search -->
-        <div class="search">
-            <button id="search-trigger-header" class="btn btn-search"><i class="far fa-search"></i></button>
-            <form id="search-form-header" action="#" method="get">
-                <label>
-                    <input type="text" class="form-control search-input" name="query" placeholder="Search" />
-                </label>
-            </form>
-        </div>
+      <!-- Search -->
+      <div class="search">
+        <button id="search-trigger-header" class="btn btn-search">
+          <i class="far fa-search"></i>
+        </button>
+        <form id="search-form-header" action="#" method="get">
+          <label>
+            <input
+              type="text"
+              class="form-control search-input"
+              name="query"
+              placeholder="Search"
+            />
+          </label>
+        </form>
+      </div>
     </header>
 
     <!-- Profile Info Page -->
     <div id="profile-info-page">
-        <!-- Profile Info Header -->
-        <h1 class="profile-info-header">Complete Your Profile</h1>
+      <!-- Profile Info Header -->
+      <h1 class="profile-info-header">Complete Your Profile</h1>
 
-        <!-- Profile Form Wrapper -->
-        <div class="profile-form-wrapper">
-            <!-- Profile Form -->
-            <form action="#" method="post" id="profile-form">
+      <!-- Profile Form Wrapper -->
+      <div class="profile-form-wrapper">
+        <!-- Profile Form -->
+        <form action="#" method="post" id="profile-form">
+          <div class="form-row">
+            <div class="form-group w-33">
+              <label>
+                First name
+                <input
+                  type="text"
+                  name="User[first_name]"
+                  class="form-control"
+                />
+              </label>
+            </div>
+            <div class="form-group w-33">
+              <label>
+                Last name
+                <input
+                  type="text"
+                  name="User[last_name]"
+                  class="form-control"
+                />
+              </label>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group w-33">
-                        <label>
-                            First name
-                            <input type="text" name="User[first_name]" class="form-control">
-                        </label>
-                    </div>
-                    <div class="form-group w-33">
-                        <label>
-                            Last name
-                            <input type="text" name="User[last_name]" class="form-control">
-                        </label>
-                    </div>
+            <div class="form-group w-33">
+              <label>
+                Birth date
+                <input
+                  type="text"
+                  name="User[birth_date]"
+                  class="form-control"
+                />
+              </label>
+            </div>
+          </div>
 
-                    <div class="form-group w-33">
-                        <label>
-                            Birth date
-                            <input type="text" name="User[birth_date]" class="form-control">
-                        </label>
-                    </div>
-                </div>
+          <div class="form-row">
+            <div class="form-group w-33">
+              <label>
+                Gender
+                <select
+                  name="User[gender]"
+                  class="form-control form-select"
+                ></select>
+              </label>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group w-33">
-                        <label>
-                            Gender
-                            <select name="User[gender]" class="form-control form-select"></select>
-                        </label>
-                    </div>
+            <div class="form-group w-33">
+              <label>
+                Country
+                <select
+                  name="User[country]"
+                  class="form-control form-select"
+                ></select>
+              </label>
+            </div>
 
-                    <div class="form-group w-33">
-                        <label>
-                            Country
-                            <select name="User[country]" class="form-control form-select"></select>
-                        </label>
-                    </div>
+            <div class="form-group w-33">
+              <label>
+                Cell phone
+                <input
+                  type="text"
+                  name="User[cell_phone]"
+                  class="form-control"
+                />
+              </label>
+            </div>
+          </div>
 
-                    <div class="form-group w-33">
-                        <label>
-                            Cell phone
-                            <input type="text" name="User[cell_phone]" class="form-control">
-                        </label>
-                    </div>
-                </div>
+          <hr />
 
-                <hr>
+          <div class="form-row">
+            <div class="form-group w-50">
+              <label>
+                Education level
+                <select
+                  name="User[education_lvl]"
+                  class="form-control form-select"
+                ></select>
+              </label>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group w-50">
-                        <label>
-                            Education level
-                            <select name="User[education_lvl]" class="form-control form-select"></select>
-                        </label>
-                    </div>
+            <div class="form-group w-50">
+              <label>
+                High education institution
+                <select
+                  name="User[high_edu_institution]"
+                  class="form-control form-select"
+                ></select>
+              </label>
+            </div>
+          </div>
 
-                    <div class="form-group w-50">
-                        <label>
-                            High education institution
-                            <select name="User[high_edu_institution]" class="form-control form-select"></select>
-                        </label>
-                    </div>
-                </div>
+          <div class="form-row">
+            <div class="form-group w-50">
+              <label>
+                Faculty
+                <input type="text" name="User[faculty]" class="form-control" />
+              </label>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group w-50">
-                        <label>
-                            Faculty
-                            <input type="text" name="User[faculty]" class="form-control">
-                        </label>
-                    </div>
+            <div class="form-group w-50">
+              <label>
+                Major
+                <input type="text" name="User[major]" class="form-control" />
+              </label>
+            </div>
+          </div>
 
-                    <div class="form-group w-50">
-                        <label>
-                            Major
-                            <input type="text" name="User[major]" class="form-control">
-                        </label>
-                    </div>
-                </div>
+          <div class="form-row">
+            <div class="form-group w-50">
+              <label>
+                Employer
+                <select
+                  name="User[employer]"
+                  class="form-control form-select"
+                ></select>
+              </label>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-group w-50">
-                        <label>
-                            Employer
-                            <select name="User[employer]" class="form-control form-select"></select>
-                        </label>
-                    </div>
+            <div class="form-group w-50">
+              <label>
+                Job title
+                <input
+                  type="text"
+                  name="User[job_title]"
+                  class="form-control"
+                />
+              </label>
+            </div>
+          </div>
 
-                    <div class="form-group w-50">
-                        <label>
-                            Job title
-                            <input type="text" name="User[job_title]" class="form-control">
-                        </label>
-                    </div>
-                </div>
-
-                <div class="form-buttons">
-                    <button class="btn btn-primary" type="submit">Submit<i class="far fa-check"></i></button>
-                </div>
-            </form>
-        </div>
+          <div class="form-buttons">
+            <button class="btn btn-primary" type="submit">
+              Submit<i class="far fa-check"></i>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer id="footer" class="border-top">
-        <div class="container-wide">
+      <div class="container-wide">
+        <!-- Footer Row -->
+        <div class="footer-row mb-50">
+          <!-- Footer Logo -->
+          <div class="footer-logo">
+            <img src="assets/logo/journal_logo_black.svg" alt="Logo" />
+          </div>
 
-            <!-- Footer Row -->
-            <div class="footer-row mb-50">
-
-                <!-- Footer Logo -->
-                <div class="footer-logo">
-                    <img src="assets/logo/journal_logo_black.svg" alt="Logo">
-                </div>
-
-                <!-- Subscribe Wrapper -->
-                <div class="subscribe-wrapper">
-                    <label for="subscribe-to">Subscribe to our latest insights</label>
-                    <input type="email" id="subscribe-to" class="form-control" placeholder="E-mail">
-                    <button class="btn btn-arrow-right"><i class="fal fa-angle-right"></i></button>
-                </div>
-
-            </div>
-
-            <!-- Footer Row -->
-            <div class="footer-row mb-20">
-
-                <!-- Footer Menu -->
-                <ul class="footer-menu">
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Contact us</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">FAQ</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Privacy policy</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Cookie policy</a>
-                    </li>
-
-                    <!-- Footer Menu Item -->
-                    <li class="footer-menu-item">
-                        <a href="#" class="footer-menu-link">Terms of use</a>
-                    </li>
-
-                </ul>
-
-                <!-- Footer Socials -->
-                <ul class="footer-socials">
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link facebook"><i class="fab fa-facebook-f"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link twitter"><i class="fab fa-twitter"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link instagram"><i class="fab fa-instagram"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link vkontakte"><i class="fab fa-vk"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link linkedin"><i class="fab fa-linkedin-in"></i></a>
-                    </li>
-
-                    <!-- Footer Social Item -->
-                    <li class="footer-social-item">
-                        <a href="#" class="footer-social-link youtube"><i class="fab fa-youtube"></i></a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <!-- Copyright -->
-            <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
-
+          <!-- Subscribe Wrapper -->
+          <div class="subscribe-wrapper">
+            <label for="subscribe-to">Subscribe to our latest insights</label>
+            <input
+              type="email"
+              id="subscribe-to"
+              class="form-control"
+              placeholder="E-mail"
+            />
+            <button class="btn btn-arrow-right">
+              <i class="fal fa-angle-right"></i>
+            </button>
+          </div>
         </div>
+
+        <!-- Footer Row -->
+        <div class="footer-row mb-20">
+          <!-- Footer Menu -->
+          <ul class="footer-menu">
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Contact us</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">FAQ</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Privacy policy</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Cookie policy</a>
+            </li>
+
+            <!-- Footer Menu Item -->
+            <li class="footer-menu-item">
+              <a href="#" class="footer-menu-link">Terms of use</a>
+            </li>
+          </ul>
+
+          <!-- Footer Socials -->
+          <ul class="footer-socials">
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link vkontakte"
+                ><i class="fab fa-vk"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </li>
+
+            <!-- Footer Social Item -->
+            <li class="footer-social-item">
+              <a href="#" class="footer-social-link youtube"
+                ><i class="fab fa-youtube"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Copyright -->
+        <p class="copyright"><span>&copy;</span> 2019 Journal LLC</p>
+      </div>
     </footer>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/particles.min.js"></script>
     <script src="assets/js/main.js"></script>
-</body>
-
+  </body>
 </html>
