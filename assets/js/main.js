@@ -44,7 +44,6 @@ $(document).ready(function () {
     var mainMenu = $('#main-menu');
     if (mainMenu.length > 0) {
         var menuTrigger = $('#menu-trigger'),
-            logo = $header.find('.logo'),
             overlay = mainMenu.find('.mm-overlay');
 
         // Openin/Closing Main Menu
@@ -254,6 +253,11 @@ $(document).ready(function () {
                         toggleMainMenu();
                         mainSwiper.slideTo(featuredSlideIndex);
                     });
+
+                    if(location.hash === '#featured') {
+                      var featuredSlideIndex = $('.swiper-slide').index(location.hash);
+                      mainSwiper.slideTo(featuredSlideIndex);
+                    }
                 },
                 slideChangeTransitionStart: function () {
                     if (this.realIndex === this.slides.length - 2) {
