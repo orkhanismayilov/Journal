@@ -248,8 +248,8 @@ $(document).ready(function () {
           });
 
           if (location.hash === '#featured') {
-            var featuredSlideIndex = $('.swiper-slide').index(location.hash);
-            mainSwiper.slideTo(featuredSlideIndex);
+            var featuredSlideIndex = $('.swiper-slide').index($(location.hash)[0]);
+            this.slideTo(featuredSlideIndex);
           }
         },
         slideChangeTransitionStart: function () {
